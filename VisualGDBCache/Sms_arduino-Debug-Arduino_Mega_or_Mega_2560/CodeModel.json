@@ -428,6 +428,96 @@
             },
             {
                 "GCC": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-g++",
+                "InputFile": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\abi.cpp",
+                "ObjectFile": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\abi.cpp.o",
+                "Arguments": [
+                    "-c",
+                    "-g",
+                    "-Os",
+                    "-w",
+                    "-std=gnu++11",
+                    "-fpermissive",
+                    "-fno-exceptions",
+                    "-ffunction-sections",
+                    "-fdata-sections",
+                    "-fno-threadsafe-statics",
+                    "-Wno-error=narrowing",
+                    "-MMD",
+                    "-flto",
+                    "-mmcu=atmega2560",
+                    "-DF_CPU=16000000L",
+                    "-DARDUINO=10600",
+                    "-DARDUINO_AVR_MEGA2560",
+                    "-DARDUINO_ARCH_AVR",
+                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino",
+                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega",
+                    "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\abi.cpp",
+                    "-o",
+                    "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\abi.cpp.o"
+                ]
+            },
+            {
+                "GCC": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-g++",
+                "InputFile": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\main.cpp",
+                "ObjectFile": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\main.cpp.o",
+                "Arguments": [
+                    "-c",
+                    "-g",
+                    "-Os",
+                    "-w",
+                    "-std=gnu++11",
+                    "-fpermissive",
+                    "-fno-exceptions",
+                    "-ffunction-sections",
+                    "-fdata-sections",
+                    "-fno-threadsafe-statics",
+                    "-Wno-error=narrowing",
+                    "-MMD",
+                    "-flto",
+                    "-mmcu=atmega2560",
+                    "-DF_CPU=16000000L",
+                    "-DARDUINO=10600",
+                    "-DARDUINO_AVR_MEGA2560",
+                    "-DARDUINO_ARCH_AVR",
+                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino",
+                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega",
+                    "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\main.cpp",
+                    "-o",
+                    "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\main.cpp.o"
+                ]
+            },
+            {
+                "GCC": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-g++",
+                "InputFile": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\new.cpp",
+                "ObjectFile": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\new.cpp.o",
+                "Arguments": [
+                    "-c",
+                    "-g",
+                    "-Os",
+                    "-w",
+                    "-std=gnu++11",
+                    "-fpermissive",
+                    "-fno-exceptions",
+                    "-ffunction-sections",
+                    "-fdata-sections",
+                    "-fno-threadsafe-statics",
+                    "-Wno-error=narrowing",
+                    "-MMD",
+                    "-flto",
+                    "-mmcu=atmega2560",
+                    "-DF_CPU=16000000L",
+                    "-DARDUINO=10600",
+                    "-DARDUINO_AVR_MEGA2560",
+                    "-DARDUINO_ARCH_AVR",
+                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino",
+                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega",
+                    "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\new.cpp",
+                    "-o",
+                    "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\new.cpp.o"
+                ]
+            },
+            {
+                "GCC": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-g++",
                 "InputFile": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\PluggableUSB.cpp",
                 "ObjectFile": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\PluggableUSB.cpp.o",
                 "Arguments": [
@@ -635,96 +725,6 @@
                     "-o",
                     "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\WString.cpp.o"
                 ]
-            },
-            {
-                "GCC": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-g++",
-                "InputFile": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\abi.cpp",
-                "ObjectFile": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\abi.cpp.o",
-                "Arguments": [
-                    "-c",
-                    "-g",
-                    "-Os",
-                    "-w",
-                    "-std=gnu++11",
-                    "-fpermissive",
-                    "-fno-exceptions",
-                    "-ffunction-sections",
-                    "-fdata-sections",
-                    "-fno-threadsafe-statics",
-                    "-Wno-error=narrowing",
-                    "-MMD",
-                    "-flto",
-                    "-mmcu=atmega2560",
-                    "-DF_CPU=16000000L",
-                    "-DARDUINO=10600",
-                    "-DARDUINO_AVR_MEGA2560",
-                    "-DARDUINO_ARCH_AVR",
-                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino",
-                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega",
-                    "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\abi.cpp",
-                    "-o",
-                    "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\abi.cpp.o"
-                ]
-            },
-            {
-                "GCC": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-g++",
-                "InputFile": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\main.cpp",
-                "ObjectFile": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\main.cpp.o",
-                "Arguments": [
-                    "-c",
-                    "-g",
-                    "-Os",
-                    "-w",
-                    "-std=gnu++11",
-                    "-fpermissive",
-                    "-fno-exceptions",
-                    "-ffunction-sections",
-                    "-fdata-sections",
-                    "-fno-threadsafe-statics",
-                    "-Wno-error=narrowing",
-                    "-MMD",
-                    "-flto",
-                    "-mmcu=atmega2560",
-                    "-DF_CPU=16000000L",
-                    "-DARDUINO=10600",
-                    "-DARDUINO_AVR_MEGA2560",
-                    "-DARDUINO_ARCH_AVR",
-                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino",
-                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega",
-                    "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\main.cpp",
-                    "-o",
-                    "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\main.cpp.o"
-                ]
-            },
-            {
-                "GCC": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-g++",
-                "InputFile": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\new.cpp",
-                "ObjectFile": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\new.cpp.o",
-                "Arguments": [
-                    "-c",
-                    "-g",
-                    "-Os",
-                    "-w",
-                    "-std=gnu++11",
-                    "-fpermissive",
-                    "-fno-exceptions",
-                    "-ffunction-sections",
-                    "-fdata-sections",
-                    "-fno-threadsafe-statics",
-                    "-Wno-error=narrowing",
-                    "-MMD",
-                    "-flto",
-                    "-mmcu=atmega2560",
-                    "-DF_CPU=16000000L",
-                    "-DARDUINO=10600",
-                    "-DARDUINO_AVR_MEGA2560",
-                    "-DARDUINO_ARCH_AVR",
-                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino",
-                    "-ID:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega",
-                    "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\new.cpp",
-                    "-o",
-                    "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\new.cpp.o"
-                ]
             }
         ]
     },
@@ -775,112 +775,78 @@
     ],
     "KnownHeaders": [
         {
-            "Name": "Wire.h",
-            "LibraryDirectories": [
-                "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\Wire\\src"
-            ]
-        },
-        {
-            "Name": "SoftwareSerial.h",
-            "LibraryDirectories": [
-                "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SoftwareSerial\\src"
-            ]
-        },
-        {
             "Name": "URLEncoder.h",
             "LibraryDirectories": [
                 "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
             ]
         },
         {
-            "Name": "TinyGsmClientBG96.h",
+            "Name": "HID.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\HID\\src"
             ]
         },
         {
-            "Name": "TinyGsmClientM95.h",
+            "Name": "OneWire.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\OneWire"
             ]
         },
         {
-            "Name": "TinyGsmClientSaraR4.h",
+            "Name": "TinyGsmClient.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "TinyGsmClientXBee.h",
+            "Name": "TinyGsmCommon.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "EEPROM.h",
-            "LibraryDirectories": [
-                "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM\\src"
-            ]
-        },
-        {
-            "Name": "HttpClient.h",
+            "Name": "ArduinoHttpClient.h",
             "LibraryDirectories": [
                 "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
             ]
         },
         {
-            "Name": "DallasTemperature.h",
+            "Name": "TinyGsmClientA6.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\DallasTemperature"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientSIM800.h",
+            "LibraryDirectories": [
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "WebSocketClient.h",
+            "LibraryDirectories": [
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
+            ]
+        },
+        {
+            "Name": "Wire.h",
+            "LibraryDirectories": [
+                "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\Wire\\src"
             ]
         },
         {
             "Name": "TinyGsmClientM590.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "TinyGsmClientSIM5360.h",
-            "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientSIM7000.h",
-            "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientUBLOX.h",
-            "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmFifo.h",
-            "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
-            ]
-        },
-        {
-            "Name": "SPI.h",
-            "LibraryDirectories": [
-                "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI\\src"
-            ]
-        },
-        {
-            "Name": "WebSocketClient.h",
+            "Name": "HttpClient.h",
             "LibraryDirectories": [
                 "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
             ]
@@ -892,84 +858,118 @@
             ]
         },
         {
-            "Name": "TinyGsmClient.h",
+            "Name": "TinyGsmClientBG96.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientSIM808.h",
-            "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
-            ]
-        },
-        {
-            "Name": "ArduinoHttpClient.h",
-            "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
             "Name": "TinyGsmClientESP8266.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "TinyGsmClientSIM7600.h",
+            "Name": "TinyGsmClientSIM808.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "TinyGsmClientSequansMonarch.h",
+            "Name": "SPI.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI\\src"
             ]
         },
         {
-            "Name": "HID.h",
+            "Name": "TinyGsmClientXBee.h",
             "LibraryDirectories": [
-                "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\HID\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "EEPROM.h",
+            "LibraryDirectories": [
+                "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM\\src"
+            ]
+        },
+        {
+            "Name": "SoftwareSerial.h",
+            "LibraryDirectories": [
+                "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SoftwareSerial\\src"
+            ]
+        },
+        {
+            "Name": "DallasTemperature.h",
+            "LibraryDirectories": [
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\DallasTemperature"
             ]
         },
         {
             "Name": "TinyGsmClientMC60.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "TinyGsmCommon.h",
+            "Name": "TinyGsmClientSIM7000.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "OneWire.h",
+            "Name": "TinyGsmClientSequansMonarch.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\OneWire"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "TinyGsmClientA6.h",
+            "Name": "TinyGsmFifo.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "TinyGsmClientSIM800.h",
+            "Name": "TinyGsmClientM95.h",
             "LibraryDirectories": [
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
-                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src"
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientSIM5360.h",
+            "LibraryDirectories": [
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientSIM7600.h",
+            "LibraryDirectories": [
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientUBLOX.h",
+            "LibraryDirectories": [
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientSaraR4.h",
+            "LibraryDirectories": [
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         }
     ],
@@ -979,85 +979,87 @@
             "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
             "Prototype": "void setup();",
             "Modifiers": "",
-            "Line": 13
+            "Line": 140
         },
         {
             "FunctionName": "loop",
             "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
             "Prototype": "void loop();",
             "Modifiers": "",
-            "Line": 18
+            "Line": 177
+        },
+        {
+            "FunctionName": "checkSMS",
+            "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
+            "Prototype": "void checkSMS();",
+            "Modifiers": "",
+            "Line": 182
+        },
+        {
+            "FunctionName": "deleteSMS",
+            "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
+            "Prototype": "bool deleteSMS(uint8_t index);",
+            "Modifiers": "",
+            "Line": 195
+        },
+        {
+            "FunctionName": "delete_all_SMS",
+            "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
+            "Prototype": "bool delete_all_SMS();",
+            "Modifiers": "",
+            "Line": 201
+        },
+        {
+            "FunctionName": "readSMS",
+            "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
+            "Prototype": "bool readSMS(uint8_t index);",
+            "Modifiers": "",
+            "Line": 207
+        },
+        {
+            "FunctionName": "tel_number_receiveSMS",
+            "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
+            "Prototype": "String tel_number_receiveSMS(String header);",
+            "Modifiers": "",
+            "Line": 300
+        },
+        {
+            "FunctionName": "count_receiveSMS",
+            "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
+            "Prototype": "uint16_t count_receiveSMS();",
+            "Modifiers": "",
+            "Line": 324
+        },
+        {
+            "FunctionName": "smsInit",
+            "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
+            "Prototype": "void smsInit();",
+            "Modifiers": "",
+            "Line": 344
+        },
+        {
+            "FunctionName": "checkNetwork",
+            "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
+            "Prototype": "bool checkNetwork();",
+            "Modifiers": "",
+            "Line": 359
+        },
+        {
+            "FunctionName": "initModem",
+            "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
+            "Prototype": "bool initModem();",
+            "Modifiers": "",
+            "Line": 426
+        },
+        {
+            "FunctionName": "testAtCommand",
+            "File": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches\\Sms_arduino.ino",
+            "Prototype": "void testAtCommand();",
+            "Modifiers": "",
+            "Line": 506
         }
     ],
     "KnownLibraries": [
-        {
-            "Folder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master",
-            "SrcFolder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "ArduinoHttpClient-master",
-            "RealName": "ArduinoHttpClient",
-            "IsLegacy": false,
-            "Version": "0.4.0",
-            "Author": "Arduino",
-            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
-            "Sentence": "[EXPERIMENTAL] Easily interact with web servers from Arduino, using HTTP and WebSocket's.",
-            "Paragraph": "This library can be used for HTTP (GET, POST, PUT, DELETE) requests to a web server. It also supports exchanging messages with WebSocket servers. Based on Adrian McEwen's HttpClient library.",
-            "URL": "https://github.com/arduino-libraries/ArduinoHttpClient",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master",
-            "SrcFolder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "TinyGSM-master",
-            "RealName": "TinyGSM",
-            "IsLegacy": false,
-            "Version": "0.9.17",
-            "Author": "Volodymyr Shymanskyy",
-            "Maintainer": "Volodymyr Shymanskyy",
-            "Sentence": "A small Arduino library for GPRS modules, that just works.",
-            "Paragraph": "Includes examples for Blynk, MQTT, File Download, and Web Client. Supports many GSM, LTE, and WiFi modules with AT command interfaces.",
-            "URL": "https://github.com/vshymanskyy/TinyGSM",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM",
-            "SrcFolder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "EEPROM",
-            "RealName": "EEPROM",
-            "IsLegacy": false,
-            "Version": "2.0",
-            "Author": "Arduino, Christopher Andrews",
-            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
-            "Sentence": "Enables reading and writing to the permanent board storage.",
-            "Paragraph": "This library allows to read and write data in a memory type, the EEPROM, that keeps its content also when the board is powered off. The amount of EEPROM available depends on the microcontroller type.",
-            "URL": "http://www.arduino.cc/en/Reference/EEPROM",
-            "Category": "Data Storage",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI",
-            "SrcFolder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "SPI",
-            "RealName": "SPI",
-            "IsLegacy": false,
-            "Version": "1.0",
-            "Author": "Arduino",
-            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
-            "Sentence": "Enables the communication with devices that use the Serial Peripheral Interface (SPI) Bus.",
-            "Paragraph": "SPI is a synchronous serial data protocol used by microcontrollers for communicating with one or more peripheral devices quickly over short distances. It uses three lines common to all devices (MISO, MOSI and SCK) and one specific for each device.",
-            "URL": "http://www.arduino.cc/en/Reference/SPI",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
         {
             "Folder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\HID",
             "SrcFolder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\HID\\src",
@@ -1072,23 +1074,6 @@
             "Sentence": "Module for PluggableUSB infrastructure. Exposes an API for devices like Keyboards, Mice and Gamepads.",
             "Paragraph": "",
             "URL": "http://www.arduino.cc/en/Reference/HID",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\OneWire",
-            "SrcFolder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\OneWire",
-            "UtilityFolder": "",
-            "Layout": "flat",
-            "Name": "OneWire",
-            "RealName": "OneWire",
-            "IsLegacy": false,
-            "Version": "2.3.5",
-            "Author": "Jim Studt, Tom Pollard, Robin James, Glenn Trewitt, Jason Dangel, Guillermo Lovato, Paul Stoffregen, Scott Roberts, Bertrik Sikken, Mark Tillotson, Ken Butcher, Roger Clark, Love Nystrom",
-            "Maintainer": "Paul Stoffregen",
-            "Sentence": "Access 1-wire temperature sensors, memory and other chips.",
-            "Paragraph": "",
-            "URL": "http://www.pjrc.com/teensy/td_libs_OneWire.html",
             "Category": "Communication",
             "License": "Unspecified"
         },
@@ -1110,6 +1095,23 @@
             "License": "Unspecified"
         },
         {
+            "Folder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\DallasTemperature",
+            "SrcFolder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\DallasTemperature",
+            "UtilityFolder": "",
+            "Layout": "flat",
+            "Name": "DallasTemperature",
+            "RealName": "DallasTemperature",
+            "IsLegacy": false,
+            "Version": "3.8.0",
+            "Author": "Miles Burton \u003cmiles@mnetcs.com\u003e, Tim Newsome \u003cnuisance@casualhacker.net\u003e, Guil Barros \u003cgfbarros@bappos.com\u003e, Rob Tillaart \u003crob.tillaart@gmail.com\u003e",
+            "Maintainer": "Miles Burton \u003cmiles@mnetcs.com\u003e",
+            "Sentence": "Arduino Library for Dallas Temperature ICs",
+            "Paragraph": "Supports DS18B20, DS18S20, DS1822, DS1820",
+            "URL": "https://github.com/milesburton/Arduino-Temperature-Control-Library",
+            "Category": "Sensors",
+            "License": "Unspecified"
+        },
+        {
             "Folder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SoftwareSerial",
             "SrcFolder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SoftwareSerial\\src",
             "UtilityFolder": "",
@@ -1123,6 +1125,57 @@
             "Sentence": "Enables serial communication on any digital pin.",
             "Paragraph": "The SoftwareSerial library has been developed to allow serial communication on any digital pin of the board, using software to replicate the functionality of the hardware UART. It is possible to have multiple software serial ports with speeds up to 115200 bps.",
             "URL": "http://www.arduino.cc/en/Reference/SoftwareSerial",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master",
+            "SrcFolder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "ArduinoHttpClient-master",
+            "RealName": "ArduinoHttpClient",
+            "IsLegacy": false,
+            "Version": "0.4.0",
+            "Author": "Arduino",
+            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
+            "Sentence": "[EXPERIMENTAL] Easily interact with web servers from Arduino, using HTTP and WebSocket's.",
+            "Paragraph": "This library can be used for HTTP (GET, POST, PUT, DELETE) requests to a web server. It also supports exchanging messages with WebSocket servers. Based on Adrian McEwen's HttpClient library.",
+            "URL": "https://github.com/arduino-libraries/ArduinoHttpClient",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\OneWire",
+            "SrcFolder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\OneWire",
+            "UtilityFolder": "",
+            "Layout": "flat",
+            "Name": "OneWire",
+            "RealName": "OneWire",
+            "IsLegacy": false,
+            "Version": "2.3.5",
+            "Author": "Jim Studt, Tom Pollard, Robin James, Glenn Trewitt, Jason Dangel, Guillermo Lovato, Paul Stoffregen, Scott Roberts, Bertrik Sikken, Mark Tillotson, Ken Butcher, Roger Clark, Love Nystrom",
+            "Maintainer": "Paul Stoffregen",
+            "Sentence": "Access 1-wire temperature sensors, memory and other chips.",
+            "Paragraph": "",
+            "URL": "http://www.pjrc.com/teensy/td_libs_OneWire.html",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master",
+            "SrcFolder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "TinyGSM-master",
+            "RealName": "TinyGSM",
+            "IsLegacy": false,
+            "Version": "0.9.17",
+            "Author": "Volodymyr Shymanskyy",
+            "Maintainer": "Volodymyr Shymanskyy",
+            "Sentence": "A small Arduino library for GPRS modules, that just works.",
+            "Paragraph": "Includes examples for Blynk, MQTT, File Download, and Web Client. Supports many GSM, LTE, and WiFi modules with AT command interfaces.",
+            "URL": "https://github.com/vshymanskyy/TinyGSM",
             "Category": "Communication",
             "License": "Unspecified"
         },
@@ -1144,252 +1197,85 @@
             "License": "Unspecified"
         },
         {
-            "Folder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\DallasTemperature",
-            "SrcFolder": "d:\\Users\\creosot\\Documents\\Arduino\\Libraries\\DallasTemperature",
+            "Folder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI",
+            "SrcFolder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI\\src",
             "UtilityFolder": "",
-            "Layout": "flat",
-            "Name": "DallasTemperature",
-            "RealName": "DallasTemperature",
+            "Layout": "recursive",
+            "Name": "SPI",
+            "RealName": "SPI",
             "IsLegacy": false,
-            "Version": "3.8.0",
-            "Author": "Miles Burton \u003cmiles@mnetcs.com\u003e, Tim Newsome \u003cnuisance@casualhacker.net\u003e, Guil Barros \u003cgfbarros@bappos.com\u003e, Rob Tillaart \u003crob.tillaart@gmail.com\u003e",
-            "Maintainer": "Miles Burton \u003cmiles@mnetcs.com\u003e",
-            "Sentence": "Arduino Library for Dallas Temperature ICs",
-            "Paragraph": "Supports DS18B20, DS18S20, DS1822, DS1820",
-            "URL": "https://github.com/milesburton/Arduino-Temperature-Control-Library",
-            "Category": "Sensors",
+            "Version": "1.0",
+            "Author": "Arduino",
+            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
+            "Sentence": "Enables the communication with devices that use the Serial Peripheral Interface (SPI) Bus.",
+            "Paragraph": "SPI is a synchronous serial data protocol used by microcontrollers for communicating with one or more peripheral devices quickly over short distances. It uses three lines common to all devices (MISO, MOSI and SCK) and one specific for each device.",
+            "URL": "http://www.arduino.cc/en/Reference/SPI",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM",
+            "SrcFolder": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "EEPROM",
+            "RealName": "EEPROM",
+            "IsLegacy": false,
+            "Version": "2.0",
+            "Author": "Arduino, Christopher Andrews",
+            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
+            "Sentence": "Enables reading and writing to the permanent board storage.",
+            "Paragraph": "This library allows to read and write data in a memory type, the EEPROM, that keeps its content also when the board is powered off. The amount of EEPROM available depends on the microcontroller type.",
+            "URL": "http://www.arduino.cc/en/Reference/EEPROM",
+            "Category": "Data Storage",
             "License": "Unspecified"
         }
     ],
     "LinkerCommandLine": "\"d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-gcc\" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega2560  -o \"D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug/Sms_arduino.ino.elf\" {object_files} \"D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug/{archive_file}\" \"-LD:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug\" -lm",
     "BuildProperties": [
         {
-            "Key": "menu.cpu.atmega2560",
-            "Value": "ATmega2560 (Mega 2560)"
-        },
-        {
-            "Key": "runtime.tools.esptool_py.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\esptool_py\\2.6.1"
-        },
-        {
-            "Key": "extra.time.local",
-            "Value": "1587910323"
-        },
-        {
-            "Key": "tools.ctags.cmd.path",
-            "Value": "{path}/ctags"
-        },
-        {
-            "Key": "compiler.warning_flags",
-            "Value": "-w"
-        },
-        {
-            "Key": "compiler.c.flags",
-            "Value": "-c -g -Os {compiler.warning_flags} -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects"
-        },
-        {
-            "Key": "menu.cpu.atmega1280.build.board",
-            "Value": "AVR_MEGA"
-        },
-        {
-            "Key": "recipe.objcopy.eep.pattern",
-            "Value": "\"{compiler.path}{compiler.objcopy.cmd}\" {compiler.objcopy.eep.flags} {compiler.objcopy.eep.extra_flags} \"{build.path}/{build.project_name}.elf\" \"{build.path}/{build.project_name}.eep\""
-        },
-        {
-            "Key": "tools.avrdude.config.path",
-            "Value": "{path}/etc/avrdude.conf"
-        },
-        {
-            "Key": "tools.avrdude.erase.params.quiet",
-            "Value": "-q -q"
-        },
-        {
-            "Key": "tools.avrdude.erase.pattern",
-            "Value": "\"{cmd.path}\" \"-C{config.path}\" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m"
-        },
-        {
-            "Key": "tools.avrdude.bootloader.params.verbose",
-            "Value": "-v"
-        },
-        {
-            "Key": "bootloader.lock_bits",
-            "Value": "0x0F"
-        },
-        {
-            "Key": "compiler.c.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "tools.avrdude.bootloader.params.quiet",
-            "Value": "-q -q"
-        },
-        {
-            "Key": "upload.maximum_size",
-            "Value": "253952"
-        },
-        {
-            "Key": "runtime.tools.xtensa-esp32-elf-gcc.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\xtensa-esp32-elf-gcc\\1.22.0-80-g6c4433a-5.2.0"
-        },
-        {
-            "Key": "tools.avrdude.path",
-            "Value": "{runtime.tools.avrdude.path}"
-        },
-        {
-            "Key": "recipe.S.o.pattern",
-            "Value": "\"{compiler.path}{compiler.c.cmd}\" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
-        },
-        {
-            "Key": "runtime.tools.esptool_py-2.6.1.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\esptool_py\\2.6.1"
-        },
-        {
-            "Key": "compiler.warning_flags.more",
-            "Value": "-Wall"
-        },
-        {
-            "Key": "compiler.objcopy.cmd",
-            "Value": "avr-objcopy"
-        },
-        {
-            "Key": "compiler.ldflags",
-            "Value": ""
-        },
-        {
-            "Key": "compiler.S.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "recipe.size.regex",
-            "Value": "^(?:\\.text|\\.data|\\.bootloader)\\s+([0-9]+).*"
-        },
-        {
-            "Key": "tools.avrdude.bootloader.pattern",
-            "Value": "\"{cmd.path}\" \"-C{config.path}\" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} \"-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i\" -Ulock:w:{bootloader.lock_bits}:m"
-        },
-        {
-            "Key": "build.mcu",
-            "Value": "atmega2560"
-        },
-        {
-            "Key": "compiler.objcopy.eep.flags",
-            "Value": "-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0"
-        },
-        {
-            "Key": "runtime.tools.esp32-tools.path",
-            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools"
-        },
-        {
-            "Key": "runtime.tools.mkspiffs.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\mkspiffs\\0.2.3"
-        },
-        {
-            "Key": "tools.avrdude.program.params.noverify",
-            "Value": "-V"
-        },
-        {
-            "Key": "pid.5",
-            "Value": "0x0242"
-        },
-        {
-            "Key": "build.variant",
-            "Value": "mega"
-        },
-        {
-            "Key": "bootloader.extended_fuses",
-            "Value": "0xFD"
-        },
-        {
-            "Key": "runtime.tools.arduino.path",
-            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools"
-        },
-        {
-            "Key": "recipe.cpp.o.pattern",
-            "Value": "\"{compiler.path}{compiler.cpp.cmd}\" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
-        },
-        {
-            "Key": "tools.avrdude.network_cmd",
-            "Value": "{runtime.tools.arduinoOTA.path}/bin/arduinoOTA"
-        },
-        {
-            "Key": "tools.avrdude_remote.upload.pattern",
-            "Value": "/usr/bin/run-avrdude /tmp/sketch.hex {upload.verbose} -p{build.mcu}"
+            "Key": "tools.avrdude.program.pattern",
+            "Value": "\"{cmd.path}\" \"-C{config.path}\" {program.verbose} {program.verify} -p{build.mcu} -c{protocol} {program.extra_params} \"-Uflash:w:{build.path}/{build.project_name}.hex:i\""
         },
         {
             "Key": "pid.0",
             "Value": "0x0010"
         },
         {
-            "Key": "bootloader.tool",
-            "Value": "avrdude"
+            "Key": "build.variant",
+            "Value": "mega"
         },
         {
             "Key": "menu.cpu.atmega2560.upload.speed",
             "Value": "115200"
         },
         {
-            "Key": "archive_file_path",
-            "Value": "{build.path}/{archive_file}"
+            "Key": "version",
+            "Value": "1.8.2"
         },
         {
-            "Key": "recipe.c.combine.pattern",
-            "Value": "\"{compiler.path}{compiler.c.elf.cmd}\" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o \"{build.path}/{build.project_name}.elf\" {object_files} \"{build.path}/{archive_file}\" \"-L{build.path}\" -lm"
+            "Key": "tools.avrdude.program.verify",
+            "Value": ""
         },
         {
-            "Key": "recipe.output.save_file",
-            "Value": "{build.project_name}.{build.variant}.hex"
+            "Key": "menu.cpu.atmega1280.bootloader.file",
+            "Value": "atmega/ATmegaBOOT_168_atmega1280.hex"
         },
         {
-            "Key": "vid.2",
-            "Value": "0x2A03"
-        },
-        {
-            "Key": "bootloader.file",
-            "Value": "stk500v2/stk500boot_v2_mega2560.hex"
+            "Key": "tools.avrdude.erase.params.verbose",
+            "Value": "-v"
         },
         {
             "Key": "pid.1",
             "Value": "0x0042"
         },
         {
-            "Key": "build.system.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\system"
+            "Key": "recipe.size.regex",
+            "Value": "^(?:\\.text|\\.data|\\.bootloader)\\s+([0-9]+).*"
         },
         {
-            "Key": "runtime.platform.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2"
-        },
-        {
-            "Key": "ide_version",
-            "Value": "10600"
-        },
-        {
-            "Key": "runtime.tools.xtensa-esp32-elf-gcc-1.22.0-80-g6c4433a-5.2.0.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\xtensa-esp32-elf-gcc\\1.22.0-80-g6c4433a-5.2.0"
-        },
-        {
-            "Key": "compiler.ar.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "compiler.elf2hex.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "upload.maximum_data_size",
-            "Value": "8192"
-        },
-        {
-            "Key": "bootloader.low_fuses",
-            "Value": "0xFF"
-        },
-        {
-            "Key": "tools.avrdude.upload.verify",
-            "Value": ""
-        },
-        {
-            "Key": "build.usb_manufacturer",
-            "Value": "\"Unknown\""
+            "Key": "tools.avrdude_remote.upload.pattern",
+            "Value": "/usr/bin/run-avrdude /tmp/sketch.hex {upload.verbose} -p{build.mcu}"
         },
         {
             "Key": "menu.cpu.atmega1280",
@@ -1400,300 +1286,328 @@
             "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avrdude\\6.3.0-arduino17"
         },
         {
-            "Key": "runtime.tools.avrdude.path",
-            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avrdude\\6.3.0-arduino17"
-        },
-        {
-            "Key": "tools.ctags.pattern",
-            "Value": "\"{cmd.path}\" -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives \"{source_file}\""
-        },
-        {
-            "Key": "compiler.path",
-            "Value": "{runtime.tools.avr-gcc.path}/bin/"
-        },
-        {
-            "Key": "tools.avrdude.erase.params.verbose",
-            "Value": "-v"
-        },
-        {
-            "Key": "build.usb_flags",
-            "Value": "-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'"
-        },
-        {
-            "Key": "menu.cpu.atmega1280.bootloader.high_fuses",
-            "Value": "0xDA"
-        },
-        {
-            "Key": "_id",
-            "Value": "mega"
-        },
-        {
-            "Key": "runtime.ide.path",
-            "Value": "C:\\Users\\creosot\\AppData\\Local\\VisualGDB\\Arduino"
-        },
-        {
-            "Key": "runtime.tools.avr-gcc.path",
-            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5"
-        },
-        {
-            "Key": "runtime.tools.arduinoOTA.path",
-            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\arduinoOTA\\1.3.0"
-        },
-        {
-            "Key": "build.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "recipe.ar.pattern",
-            "Value": "\"{compiler.path}{compiler.ar.cmd}\" {compiler.ar.flags} {compiler.ar.extra_flags} \"{archive_file_path}\" \"{object_file}\""
-        },
-        {
-            "Key": "vid.1",
-            "Value": "0x2341"
-        },
-        {
-            "Key": "bootloader.unlock_bits",
-            "Value": "0x3F"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.upload.maximum_size",
-            "Value": "253952"
-        },
-        {
-            "Key": "build.core",
-            "Value": "arduino"
-        },
-        {
-            "Key": "build.path",
-            "Value": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug"
-        },
-        {
-            "Key": "runtime.os",
-            "Value": "windows"
-        },
-        {
-            "Key": "tools.ctags.path",
-            "Value": "{runtime.tools.ctags.path}"
-        },
-        {
-            "Key": "preproc.macros.flags",
-            "Value": "-w -x c++ -E -CC"
-        },
-        {
-            "Key": "recipe.c.o.pattern",
-            "Value": "\"{compiler.path}{compiler.c.cmd}\" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
-        },
-        {
-            "Key": "tools.avrdude.upload.params.verbose",
-            "Value": "-v"
-        },
-        {
-            "Key": "name",
-            "Value": "Arduino Mega or Mega 2560"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.bootloader.high_fuses",
-            "Value": "0xD8"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.bootloader.file",
-            "Value": "stk500v2/stk500boot_v2_mega2560.hex"
-        },
-        {
-            "Key": "version",
-            "Value": "1.8.2"
+            "Key": "tools.avrdude.path",
+            "Value": "{runtime.tools.avrdude.path}"
         },
         {
             "Key": "compiler.cpp.flags",
             "Value": "-c -g -Os {compiler.warning_flags} -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto"
         },
         {
-            "Key": "recipe.output.tmp_file",
-            "Value": "{build.project_name}.hex"
-        },
-        {
-            "Key": "vid.0",
-            "Value": "0x2341"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.build.mcu",
-            "Value": "atmega2560"
-        },
-        {
-            "Key": "runtime.tools.arduino-hardware.path",
-            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware"
-        },
-        {
-            "Key": "compiler.objcopy.eep.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "runtime.tools.ctags.path",
-            "Value": "C:\\Users\\creosot\\AppData\\Local\\VisualGDB\\Arduino\\tools-builder\\ctags\\5.8-arduino11"
-        },
-        {
-            "Key": "tools.arduino-preprocessor.cmd.path",
-            "Value": "{path}/arduino-preprocessor"
-        },
-        {
-            "Key": "tools.avrdude.cmd.path",
-            "Value": "{path}/bin/avrdude"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.build.board",
-            "Value": "AVR_MEGA2560"
-        },
-        {
-            "Key": "runtime.tools.arduino-tools.path",
-            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools"
-        },
-        {
-            "Key": "software",
-            "Value": "ARDUINO"
-        },
-        {
-            "Key": "vid.4",
-            "Value": "0x2341"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.bootloader.extended_fuses",
-            "Value": "0xFD"
-        },
-        {
-            "Key": "menu.cpu.atmega1280.upload.speed",
-            "Value": "57600"
-        },
-        {
-            "Key": "upload.protocol",
-            "Value": "wiring"
+            "Key": "bootloader.file",
+            "Value": "stk500v2/stk500boot_v2_mega2560.hex"
         },
         {
             "Key": "runtime.tools.esp32-hardware.path",
             "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\hardware"
         },
         {
-            "Key": "compiler.c.elf.cmd",
-            "Value": "avr-gcc"
+            "Key": "runtime.tools.xtensa-esp32-elf-gcc.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\xtensa-esp32-elf-gcc\\1.22.0-80-g6c4433a-5.2.0"
         },
         {
-            "Key": "tools.avrdude.program.params.quiet",
-            "Value": "-q -q"
+            "Key": "runtime.tools.esptool_py-2.6.1.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\esptool_py\\2.6.1"
         },
         {
-            "Key": "pid.3",
-            "Value": "0x0042"
+            "Key": "runtime.tools.esp32-tools.path",
+            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools"
         },
         {
-            "Key": "build.project_name",
-            "Value": "Sms_arduino.ino"
+            "Key": "tools.ctags.cmd.path",
+            "Value": "{path}/ctags"
         },
         {
-            "Key": "runtime.hardware.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr"
+            "Key": "menu.cpu.atmega2560.upload.maximum_size",
+            "Value": "253952"
         },
         {
-            "Key": "compiler.c.elf.extra_flags",
-            "Value": ""
+            "Key": "pid.2",
+            "Value": "0x0010"
         },
         {
-            "Key": "menu.cpu.atmega1280.bootloader.file",
-            "Value": "atmega/ATmegaBOOT_168_atmega1280.hex"
+            "Key": "menu.cpu.atmega1280.upload.maximum_size",
+            "Value": "126976"
         },
         {
-            "Key": "tools.arduino-preprocessor.pattern",
-            "Value": "\"{cmd.path}\" \"{source_file}\" \"{codecomplete}\" -- -std=gnu++11"
+            "Key": "upload.maximum_size",
+            "Value": "253952"
         },
         {
-            "Key": "compiler.elf2hex.cmd",
-            "Value": "avr-objcopy"
-        },
-        {
-            "Key": "preproc.includes.flags",
-            "Value": "-w -x c++ -M -MG -MP"
-        },
-        {
-            "Key": "tools.avrdude.program.pattern",
-            "Value": "\"{cmd.path}\" \"-C{config.path}\" {program.verbose} {program.verify} -p{build.mcu} -c{protocol} {program.extra_params} \"-Uflash:w:{build.path}/{build.project_name}.hex:i\""
-        },
-        {
-            "Key": "runtime.tools.mkspiffs-0.2.3.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\mkspiffs\\0.2.3"
-        },
-        {
-            "Key": "tools.arduino-preprocessor.path",
-            "Value": "{runtime.tools.arduino-preprocessor.path}"
-        },
-        {
-            "Key": "compiler.c.elf.flags",
-            "Value": "{compiler.warning_flags} -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections"
-        },
-        {
-            "Key": "recipe.preproc.includes",
-            "Value": "\"{compiler.path}{compiler.cpp.cmd}\" {compiler.cpp.flags} {preproc.includes.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} \"{source_file}\""
-        },
-        {
-            "Key": "tools.avrdude.upload.pattern",
-            "Value": "\"{cmd.path}\" \"-C{config.path}\" {upload.verbose} {upload.verify} -p{build.mcu} -c{upload.protocol} \"-P{serial.port}\" -b{upload.speed} -D \"-Uflash:w:{build.path}/{build.project_name}.hex:i\""
-        },
-        {
-            "Key": "compiler.warning_flags.all",
-            "Value": "-Wall -Wextra"
-        },
-        {
-            "Key": "compiler.elf2hex.flags",
-            "Value": "-O ihex -R .eeprom"
-        },
-        {
-            "Key": "upload.speed",
-            "Value": "115200"
-        },
-        {
-            "Key": "build.board",
-            "Value": "AVR_MEGA2560"
-        },
-        {
-            "Key": "build.arch",
-            "Value": "AVR"
+            "Key": "build.core.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino"
         },
         {
             "Key": "runtime.ide.version",
             "Value": "10600"
         },
         {
-            "Key": "runtime.tools.avr-gcc-7.3.0-atmel3.6.1-arduino5.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5"
+            "Key": "preproc.includes.flags",
+            "Value": "-w -x c++ -M -MG -MP"
         },
         {
-            "Key": "build.source.path",
-            "Value": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches"
-        },
-        {
-            "Key": "extra.time.utc",
-            "Value": "1587899523"
-        },
-        {
-            "Key": "compiler.warning_flags.none",
-            "Value": "-w"
-        },
-        {
-            "Key": "compiler.cpp.cmd",
-            "Value": "avr-g++"
-        },
-        {
-            "Key": "vid.3",
-            "Value": "0x2A03"
-        },
-        {
-            "Key": "menu.cpu.atmega1280.bootloader.extended_fuses",
-            "Value": "0xF5"
+            "Key": "tools.avrdude.program.params.quiet",
+            "Value": "-q -q"
         },
         {
             "Key": "compiler.S.flags",
             "Value": "-c -g -x assembler-with-cpp -flto -MMD"
         },
         {
+            "Key": "compiler.ar.flags",
+            "Value": "rcs"
+        },
+        {
+            "Key": "recipe.cpp.o.pattern",
+            "Value": "\"{compiler.path}{compiler.cpp.cmd}\" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
+        },
+        {
+            "Key": "recipe.output.save_file",
+            "Value": "{build.project_name}.{build.variant}.hex"
+        },
+        {
+            "Key": "tools.avrdude.upload.params.verbose",
+            "Value": "-v"
+        },
+        {
+            "Key": "tools.avrdude.erase.pattern",
+            "Value": "\"{cmd.path}\" \"-C{config.path}\" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m"
+        },
+        {
+            "Key": "compiler.warning_flags.default",
+            "Value": ""
+        },
+        {
+            "Key": "compiler.c.cmd",
+            "Value": "avr-gcc"
+        },
+        {
+            "Key": "runtime.tools.avrdude.path",
+            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avrdude\\6.3.0-arduino17"
+        },
+        {
+            "Key": "bootloader.high_fuses",
+            "Value": "0xD8"
+        },
+        {
+            "Key": "build.fqbn",
+            "Value": "arduino:avr:mega:cpu=atmega2560"
+        },
+        {
+            "Key": "compiler.c.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "build.arch",
+            "Value": "AVR"
+        },
+        {
+            "Key": "build.core",
+            "Value": "arduino"
+        },
+        {
+            "Key": "tools.arduino-preprocessor.cmd.path",
+            "Value": "{path}/arduino-preprocessor"
+        },
+        {
+            "Key": "build.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "pid.5",
+            "Value": "0x0242"
+        },
+        {
+            "Key": "runtime.ide.path",
+            "Value": "C:\\Users\\creosot\\AppData\\Local\\VisualGDB\\Arduino"
+        },
+        {
+            "Key": "runtime.tools.mkspiffs-0.2.3.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\mkspiffs\\0.2.3"
+        },
+        {
+            "Key": "compiler.elf2hex.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "tools.avrdude.erase.params.quiet",
+            "Value": "-q -q"
+        },
+        {
+            "Key": "build.system.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\system"
+        },
+        {
+            "Key": "recipe.preproc.includes",
+            "Value": "\"{compiler.path}{compiler.cpp.cmd}\" {compiler.cpp.flags} {preproc.includes.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} \"{source_file}\""
+        },
+        {
+            "Key": "vid.0",
+            "Value": "0x2341"
+        },
+        {
+            "Key": "upload.protocol",
+            "Value": "wiring"
+        },
+        {
+            "Key": "build.board",
+            "Value": "AVR_MEGA2560"
+        },
+        {
+            "Key": "runtime.tools.arduinoOTA-1.3.0.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\arduinoOTA\\1.3.0"
+        },
+        {
+            "Key": "tools.arduino-preprocessor.path",
+            "Value": "{runtime.tools.arduino-preprocessor.path}"
+        },
+        {
+            "Key": "compiler.warning_flags.more",
+            "Value": "-Wall"
+        },
+        {
+            "Key": "vid.1",
+            "Value": "0x2341"
+        },
+        {
+            "Key": "extra.time.dst",
+            "Value": "0"
+        },
+        {
+            "Key": "tools.ctags.pattern",
+            "Value": "\"{cmd.path}\" -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives \"{source_file}\""
+        },
+        {
+            "Key": "compiler.ar.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "build.usb_flags",
+            "Value": "-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'"
+        },
+        {
+            "Key": "bootloader.unlock_bits",
+            "Value": "0x3F"
+        },
+        {
+            "Key": "menu.cpu.atmega2560.build.board",
+            "Value": "AVR_MEGA2560"
+        },
+        {
+            "Key": "menu.cpu.atmega1280.bootloader.high_fuses",
+            "Value": "0xDA"
+        },
+        {
+            "Key": "upload.speed",
+            "Value": "115200"
+        },
+        {
+            "Key": "build.mcu",
+            "Value": "atmega2560"
+        },
+        {
+            "Key": "compiler.c.elf.extra_flags",
+            "Value": ""
+        },
+        {
             "Key": "recipe.objcopy.hex.pattern",
             "Value": "\"{compiler.path}{compiler.elf2hex.cmd}\" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} \"{build.path}/{build.project_name}.elf\" \"{build.path}/{build.project_name}.hex\""
+        },
+        {
+            "Key": "tools.avrdude.bootloader.params.quiet",
+            "Value": "-q -q"
+        },
+        {
+            "Key": "upload.tool",
+            "Value": "avrdude"
+        },
+        {
+            "Key": "runtime.tools.arduino-hardware.path",
+            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware"
+        },
+        {
+            "Key": "runtime.tools.arduino.path",
+            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools"
+        },
+        {
+            "Key": "extra.time.local",
+            "Value": "1588010979"
+        },
+        {
+            "Key": "preproc.macros.flags",
+            "Value": "-w -x c++ -E -CC"
+        },
+        {
+            "Key": "recipe.S.o.pattern",
+            "Value": "\"{compiler.path}{compiler.c.cmd}\" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
+        },
+        {
+            "Key": "recipe.c.o.pattern",
+            "Value": "\"{compiler.path}{compiler.c.cmd}\" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
+        },
+        {
+            "Key": "compiler.cpp.cmd",
+            "Value": "avr-g++"
+        },
+        {
+            "Key": "compiler.ar.cmd",
+            "Value": "avr-gcc-ar"
+        },
+        {
+            "Key": "vid.3",
+            "Value": "0x2A03"
+        },
+        {
+            "Key": "menu.cpu.atmega1280.build.board",
+            "Value": "AVR_MEGA"
+        },
+        {
+            "Key": "build.variant.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega"
+        },
+        {
+            "Key": "tools.ctags.path",
+            "Value": "{runtime.tools.ctags.path}"
+        },
+        {
+            "Key": "tools.avrdude.program.params.verbose",
+            "Value": "-v"
+        },
+        {
+            "Key": "tools.avrdude.program.params.noverify",
+            "Value": "-V"
+        },
+        {
+            "Key": "compiler.warning_flags.all",
+            "Value": "-Wall -Wextra"
+        },
+        {
+            "Key": "compiler.elf2hex.cmd",
+            "Value": "avr-objcopy"
+        },
+        {
+            "Key": "pid.4",
+            "Value": "0x0210"
+        },
+        {
+            "Key": "vid.5",
+            "Value": "0x2341"
+        },
+        {
+            "Key": "menu.cpu.atmega2560",
+            "Value": "ATmega2560 (Mega 2560)"
+        },
+        {
+            "Key": "runtime.tools.arduino-tools.path",
+            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools"
+        },
+        {
+            "Key": "compiler.c.elf.flags",
+            "Value": "{compiler.warning_flags} -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections"
+        },
+        {
+            "Key": "name",
+            "Value": "Arduino Mega or Mega 2560"
         },
         {
             "Key": "recipe.preproc.macros",
@@ -1704,124 +1618,280 @@
             "Value": "-V"
         },
         {
-            "Key": "pid.2",
-            "Value": "0x0010"
-        },
-        {
-            "Key": "upload.tool",
-            "Value": "avrdude"
-        },
-        {
-            "Key": "build.f_cpu",
-            "Value": "16000000L"
-        },
-        {
-            "Key": "build.core.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino"
-        },
-        {
-            "Key": "recipe.size.regex.data",
-            "Value": "^(?:\\.data|\\.bss|\\.noinit)\\s+([0-9]+).*"
-        },
-        {
-            "Key": "tools.avrdude.program.params.verbose",
-            "Value": "-v"
-        },
-        {
-            "Key": "vid.5",
-            "Value": "0x2341"
-        },
-        {
-            "Key": "runtime.tools.arduinoOTA-1.3.0.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\arduinoOTA\\1.3.0"
-        },
-        {
-            "Key": "compiler.c.cmd",
-            "Value": "avr-gcc"
-        },
-        {
-            "Key": "compiler.ar.flags",
-            "Value": "rcs"
-        },
-        {
-            "Key": "recipe.size.pattern",
-            "Value": "\"{compiler.path}{compiler.size.cmd}\" -A \"{build.path}/{build.project_name}.elf\""
-        },
-        {
-            "Key": "recipe.size.regex.eeprom",
-            "Value": "^(?:\\.eeprom)\\s+([0-9]+).*"
-        },
-        {
-            "Key": "tools.avrdude.upload.params.quiet",
-            "Value": "-q -q"
-        },
-        {
-            "Key": "tools.avrdude.program.verify",
-            "Value": ""
-        },
-        {
-            "Key": "tools.avrdude.upload.network_pattern",
-            "Value": "\"{network_cmd}\" -address {serial.port} -port {upload.network.port} -sketch \"{build.path}/{build.project_name}.hex\" -upload {upload.network.endpoint_upload} -sync {upload.network.endpoint_sync} -reset {upload.network.endpoint_reset} -sync_exp {upload.network.sync_return}"
-        },
-        {
-            "Key": "pid.4",
-            "Value": "0x0210"
-        },
-        {
-            "Key": "extra.time.dst",
-            "Value": "0"
-        },
-        {
-            "Key": "compiler.warning_flags.default",
-            "Value": ""
-        },
-        {
-            "Key": "compiler.ar.cmd",
-            "Value": "avr-gcc-ar"
+            "Key": "build.usb_manufacturer",
+            "Value": "\"Unknown\""
         },
         {
             "Key": "compiler.size.cmd",
             "Value": "avr-size"
         },
         {
-            "Key": "menu.cpu.atmega2560.upload.protocol",
-            "Value": "wiring"
+            "Key": "recipe.c.combine.pattern",
+            "Value": "\"{compiler.path}{compiler.c.elf.cmd}\" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o \"{build.path}/{build.project_name}.elf\" {object_files} \"{build.path}/{archive_file}\" \"-L{build.path}\" -lm"
         },
         {
-            "Key": "build.fqbn",
-            "Value": "arduino:avr:mega:cpu=atmega2560"
+            "Key": "menu.cpu.atmega1280.upload.speed",
+            "Value": "57600"
         },
         {
-            "Key": "extra.time.zone",
-            "Value": "10800"
+            "Key": "runtime.hardware.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr"
         },
         {
             "Key": "compiler.cpp.extra_flags",
             "Value": ""
         },
         {
+            "Key": "recipe.output.tmp_file",
+            "Value": "{build.project_name}.hex"
+        },
+        {
+            "Key": "vid.4",
+            "Value": "0x2341"
+        },
+        {
+            "Key": "compiler.objcopy.cmd",
+            "Value": "avr-objcopy"
+        },
+        {
+            "Key": "tools.avrdude.bootloader.pattern",
+            "Value": "\"{cmd.path}\" \"-C{config.path}\" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} \"-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i\" -Ulock:w:{bootloader.lock_bits}:m"
+        },
+        {
+            "Key": "tools.avrdude.config.path",
+            "Value": "{path}/etc/avrdude.conf"
+        },
+        {
+            "Key": "runtime.platform.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2"
+        },
+        {
+            "Key": "pid.3",
+            "Value": "0x0042"
+        },
+        {
+            "Key": "build.f_cpu",
+            "Value": "16000000L"
+        },
+        {
+            "Key": "menu.cpu.atmega2560.bootloader.high_fuses",
+            "Value": "0xD8"
+        },
+        {
+            "Key": "_id",
+            "Value": "mega"
+        },
+        {
+            "Key": "runtime.tools.avr-gcc-7.3.0-atmel3.6.1-arduino5.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5"
+        },
+        {
+            "Key": "runtime.tools.mkspiffs.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\mkspiffs\\0.2.3"
+        },
+        {
+            "Key": "compiler.warning_flags",
+            "Value": "-w"
+        },
+        {
+            "Key": "recipe.size.regex.eeprom",
+            "Value": "^(?:\\.eeprom)\\s+([0-9]+).*"
+        },
+        {
+            "Key": "runtime.tools.ctags.path",
+            "Value": "C:\\Users\\creosot\\AppData\\Local\\VisualGDB\\Arduino\\tools-builder\\ctags\\5.8-arduino11"
+        },
+        {
+            "Key": "tools.avrdude.network_cmd",
+            "Value": "{runtime.tools.arduinoOTA.path}/bin/arduinoOTA"
+        },
+        {
+            "Key": "runtime.tools.esptool_py.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\esptool_py\\2.6.1"
+        },
+        {
+            "Key": "compiler.c.flags",
+            "Value": "-c -g -Os {compiler.warning_flags} -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects"
+        },
+        {
+            "Key": "compiler.S.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "menu.cpu.atmega2560.upload.protocol",
+            "Value": "wiring"
+        },
+        {
+            "Key": "menu.cpu.atmega2560.bootloader.file",
+            "Value": "stk500v2/stk500boot_v2_mega2560.hex"
+        },
+        {
+            "Key": "vid.2",
+            "Value": "0x2A03"
+        },
+        {
+            "Key": "bootloader.lock_bits",
+            "Value": "0x0F"
+        },
+        {
+            "Key": "menu.cpu.atmega1280.bootloader.extended_fuses",
+            "Value": "0xF5"
+        },
+        {
+            "Key": "tools.avrdude.upload.params.quiet",
+            "Value": "-q -q"
+        },
+        {
+            "Key": "tools.avrdude.bootloader.params.verbose",
+            "Value": "-v"
+        },
+        {
+            "Key": "runtime.tools.esp32.path",
+            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools"
+        },
+        {
+            "Key": "compiler.objcopy.eep.flags",
+            "Value": "-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0"
+        },
+        {
             "Key": "menu.cpu.atmega1280.upload.protocol",
             "Value": "arduino"
         },
         {
-            "Key": "menu.cpu.atmega1280.upload.maximum_size",
-            "Value": "126976"
+            "Key": "tools.avrdude.upload.verify",
+            "Value": ""
+        },
+        {
+            "Key": "build.project_name",
+            "Value": "Sms_arduino.ino"
+        },
+        {
+            "Key": "ide_version",
+            "Value": "10600"
+        },
+        {
+            "Key": "runtime.tools.avr-gcc.path",
+            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5"
+        },
+        {
+            "Key": "recipe.size.pattern",
+            "Value": "\"{compiler.path}{compiler.size.cmd}\" -A \"{build.path}/{build.project_name}.elf\""
+        },
+        {
+            "Key": "recipe.size.regex.data",
+            "Value": "^(?:\\.data|\\.bss|\\.noinit)\\s+([0-9]+).*"
+        },
+        {
+            "Key": "compiler.path",
+            "Value": "{runtime.tools.avr-gcc.path}/bin/"
+        },
+        {
+            "Key": "compiler.c.elf.cmd",
+            "Value": "avr-gcc"
+        },
+        {
+            "Key": "tools.avrdude.cmd.path",
+            "Value": "{path}/bin/avrdude"
+        },
+        {
+            "Key": "tools.avrdude.upload.pattern",
+            "Value": "\"{cmd.path}\" \"-C{config.path}\" {upload.verbose} {upload.verify} -p{build.mcu} -c{upload.protocol} \"-P{serial.port}\" -b{upload.speed} -D \"-Uflash:w:{build.path}/{build.project_name}.hex:i\""
+        },
+        {
+            "Key": "tools.avrdude.upload.network_pattern",
+            "Value": "\"{network_cmd}\" -address {serial.port} -port {upload.network.port} -sketch \"{build.path}/{build.project_name}.hex\" -upload {upload.network.endpoint_upload} -sync {upload.network.endpoint_sync} -reset {upload.network.endpoint_reset} -sync_exp {upload.network.sync_return}"
+        },
+        {
+            "Key": "bootloader.low_fuses",
+            "Value": "0xFF"
         },
         {
             "Key": "menu.cpu.atmega1280.build.mcu",
             "Value": "atmega1280"
         },
         {
-            "Key": "bootloader.high_fuses",
-            "Value": "0xD8"
+            "Key": "extra.time.zone",
+            "Value": "10800"
         },
         {
-            "Key": "build.variant.path",
-            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega"
+            "Key": "compiler.ldflags",
+            "Value": ""
         },
         {
-            "Key": "runtime.tools.esp32.path",
-            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools"
+            "Key": "recipe.ar.pattern",
+            "Value": "\"{compiler.path}{compiler.ar.cmd}\" {compiler.ar.flags} {compiler.ar.extra_flags} \"{archive_file_path}\" \"{object_file}\""
+        },
+        {
+            "Key": "runtime.tools.arduinoOTA.path",
+            "Value": "d:\\Users\\creosot\\Documents\\ArduinoData\\packages\\arduino\\tools\\arduinoOTA\\1.3.0"
+        },
+        {
+            "Key": "recipe.objcopy.eep.pattern",
+            "Value": "\"{compiler.path}{compiler.objcopy.cmd}\" {compiler.objcopy.eep.flags} {compiler.objcopy.eep.extra_flags} \"{build.path}/{build.project_name}.elf\" \"{build.path}/{build.project_name}.eep\""
+        },
+        {
+            "Key": "menu.cpu.atmega2560.bootloader.extended_fuses",
+            "Value": "0xFD"
+        },
+        {
+            "Key": "menu.cpu.atmega2560.build.mcu",
+            "Value": "atmega2560"
+        },
+        {
+            "Key": "build.path",
+            "Value": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\Output\\Arduino_Mega_or_Mega_2560\\Debug"
+        },
+        {
+            "Key": "runtime.tools.xtensa-esp32-elf-gcc-1.22.0-80-g6c4433a-5.2.0.path",
+            "Value": "D:\\Users\\creosot\\Documents\\ArduinoData\\packages\\esp32\\tools\\xtensa-esp32-elf-gcc\\1.22.0-80-g6c4433a-5.2.0"
+        },
+        {
+            "Key": "software",
+            "Value": "ARDUINO"
+        },
+        {
+            "Key": "compiler.warning_flags.none",
+            "Value": "-w"
+        },
+        {
+            "Key": "archive_file_path",
+            "Value": "{build.path}/{archive_file}"
+        },
+        {
+            "Key": "compiler.objcopy.eep.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "upload.maximum_data_size",
+            "Value": "8192"
+        },
+        {
+            "Key": "bootloader.tool",
+            "Value": "avrdude"
+        },
+        {
+            "Key": "bootloader.extended_fuses",
+            "Value": "0xFD"
+        },
+        {
+            "Key": "runtime.os",
+            "Value": "windows"
+        },
+        {
+            "Key": "build.source.path",
+            "Value": "D:\\Users\\creosot\\source\\repos\\Sms_arduino\\sketches"
+        },
+        {
+            "Key": "tools.arduino-preprocessor.pattern",
+            "Value": "\"{cmd.path}\" \"{source_file}\" \"{codecomplete}\" -- -std=gnu++11"
+        },
+        {
+            "Key": "compiler.elf2hex.flags",
+            "Value": "-O ihex -R .eeprom"
+        },
+        {
+            "Key": "extra.time.utc",
+            "Value": "1588000179"
         }
     ]
 }
