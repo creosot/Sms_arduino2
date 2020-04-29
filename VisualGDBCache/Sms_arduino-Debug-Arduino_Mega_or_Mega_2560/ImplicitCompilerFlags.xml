@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <ImplicitFlagCache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <GCC>d:\Users\creosot\Documents\ArduinoData\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5/bin/avr-gcc</GCC>
-  <GXX>d:\Users\creosot\Documents\ArduinoData\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5/bin/avr-g++</GXX>
+  <GCC>C:\Users\Admin\Documents\ArduinoData\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5/bin/avr-gcc</GCC>
+  <GXX>C:\Users\Admin\Documents\ArduinoData\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5/bin/avr-g++</GXX>
   <CachedFlags>
     <Entry>
       <Key>
@@ -10,16 +10,16 @@
       </Key>
       <Specs>
         <RawIncludeDirs>
-          <string>d:\users\creosot\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/include</string>
-          <string>d:\users\creosot\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/include-fixed</string>
-          <string>d:\users\creosot\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/../../../../avr/include</string>
+          <string>c:\users\admin\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/include</string>
+          <string>c:\users\admin\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/include-fixed</string>
+          <string>c:\users\admin\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/../../../../avr/include</string>
         </RawIncludeDirs>
         <RawLibraryPaths>
-          <string>d:/users/creosot/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr6/</string>
-          <string>d:/users/creosot/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6/</string>
-          <string>d:/users/creosot/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/</string>
-          <string>d:/users/creosot/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/</string>
-          <string>d:/users/creosot/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/</string>
+          <string>c:/users/admin/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr6/</string>
+          <string>c:/users/admin/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6/</string>
+          <string>c:/users/admin/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/</string>
+          <string>c:/users/admin/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/</string>
+          <string>c:/users/admin/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/</string>
         </RawLibraryPaths>
         <ForcedIncludeFiles />
         <PreprocessorMacros>
@@ -1989,16 +1989,16 @@
       </Key>
       <Specs>
         <RawIncludeDirs>
-          <string>d:\users\creosot\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/include</string>
-          <string>d:\users\creosot\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/include-fixed</string>
-          <string>d:\users\creosot\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/../../../../avr/include</string>
+          <string>c:\users\admin\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/include</string>
+          <string>c:\users\admin\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/include-fixed</string>
+          <string>c:\users\admin\documents\arduinodata\packages\arduino\tools\avr-gcc\7.3.0-atmel3.6.1-arduino5\bin\../lib/gcc/avr/7.3.0/../../../../avr/include</string>
         </RawIncludeDirs>
         <RawLibraryPaths>
-          <string>d:/users/creosot/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr6/</string>
-          <string>d:/users/creosot/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6/</string>
-          <string>d:/users/creosot/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/</string>
-          <string>d:/users/creosot/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/</string>
-          <string>d:/users/creosot/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/</string>
+          <string>c:/users/admin/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/avr6/</string>
+          <string>c:/users/admin/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/avr6/</string>
+          <string>c:/users/admin/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/</string>
+          <string>c:/users/admin/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/</string>
+          <string>c:/users/admin/documents/arduinodata/packages/arduino/tools/avr-gcc/7.3.0-atmel3.6.1-arduino5/bin/../lib/gcc/avr/7.3.0/../../../../avr/lib/</string>
         </RawLibraryPaths>
         <ForcedIncludeFiles />
         <PreprocessorMacros>

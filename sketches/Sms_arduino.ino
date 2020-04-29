@@ -9,6 +9,7 @@
 #define TINY_GSM_USE_WIFI false
 #define GSM_PIN ""
 
+#define LENGTH_SMS_BUFFER	10
 #define ROTATE_ON	0 //inverted
 #define ROTATE_OFF_AC_OFF	1
 #define ROTATE_OFF_AC_ON	2
@@ -139,6 +140,9 @@ TinyGsmClient client(modem);
 
 void setup()
 {
+	// Set console baud rate
+	SerialMon.begin(115200);
+	delay(100);
 	SerialMon.println("Wait...");
 	delay(1000);
 	//digitalWrite(PWR_KEY, LOW);
@@ -202,6 +206,41 @@ bool delete_all_SMS()
 {
 	modem.sendAT(GF("+CMGDA=\"DEL ALL\""));     // Delete ALL SMS Message
 	return modem.waitResponse(15000L) == 1;
+}
+
+bool readAllSMS()
+{
+	modem.sendAT(GF("+CMGF=1"));     //Text type messages instead of PDU
+	modem.waitResponse();
+	modem.sendAT(GF("+CNMI=2,0"));     //Disable messages about new SMS from the GSM module
+	modem.waitResponse();
+	String data;
+	modem.sendAT(GF("+CMGL=\"ALL\""));
+	modem.waitResponse(10000L, data, GF(GSM_NL "+CMGL:"));
+	
+//	for (uint8_t i = 0; i < LENGTH_SMS_BUFFER; i++)
+//	{
+//		
+//		if (modem.waitResponse(10000L, GF(GSM_NL "+CMGL:")))
+//		{
+//			String header = modem.stream.readStringUntil('\n');
+//			String body = modem.stream.readStringUntil('\n');
+//			body.trim();
+//			SerialMon.println();
+//			SerialMon.println(F("Receive SMS:"));
+//			SerialMon.print(F("Header: "));
+//			SerialMon.println(header);
+//			SerialMon.print(F("Body: "));
+//			SerialMon.println(body);
+//		
+//		}
+//		else
+//		{
+//			SerialMon.println(F("not receive SMS"));
+//			return false;
+//		}
+//	}
+	return false;
 }
 
 bool readSMS(uint8_t index)
