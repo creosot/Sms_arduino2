@@ -8,7 +8,6 @@
 	void checkSMS(); \
 	bool deleteSMS(uint8_t index); \
 	bool delete_all_SMS(); \
-	bool readAllSMS(); \
 	bool readSMS(uint8_t index); \
 	String tel_number_receiveSMS(String header); \
 	uint16_t count_receiveSMS(); \

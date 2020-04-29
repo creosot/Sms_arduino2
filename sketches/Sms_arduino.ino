@@ -25,6 +25,8 @@ uint16_t count_receiveSMS(void);
 bool deleteSMS(uint8_t); 
 bool delete_all_SMS(void);
 String tel_number_receiveSMS(String);
+bool readAllSMS();
+bool prepareSMS(String header, String body);
 void testAtCommand(void);
 
 struct Provider
@@ -57,7 +59,8 @@ uint16_t sec;
 uint8_t min;
 uint16_t str_len;
 uint8_t count_sms = 0;
-int temp_indexoff = -1;
+int from_indexoff = -1;
+int to_indexoff = -1;
 #define LENGHT_GID 16
 uint8_t EEMEM flag_gid_eeprom;
 uint8_t EEMEM gid_eeprom[LENGHT_GID];
@@ -180,7 +183,9 @@ uint32_t rate = 0;
 
 void loop()
 {
-	testAtCommand();
+	//testAtCommand();
+	readAllSMS();
+	delay(15000);
 }
 
 void checkSMS()
@@ -211,44 +216,91 @@ bool delete_all_SMS()
 bool readAllSMS()
 {
 	modem.sendAT(GF("+CMGF=1"));     //Text type messages instead of PDU
-	modem.waitResponse();
+	if(modem.waitResponse(10000L) != 1) {
+		return false;
+	}
 	modem.sendAT(GF("+CNMI=2,0"));     //Disable messages about new SMS from the GSM module
-	modem.waitResponse();
-	String data;
+	if(modem.waitResponse(10000L) != 1) {
+		return false;
+	}
 	modem.sendAT(GF("+CMGL=\"ALL\""));
-	modem.waitResponse(10000L, data, GF(GSM_NL "+CMGL:"));
-	
-//	for (uint8_t i = 0; i < LENGTH_SMS_BUFFER; i++)
-//	{
-//		
-//		if (modem.waitResponse(10000L, GF(GSM_NL "+CMGL:")))
-//		{
-//			String header = modem.stream.readStringUntil('\n');
-//			String body = modem.stream.readStringUntil('\n');
-//			body.trim();
-//			SerialMon.println();
-//			SerialMon.println(F("Receive SMS:"));
-//			SerialMon.print(F("Header: "));
-//			SerialMon.println(header);
-//			SerialMon.print(F("Body: "));
-//			SerialMon.println(body);
-//		
-//		}
-//		else
-//		{
-//			SerialMon.println(F("not receive SMS"));
-//			return false;
-//		}
-//	}
+	for (uint8_t i = 0; i < LENGTH_SMS_BUFFER; ++i)
+	{
+		uint8_t res = modem.waitResponse(10000L, GF("ERROR" GSM_NL), GF(GSM_NL "+CMGL:"), GF("OK" GSM_NL));
+		if (!res)
+		{
+			SerialMon.println(F("ERROR: Read SMS unhandled data"));
+			delete_all_SMS();
+			return false;
+		}
+		if (res == 1)
+		{
+			SerialMon.println(F("ERROR: Read SMS"));
+			delete_all_SMS();
+			return false;
+		}
+		if (res == 2)
+		{
+			String header = modem.stream.readStringUntil('\n');
+			String body = modem.stream.readStringUntil('\n');
+			body.trim();
+			SerialMon.println();
+			SerialMon.print("index: ");
+			SerialMon.println(i);
+			SerialMon.println(F("Receive SMS:"));
+			SerialMon.print(F("Header: "));
+			SerialMon.println(header);
+			SerialMon.print(F("Body: "));
+			SerialMon.println(body);
+			prepareSMS(header, body);
+		}
+		if (res == 3)
+		{
+			SerialMon.println(F("All receive SMS reading"));
+			return true;
+		}
+	}
 	return false;
+}
+
+bool prepareSMS(String header, String body)
+{
+	header.trim();
+	from_indexoff = header.indexOf(F(",\"REC"));
+	if (from_indexoff == -1 || from_indexoff == 0)
+	{
+		return false;
+	}
+	int index = header.substring(0, from_indexoff).toInt();
+	SerialMon.println();
+	SerialMon.print("index sms: ");
+	SerialMon.println(index);
+	from_indexoff = header.lastIndexOf(F("READ\",\""));
+	if (from_indexoff == -1)
+	{
+		return false;
+	}
+	to_indexoff = header.indexOf(F("\",\""), from_indexoff);
+	if (to_indexoff == -1)
+	{
+		return false;
+	}
+	String tel = header.substring(from_indexoff, to_indexoff);
+	SerialMon.print("tel: ");
+	SerialMon.println(tel);
+	return true;
 }
 
 bool readSMS(uint8_t index)
 {
 	modem.sendAT(GF("+CMGF=1"));    //Text type messages instead of PDU
-	modem.waitResponse();
+	if(modem.waitResponse(10000L) != 1) {
+		return false;
+	}
 	modem.sendAT(GF("+CNMI=2,0"));    //Disable messages about new SMS from the GSM module
-	modem.waitResponse();
+	if(modem.waitResponse(10000L) != 1) {
+		return false;
+	}
 	modem.sendAT(GF("+CMGR="), index);
 	if (modem.waitResponse(10000L, GF(GSM_NL "+CMGR:"))) 
 	{
@@ -261,15 +313,15 @@ bool readSMS(uint8_t index)
 		SerialMon.println(header);
 		SerialMon.print(F("Body: "));
 		SerialMon.println(body);
-		temp_indexoff = body.indexOf("@");
-		if (temp_indexoff != -1)
+		from_indexoff = body.indexOf("@");
+		if (from_indexoff != -1)
 		{
-			if (imei.equals(body.substring(0, temp_indexoff)))
+			if (imei.equals(body.substring(0, from_indexoff)))
 			{
 				SerialMon.println(F("imei Ok"));
 				
-				temp_indexoff = body.indexOf("status");  //imei@status
-				if(temp_indexoff != -1)
+				from_indexoff = body.indexOf("status");  //imei@status
+				if(from_indexoff != -1)
 				{
 					SerialMon.println("receive status command");
 					String tel = tel_number_receiveSMS(header);
@@ -284,17 +336,17 @@ bool readSMS(uint8_t index)
 					}
 				}
 				
-				temp_indexoff = body.indexOf("gid=");  //imei@gid=newgid
-				if(temp_indexoff != -1)
+				from_indexoff = body.indexOf("gid=");  //imei@gid=newgid
+				if(from_indexoff != -1)
 				{
-					uint8_t len = body.length() - (temp_indexoff + 4);  //+ 4(gid=)
+					uint8_t len = body.length() - (from_indexoff + 4);  //+ 4(gid=)
 					if(len > 3 && len < LENGHT_GID)
 					{
 						for (uint8_t i = 0; i < LENGHT_GID; i++)
 						{
 							gid_array[i] = 0;
 						}
-						gid = body.substring((temp_indexoff + 4), body.length());
+						gid = body.substring((from_indexoff + 4), body.length());
 						gid.toCharArray(gid_array, LENGHT_GID);
 						for (uint8_t i = 0; i < LENGHT_GID; i++)
 						{
@@ -339,14 +391,14 @@ bool readSMS(uint8_t index)
 String tel_number_receiveSMS(String header)
 {
 	String tel;
-	temp_indexoff = header.indexOf("\",\"+");
-	if (temp_indexoff != -1)
+	from_indexoff = header.indexOf("\",\"+");
+	if (from_indexoff != -1)
 	{
-		tel = header.substring(temp_indexoff + 3, header.length());  //start to +
-		temp_indexoff = tel.indexOf("\",\"");
-		if (temp_indexoff != -1)
+		tel = header.substring(from_indexoff + 3, header.length());  //start to +
+		from_indexoff = tel.indexOf("\",\"");
+		if (from_indexoff != -1)
 		{
-			return tel.substring(0, temp_indexoff);
+			return tel.substring(0, from_indexoff);
 		}
 		else
 		{
@@ -370,10 +422,10 @@ uint16_t count_receiveSMS()
 	if (modem.waitResponse(10000L, GF("+CPMS:"))) 
 	{
 		res = modem.stream.readStringUntil('\n');
-		temp_indexoff = res.indexOf("SM_P");
-		if (temp_indexoff != -1)
+		from_indexoff = res.indexOf("SM_P");
+		if (from_indexoff != -1)
 		{
-			c = res.substring(temp_indexoff + 6, temp_indexoff + 8).toInt();
+			c = res.substring(from_indexoff + 6, from_indexoff + 8).toInt();
 		}
 	}
 	modem.waitResponse();
