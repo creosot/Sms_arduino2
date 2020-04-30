@@ -224,7 +224,7 @@ bool readAllSMS()
 		return false;
 	}
 	modem.sendAT(GF("+CMGL=\"ALL\""));
-	for (uint8_t i = 0; i < LENGTH_SMS_BUFFER; ++i)
+	for (uint8_t i = 0; i < LENGTH_SMS_BUFFER; i++)
 	{
 		uint8_t res = modem.waitResponse(10000L, GF("ERROR" GSM_NL), GF(GSM_NL "+CMGL:"), GF("OK" GSM_NL));
 		if (!res)
@@ -245,8 +245,8 @@ bool readAllSMS()
 			String body = modem.stream.readStringUntil('\n');
 			body.trim();
 			SerialMon.println();
-			SerialMon.print("index: ");
-			SerialMon.println(i);
+			SerialMon.print("count: ");
+			SerialMon.println(i + 1);
 			SerialMon.println(F("Receive SMS:"));
 			SerialMon.print(F("Header: "));
 			SerialMon.println(header);
@@ -265,6 +265,7 @@ bool readAllSMS()
 
 bool prepareSMS(String header, String body)
 {
+	//header
 	header.trim();
 	from_indexoff = header.indexOf(F(",\"REC"));
 	if (from_indexoff == -1 || from_indexoff == 0)
@@ -273,13 +274,14 @@ bool prepareSMS(String header, String body)
 	}
 	int index = header.substring(0, from_indexoff).toInt();
 	SerialMon.println();
-	SerialMon.print("index sms: ");
+	SerialMon.print("sms index: ");
 	SerialMon.println(index);
-	from_indexoff = header.lastIndexOf(F("READ\",\""));
+	from_indexoff = header.indexOf(F("READ\",\""));
 	if (from_indexoff == -1)
 	{
 		return false;
 	}
+	from_indexoff += 7; //length READ","
 	to_indexoff = header.indexOf(F("\",\""), from_indexoff);
 	if (to_indexoff == -1)
 	{
@@ -288,7 +290,40 @@ bool prepareSMS(String header, String body)
 	String tel = header.substring(from_indexoff, to_indexoff);
 	SerialMon.print("tel: ");
 	SerialMon.println(tel);
-	return true;
+	//body
+	body.trim();
+	//find imei
+	to_indexoff = body.indexOf("@");
+	if (imei.equals(body.substring(0, to_indexoff)) == false)
+	{
+		SerialMon.println(F("ERRROR: not valid imei in SMS"));
+		return false;
+	}
+	SerialMon.println(F("imei Ok"));
+	//find command
+	from_indexoff = to_indexoff + 1;
+	//status
+	if(body.indexOf("status", from_indexoff) != -1)
+	{
+		SerialMon.println(F("receive status command"));
+	}
+	//mode
+	if(body.indexOf("mode", from_indexoff) != -1)
+	{
+		SerialMon.println(F("receive mode command"));
+	}
+	//gid2
+	if(body.indexOf("gid2", from_indexoff) != -1)
+	{
+		SerialMon.println(F("receive gid2 command"));
+	}
+	//gid
+	if(body.indexOf("gid", from_indexoff) != -1)
+	{
+		SerialMon.println(F("receive gid command"));
+	}
+	SerialMon.println(F("ERROR: receive command not found"));
+	return false;
 }
 
 bool readSMS(uint8_t index)
@@ -313,10 +348,10 @@ bool readSMS(uint8_t index)
 		SerialMon.println(header);
 		SerialMon.print(F("Body: "));
 		SerialMon.println(body);
-		from_indexoff = body.indexOf("@");
-		if (from_indexoff != -1)
+		to_indexoff = body.indexOf("@");
+		if (to_indexoff != -1)
 		{
-			if (imei.equals(body.substring(0, from_indexoff)))
+			if (imei.equals(body.substring(0, to_indexoff)))
 			{
 				SerialMon.println(F("imei Ok"));
 				
