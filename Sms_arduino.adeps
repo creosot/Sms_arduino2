@@ -14,7 +14,7 @@
       <Key>
         <Packager>Volodymyr Shymanskyy</Packager>
         <Name>TinyGSM</Name>
-        <Version>0.9.7</Version>
+        <Version>0.9.17</Version>
       </Key>
     </Dependency>
   </Dependencies>

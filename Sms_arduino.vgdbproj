@@ -152,7 +152,7 @@
       </DebugSettingsOverride>
       <BuildSettingsExtension xsi:type="com.visualgdb.build.external.arduino.extension">
         <BoardID>arduino:avr:mega</BoardID>
-        <COMPort>COM50</COMPort>
+        <COMPort>COM4</COMPort>
         <Properties>
           <Entries>
             <KeyValue>

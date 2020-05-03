@@ -9,6 +9,7 @@
 #define TINY_GSM_USE_WIFI false
 #define GSM_PIN ""
 
+#define LENGHT_GID 32
 #define LENGTH_SMS_BUFFER	10
 #define ROTATE_ON	0 //inverted
 #define ROTATE_OFF_AC_OFF	1
@@ -17,17 +18,24 @@
 #include <avr/eeprom.h>
 #include "TinyGsmClient.h"
 
-bool initModem(void);
-bool checkNetwork(void);
-void smsInit(void);
-bool readSMS(uint8_t);
-uint16_t count_receiveSMS(void);
-bool deleteSMS(uint8_t); 
-bool delete_all_SMS(void);
-String tel_number_receiveSMS(String);
-bool readAllSMS();
-bool prepareSMS(String header, String body);
-void testAtCommand(void);
+typedef struct sms_node {
+	struct sms_node *next;
+	const char *command;
+	const char* data;
+	const char* tel;
+} sms_node_t;
+
+typedef struct stack {
+	int size;
+	sms_node_t *head;
+	sms_node_t *tail;
+} stack_t;
+
+stack_t sms_nodes = {0, NULL, NULL};
+stack_t *ptr_sms_nodes = &sms_nodes;
+
+const char *status = "status";
+
 
 struct Provider
 {
@@ -61,12 +69,24 @@ uint16_t str_len;
 uint8_t count_sms = 0;
 int from_indexoff = -1;
 int to_indexoff = -1;
-#define LENGHT_GID 16
 uint8_t EEMEM flag_gid_eeprom;
 uint8_t EEMEM gid_eeprom[LENGHT_GID];
 char gid_array[LENGHT_GID] = { 0 };
 const char* status_str[] = { "vraschenie", "net phase", "net vrascheniz" };
 unsigned long measuring_timer = 0;
+
+bool initModem(void);
+bool checkNetwork(void);
+void smsInit(void);
+bool readSMS(uint8_t);
+uint16_t count_receiveSMS(void);
+bool deleteSMS(uint8_t); 
+bool delete_all_SMS(void);
+String tel_number_receiveSMS(String);
+bool readAllSMS();
+bool prepareSMS(String header, String body);
+void testAtCommand();
+void node_push(stack_t *list, const char *command, char *data, const char *tel);
 
 class MyTinyGsm : public TinyGsm
 {
@@ -185,20 +205,21 @@ void loop()
 {
 	//testAtCommand();
 	readAllSMS();
-	delay(15000);
+	delay(30000);
+	
 }
 
-void checkSMS()
-{
-	uint16_t c = count_receiveSMS();
-	if (!c) return;
-	for (; c; --c)
-	{
-		readSMS(c);
-		//deleteSMS(c);
-	}
-	delete_all_SMS();
-}
+//void checkSMS()
+//{
+//	uint16_t c = count_receiveSMS();
+//	if (!c) return;
+//	for (; c; --c)
+//	{
+//		readSMS(c);
+//		//deleteSMS(c);
+//	}
+//	delete_all_SMS();
+//}
 
 
 bool deleteSMS(uint8_t index) 
@@ -256,6 +277,7 @@ bool readAllSMS()
 		}
 		if (res == 3)
 		{
+			SerialMon.println();
 			SerialMon.println(F("All receive SMS reading"));
 			return true;
 		}
@@ -287,6 +309,7 @@ bool prepareSMS(String header, String body)
 	{
 		return false;
 	}
+	//tel
 	String tel = header.substring(from_indexoff, to_indexoff);
 	SerialMon.print("tel: ");
 	SerialMon.println(tel);
@@ -296,176 +319,215 @@ bool prepareSMS(String header, String body)
 	to_indexoff = body.indexOf("@");
 	if (imei.equals(body.substring(0, to_indexoff)) == false)
 	{
-		SerialMon.println(F("ERRROR: not valid imei in SMS"));
-		return false;
+		SerialMon.println(F("ERRROR: not valid imei, SMS delete"));
+		goto exit;
 	}
 	SerialMon.println(F("imei Ok"));
 	//find command
-	from_indexoff = to_indexoff + 1;
+	from_indexoff = to_indexoff + 1; //@
 	//status
-	if(body.indexOf("status", from_indexoff) != -1)
+	to_indexoff = body.indexOf("status", from_indexoff);
+	if (to_indexoff != -1)
 	{
-		SerialMon.println(F("receive status command"));
+		SerialMon.println(F("receive command status"));
+		node_push(ptr_sms_nodes, status, NULL, tel.c_str());
+		return true;
 	}
 	//mode
-	if(body.indexOf("mode", from_indexoff) != -1)
+	to_indexoff = body.indexOf("mode=", from_indexoff);
+	if (to_indexoff != -1)
 	{
-		SerialMon.println(F("receive mode command"));
-	}
-	//gid2
-	if(body.indexOf("gid2", from_indexoff) != -1)
-	{
-		SerialMon.println(F("receive gid2 command"));
-	}
-	//gid
-	if(body.indexOf("gid", from_indexoff) != -1)
-	{
-		SerialMon.println(F("receive gid command"));
-	}
-	SerialMon.println(F("ERROR: receive command not found"));
-	return false;
-}
-
-bool readSMS(uint8_t index)
-{
-	modem.sendAT(GF("+CMGF=1"));    //Text type messages instead of PDU
-	if(modem.waitResponse(10000L) != 1) {
-		return false;
-	}
-	modem.sendAT(GF("+CNMI=2,0"));    //Disable messages about new SMS from the GSM module
-	if(modem.waitResponse(10000L) != 1) {
-		return false;
-	}
-	modem.sendAT(GF("+CMGR="), index);
-	if (modem.waitResponse(10000L, GF(GSM_NL "+CMGR:"))) 
-	{
-		String header = modem.stream.readStringUntil('\n');
-		String body = modem.stream.readStringUntil('\n');
-		body.trim();
-		SerialMon.println();
-		SerialMon.println(F("Receive SMS:"));
-		SerialMon.print(F("Header: "));
-		SerialMon.println(header);
-		SerialMon.print(F("Body: "));
-		SerialMon.println(body);
-		to_indexoff = body.indexOf("@");
-		if (to_indexoff != -1)
+		int len_data = body.length() - (to_indexoff + 5);  //legth mode=
+		if(len_data == 0 || len_data > 1)
 		{
-			if (imei.equals(body.substring(0, to_indexoff)))
-			{
-				SerialMon.println(F("imei Ok"));
-				
-				from_indexoff = body.indexOf("status");  //imei@status
-				if(from_indexoff != -1)
-				{
-					SerialMon.println("receive status command");
-					String tel = tel_number_receiveSMS(header);
-					if (tel.length() > 7)
-					{
-						modem.sendSMS(tel, "GID=" + gid + "; imei=" + imei + "; status=" + status_str[rotate]);
-						return true;
-					}
-					else
-					{
-						return false;
-					}
-				}
-				
-				from_indexoff = body.indexOf("gid=");  //imei@gid=newgid
-				if(from_indexoff != -1)
-				{
-					uint8_t len = body.length() - (from_indexoff + 4);  //+ 4(gid=)
-					if(len > 3 && len < LENGHT_GID)
-					{
-						for (uint8_t i = 0; i < LENGHT_GID; i++)
-						{
-							gid_array[i] = 0;
-						}
-						gid = body.substring((from_indexoff + 4), body.length());
-						gid.toCharArray(gid_array, LENGHT_GID);
-						for (uint8_t i = 0; i < LENGHT_GID; i++)
-						{
-							eeprom_write_byte((gid_eeprom + i), gid_array[i]);
-						}
-						eeprom_write_byte(&flag_gid_eeprom, 'r');
-						SerialMon.print(F("new GID="));
-						SerialMon.println(gid);
-						String tel = tel_number_receiveSMS(header);
-						if (tel.length() > 7)
-						{
-							modem.sendSMS(tel, "new GID=" + gid);
-							return true;
-						}
-						else
-						{
-							return false;
-						}
-					}
-					else
-					{
-						SerialMon.println(F("ERRROR: not valid size gid in SMS"));
-						return false;
-					}
-				}
-				else
-				{
-					SerialMon.println(F("ERRROR: not valid gid in SMS"));
-					return false;
-				}
-			}
-			else
-			{
-				SerialMon.println(F("ERRROR: not valid imei in SMS"));
-				return false;
-			}
+			SerialMon.println(F("ERROR: mode command not valid length"));
+			goto exit;
 		}
-	}
-	return true;
-}
-
-String tel_number_receiveSMS(String header)
-{
-	String tel;
-	from_indexoff = header.indexOf("\",\"+");
-	if (from_indexoff != -1)
-	{
-		tel = header.substring(from_indexoff + 3, header.length());  //start to +
-		from_indexoff = tel.indexOf("\",\"");
-		if (from_indexoff != -1)
+		char ch = body.charAt(from_indexoff + 5);
+		if (ch == '1' || ch == '2')
 		{
-			return tel.substring(0, from_indexoff);
+			SerialMon.print(F("receive command mode="));
+			SerialMon.println(ch);
+			return true;
 		}
 		else
 		{
-			SerialMon.print(F("ERROR: not valid lenght number telefon"));
-			return tel = "";
+			SerialMon.println(F("ERROR: mode command not valid data"));
+			goto exit;
 		}
 	}
-	else
+	//gid2
+	to_indexoff = body.indexOf("gid2=", from_indexoff);
+	if (to_indexoff != -1)
 	{
-		return tel = "";
+		
+		SerialMon.println(F("receive command gid2="));
+		return true;
 	}
+	//gid
+	to_indexoff = body.indexOf("gid=", from_indexoff);
+	if (to_indexoff != -1)
+	{
+		SerialMon.println(F("receive command gid="));
+		return true;
+	}
+	SerialMon.println(F("ERROR: command not found, SMS delete"));
+exit:
+	deleteSMS(index);
+	return false;
 }
 
-uint16_t count_receiveSMS()
+void node_push(stack_t *s, const char* cmd, char *d, const char *t)
 {
-	uint16_t c = 0;
-	String res;
-	res.reserve(50);
-	modem.waitResponse();
-	modem.sendAT(GF("+CPMS?"));
-	if (modem.waitResponse(10000L, GF("+CPMS:"))) 
-	{
-		res = modem.stream.readStringUntil('\n');
-		from_indexoff = res.indexOf("SM_P");
-		if (from_indexoff != -1)
-		{
-			c = res.substring(from_indexoff + 6, from_indexoff + 8).toInt();
-		}
-	}
-	modem.waitResponse();
-	return c;
+	sms_node_t *node = (sms_node_t *) malloc(sizeof(sms_node_t));
+	node->command = cmd;
+	node->data = d;
+	node->tel = t;
+	node->next = s->head;
+	s->head = node;
+	s->size += 1;
 }
+
+//bool readSMS(uint8_t index)
+//{
+//	modem.sendAT(GF("+CMGF=1"));    //Text type messages instead of PDU
+//	if(modem.waitResponse(10000L) != 1) {
+//		return false;
+//	}
+//	modem.sendAT(GF("+CNMI=2,0"));    //Disable messages about new SMS from the GSM module
+//	if(modem.waitResponse(10000L) != 1) {
+//		return false;
+//	}
+//	modem.sendAT(GF("+CMGR="), index);
+//	if (modem.waitResponse(10000L, GF(GSM_NL "+CMGR:"))) 
+//	{
+//		String header = modem.stream.readStringUntil('\n');
+//		String body = modem.stream.readStringUntil('\n');
+//		body.trim();
+//		SerialMon.println();
+//		SerialMon.println(F("Receive SMS:"));
+//		SerialMon.print(F("Header: "));
+//		SerialMon.println(header);
+//		SerialMon.print(F("Body: "));
+//		SerialMon.println(body);
+//		to_indexoff = body.indexOf("@");
+//		if (to_indexoff != -1)
+//		{
+//			if (imei.equals(body.substring(0, to_indexoff)))
+//			{
+//				SerialMon.println(F("imei Ok"));
+//				
+//				from_indexoff = body.indexOf("status");  //imei@status
+//				if(from_indexoff != -1)
+//				{
+//					SerialMon.println("receive status command");
+//					String tel = tel_number_receiveSMS(header);
+//					if (tel.length() > 7)
+//					{
+//						modem.sendSMS(tel, "GID=" + gid + "; imei=" + imei + "; status=" + status_str[rotate]);
+//						return true;
+//					}
+//					else
+//					{
+//						return false;
+//					}
+//				}
+//				
+//				from_indexoff = body.indexOf("gid=");  //imei@gid=newgid
+//				if(from_indexoff != -1)
+//				{
+//					uint8_t len = body.length() - (from_indexoff + 4);  //+ 4(gid=)
+//					if(len > 3 && len < LENGHT_GID)
+//					{
+//						for (uint8_t i = 0; i < LENGHT_GID; i++)
+//						{
+//							gid_array[i] = 0;
+//						}
+//						gid = body.substring((from_indexoff + 4), body.length());
+//						gid.toCharArray(gid_array, LENGHT_GID);
+//						for (uint8_t i = 0; i < LENGHT_GID; i++)
+//						{
+//							eeprom_write_byte((gid_eeprom + i), gid_array[i]);
+//						}
+//						eeprom_write_byte(&flag_gid_eeprom, 'r');
+//						SerialMon.print(F("new GID="));
+//						SerialMon.println(gid);
+//						String tel = tel_number_receiveSMS(header);
+//						if (tel.length() > 7)
+//						{
+//							modem.sendSMS(tel, "new GID=" + gid);
+//							return true;
+//						}
+//						else
+//						{
+//							return false;
+//						}
+//					}
+//					else
+//					{
+//						SerialMon.println(F("ERRROR: not valid size gid in SMS"));
+//						return false;
+//					}
+//				}
+//				else
+//				{
+//					SerialMon.println(F("ERRROR: not valid gid in SMS"));
+//					return false;
+//				}
+//			}
+//			else
+//			{
+//				SerialMon.println(F("ERRROR: not valid imei in SMS"));
+//				return false;
+//			}
+//		}
+//	}
+//	return true;
+//}
+//
+//String tel_number_receiveSMS(String header)
+//{
+//	String tel;
+//	from_indexoff = header.indexOf("\",\"+");
+//	if (from_indexoff != -1)
+//	{
+//		tel = header.substring(from_indexoff + 3, header.length());  //start to +
+//		from_indexoff = tel.indexOf("\",\"");
+//		if (from_indexoff != -1)
+//		{
+//			return tel.substring(0, from_indexoff);
+//		}
+//		else
+//		{
+//			SerialMon.print(F("ERROR: not valid lenght number telefon"));
+//			return tel = "";
+//		}
+//	}
+//	else
+//	{
+//		return tel = "";
+//	}
+//}
+//
+//uint16_t count_receiveSMS()
+//{
+//	uint16_t c = 0;
+//	String res;
+//	res.reserve(50);
+//	modem.waitResponse();
+//	modem.sendAT(GF("+CPMS?"));
+//	if (modem.waitResponse(10000L, GF("+CPMS:"))) 
+//	{
+//		res = modem.stream.readStringUntil('\n');
+//		from_indexoff = res.indexOf("SM_P");
+//		if (from_indexoff != -1)
+//		{
+//			c = res.substring(from_indexoff + 6, from_indexoff + 8).toInt();
+//		}
+//	}
+//	modem.waitResponse();
+//	return c;
+//}
 
 void smsInit()
 {
@@ -663,3 +725,5 @@ void testAtCommand() {
 		delay(0);
 	}
 }
+
+

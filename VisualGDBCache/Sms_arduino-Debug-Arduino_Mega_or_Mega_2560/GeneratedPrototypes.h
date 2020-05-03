@@ -5,14 +5,10 @@
 #define SYSPROGS_ARDUINO_EXPAND_GENERATED_PROTOTYPES \
 	void setup(); \
 	void loop(); \
-	void checkSMS(); \
 	bool deleteSMS(uint8_t index); \
 	bool delete_all_SMS(); \
-	bool readSMS(uint8_t index); \
-	String tel_number_receiveSMS(String header); \
-	uint16_t count_receiveSMS(); \
+	void node_push(stack_t *s, const char* cmd, char *d, const char *t); \
 	void smsInit(); \
 	bool checkNetwork(); \
 	bool initModem(); \
-	void testAtCommand(); \
 
