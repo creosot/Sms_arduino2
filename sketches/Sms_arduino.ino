@@ -18,10 +18,18 @@
 #include <avr/eeprom.h>
 #include "TinyGsmClient.h"
 
+//typedef struct sms_node {
+//	struct sms_node *next;
+//	const char *command;
+//	const char* data;
+//	const char* tel;
+//} sms_node_t;
+
 typedef struct sms_node {
 	struct sms_node *next;
-	const char *command;
-	const char* data;
+	uint8_t command;
+	int data_int;
+	const char* data_str;
 	const char* tel;
 } sms_node_t;
 
@@ -36,6 +44,13 @@ stack_t *ptr_sms_nodes = &sms_nodes;
 
 const char *status = "status";
 
+enum CmdStatus
+{
+	CMD_STATUS = 1,
+	CMD_MODE = 2,
+	CMD_GID2 = 3,
+	CMD_GID = 4,
+};
 
 struct Provider
 {
@@ -80,13 +95,14 @@ bool checkNetwork(void);
 void smsInit(void);
 bool readSMS(uint8_t);
 uint16_t count_receiveSMS(void);
-bool deleteSMS(uint8_t); 
+bool delete_SMS(uint8_t); 
 bool delete_all_SMS(void);
 String tel_number_receiveSMS(String);
-bool readAllSMS();
-bool prepareSMS(String header, String body);
+bool read_all_SMS();
+bool prepare_SMS(String header, String body);
 void testAtCommand();
-void node_push(stack_t *list, const char *command, char *data, const char *tel);
+void node_push(stack_t *s, uint8_t cmd, int d_int, const char *d_str, const char *t);
+void prepare_Stack_SMS(sms_node_t *node);
 
 class MyTinyGsm : public TinyGsm
 {
@@ -204,7 +220,7 @@ uint32_t rate = 0;
 void loop()
 {
 	//testAtCommand();
-	readAllSMS();
+	read_all_SMS();
 	delay(30000);
 	
 }
@@ -222,7 +238,7 @@ void loop()
 //}
 
 
-bool deleteSMS(uint8_t index) 
+bool delete_SMS(uint8_t index) 
 {
 	modem.sendAT(GF("+CMGD="), index, GF(","), 0);   // Delete SMS Message from <mem1> location
 	return modem.waitResponse(5000L) == 1;
@@ -234,7 +250,7 @@ bool delete_all_SMS()
 	return modem.waitResponse(15000L) == 1;
 }
 
-bool readAllSMS()
+bool read_all_SMS()
 {
 	modem.sendAT(GF("+CMGF=1"));     //Text type messages instead of PDU
 	if(modem.waitResponse(10000L) != 1) {
@@ -273,7 +289,7 @@ bool readAllSMS()
 			SerialMon.println(header);
 			SerialMon.print(F("Body: "));
 			SerialMon.println(body);
-			prepareSMS(header, body);
+			prepare_SMS(header, body);
 		}
 		if (res == 3)
 		{
@@ -285,7 +301,7 @@ bool readAllSMS()
 	return false;
 }
 
-bool prepareSMS(String header, String body)
+bool prepare_SMS(String header, String body)
 {
 	//header
 	header.trim();
@@ -330,7 +346,7 @@ bool prepareSMS(String header, String body)
 	if (to_indexoff != -1)
 	{
 		SerialMon.println(F("receive command status"));
-		node_push(ptr_sms_nodes, status, NULL, tel.c_str());
+		node_push(ptr_sms_nodes, CMD_STATUS, 0, NULL, tel.c_str());
 		return true;
 	}
 	//mode
@@ -348,6 +364,8 @@ bool prepareSMS(String header, String body)
 		{
 			SerialMon.print(F("receive command mode="));
 			SerialMon.println(ch);
+			uint8_t md = ch - 30;
+			node_push(ptr_sms_nodes, CMD_MODE, md, NULL, tel.c_str());
 			return true;
 		}
 		else
@@ -360,8 +378,10 @@ bool prepareSMS(String header, String body)
 	to_indexoff = body.indexOf("gid2=", from_indexoff);
 	if (to_indexoff != -1)
 	{
-		
 		SerialMon.println(F("receive command gid2="));
+		from_indexoff = to_indexoff + 5; //legth gid2=
+		String gid2 = body.substring(from_indexoff, body.length());
+		node_push(ptr_sms_nodes, CMD_GID2, 0, gid2.c_str(), tel.c_str());
 		return true;
 	}
 	//gid
@@ -369,23 +389,66 @@ bool prepareSMS(String header, String body)
 	if (to_indexoff != -1)
 	{
 		SerialMon.println(F("receive command gid="));
+		from_indexoff = to_indexoff + 4;  //legth gid=
+		String gid = body.substring(from_indexoff, body.length());
+		node_push(ptr_sms_nodes, CMD_GID, 0, gid.c_str(), tel.c_str());
 		return true;
 	}
 	SerialMon.println(F("ERROR: command not found, SMS delete"));
 exit:
-	deleteSMS(index);
+	delete_SMS(index);
 	return false;
 }
 
-void node_push(stack_t *s, const char* cmd, char *d, const char *t)
+void node_push(stack_t *s, uint8_t cmd, int d_int, const char *d_str, const char *t)
 {
 	sms_node_t *node = (sms_node_t *) malloc(sizeof(sms_node_t));
+	if (node == NULL)
+	{
+		return;
+	}
 	node->command = cmd;
-	node->data = d;
+	node->data_int = d_int;
+	node->data_str = d_str;
 	node->tel = t;
 	node->next = s->head;
 	s->head = node;
 	s->size += 1;
+}
+
+void node_pop(stack *s)
+{
+	if (s->size == 0)
+	{
+		return;
+	}
+	sms_node_t *node = s->head;
+	s->head = node->next;
+	prepare_Stack_SMS(node);
+	free(node);
+	s->size -= 1;
+	if (s->size == 0)
+	{
+		s->head = NULL;
+		s->tail = NULL;
+	}
+}
+
+void prepare_Stack_SMS(sms_node_t *node)
+{
+	switch (node->command)
+	{
+	case CMD_STATUS:
+		break;
+	case CMD_MODE:
+		break;
+	case CMD_GID2:
+		break;
+	case CMD_GID:
+		break;
+	default:
+		break;
+	}
 }
 
 //bool readSMS(uint8_t index)

@@ -5,9 +5,9 @@
 #define SYSPROGS_ARDUINO_EXPAND_GENERATED_PROTOTYPES \
 	void setup(); \
 	void loop(); \
-	bool deleteSMS(uint8_t index); \
+	bool delete_SMS(uint8_t index); \
 	bool delete_all_SMS(); \
-	void node_push(stack_t *s, const char* cmd, char *d, const char *t); \
+	void node_pop(stack *s); \
 	void smsInit(); \
 	bool checkNetwork(); \
 	bool initModem(); \
