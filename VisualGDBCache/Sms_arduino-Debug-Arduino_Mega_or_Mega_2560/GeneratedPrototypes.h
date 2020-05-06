@@ -8,6 +8,7 @@
 	bool delete_SMS(uint8_t index); \
 	bool delete_all_SMS(); \
 	void node_pop(stack *s); \
+	void write_Mode(uint8_t mode_number); \
 	void smsInit(); \
 	bool checkNetwork(); \
 	bool initModem(); \

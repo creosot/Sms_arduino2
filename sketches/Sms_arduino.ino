@@ -18,17 +18,10 @@
 #include <avr/eeprom.h>
 #include "TinyGsmClient.h"
 
-//typedef struct sms_node {
-//	struct sms_node *next;
-//	const char *command;
-//	const char* data;
-//	const char* tel;
-//} sms_node_t;
-
 typedef struct sms_node {
 	struct sms_node *next;
 	uint8_t command;
-	int data_int;
+	uint8_t mode;
 	const char* data_str;
 	const char* tel;
 } sms_node_t;
@@ -76,16 +69,21 @@ int rotate = ROTATE_OFF_AC_ON;
 String operator_apn;
 String imei;
 String gid;
+String gid2;
 String iccid;
 String csq;
+uint8_t mode = 1;
 uint16_t sec;
 uint8_t min;
 uint16_t str_len;
 uint8_t count_sms = 0;
 int from_indexoff = -1;
 int to_indexoff = -1;
+uint8_t EEMEM mode_eeprom;
 uint8_t EEMEM flag_gid_eeprom;
 uint8_t EEMEM gid_eeprom[LENGHT_GID];
+uint8_t EEMEM flag_gid2_eeprom;
+uint8_t EEMEM gid2_eeprom[LENGHT_GID];
 char gid_array[LENGHT_GID] = { 0 };
 const char* status_str[] = { "vraschenie", "net phase", "net vrascheniz" };
 unsigned long measuring_timer = 0;
@@ -103,6 +101,13 @@ bool prepare_SMS(String header, String body);
 void testAtCommand();
 void node_push(stack_t *s, uint8_t cmd, int d_int, const char *d_str, const char *t);
 void prepare_Stack_SMS(sms_node_t *node);
+void write_GID(const char* gid_name);
+void read_GID();
+void write_GID2(const char* gid_name);
+void read_GID2();
+void read_Mode();
+void write_Mode(uint8_t m);
+void send_Status(const char* tel);
 
 class MyTinyGsm : public TinyGsm
 {
@@ -364,8 +369,8 @@ bool prepare_SMS(String header, String body)
 		{
 			SerialMon.print(F("receive command mode="));
 			SerialMon.println(ch);
-			uint8_t md = ch - 30;
-			node_push(ptr_sms_nodes, CMD_MODE, md, NULL, tel.c_str());
+			uint8_t mode_number = ch - '0';
+			node_push(ptr_sms_nodes, CMD_MODE, mode_number, NULL, tel.c_str());
 			return true;
 		}
 		else
@@ -408,7 +413,7 @@ void node_push(stack_t *s, uint8_t cmd, int d_int, const char *d_str, const char
 		return;
 	}
 	node->command = cmd;
-	node->data_int = d_int;
+	node->mode = d_int;
 	node->data_str = d_str;
 	node->tel = t;
 	node->next = s->head;
@@ -439,16 +444,128 @@ void prepare_Stack_SMS(sms_node_t *node)
 	switch (node->command)
 	{
 	case CMD_STATUS:
+		send_Status(node->tel);
 		break;
 	case CMD_MODE:
+		write_Mode(node->mode);
 		break;
 	case CMD_GID2:
+		write_GID2(node->data_str);
 		break;
 	case CMD_GID:
+		write_GID(node->data_str);
 		break;
 	default:
 		break;
 	}
+}
+
+void read_GID()
+{
+	byte flg = eeprom_read_byte(&flag_gid_eeprom);
+	if (flg == 'w')
+	{
+		for (uint8_t i = 0; i < LENGHT_GID; i++)
+		{
+			gid_array[i] = eeprom_read_byte(gid_eeprom + i);
+			if (gid_array[i] == '\0')
+			{
+				break;
+			}
+		}
+		gid_array[LENGHT_GID - 1] = '\0';
+		gid = String(gid_array);
+		SerialMon.print(F("GID(over SMS): "));
+	}
+	else
+	{
+		SerialMon.print(F("no GID. set default GID: "));
+		gid = imei;
+	}
+}
+
+void send_Status(const char* tel)
+{
+	modem.sendSMS(tel, "GID=" + gid + "; imei=" + imei + "; status=" + status_str[rotate]);
+}
+
+void read_Mode()
+{
+	uint8_t mode_number = eeprom_read_byte(&mode_eeprom);
+	if (mode_number == 1 || mode_number == 2)
+	{
+		mode = mode_number; 
+	}
+	else
+	{
+		write_Mode(1);
+	}
+}
+
+void write_Mode(uint8_t mode_number)
+{
+	mode = mode_number;
+	eeprom_write_byte(&mode_eeprom, mode_number);
+}
+
+void read_GID2()
+{
+	uint8_t flg = eeprom_read_byte(&flag_gid2_eeprom);
+	if (flg == 'w')
+	{
+		for (uint8_t i = 0; i < LENGHT_GID; i++)
+		{
+			gid_array[i] = eeprom_read_byte(gid2_eeprom + i);
+			if (gid_array[i] == '\0')
+			{
+				break;
+			}
+		}
+		gid_array[LENGHT_GID - 1] = '\0';
+		gid2 = String(gid_array);
+		SerialMon.print(F("GID2(over SMS): "));
+	}
+	else
+	{
+		SerialMon.print(F("no GID2. set default GID2: "));
+		gid2 = imei;
+	}
+}
+
+void write_GID(const char* gid_name)
+{
+	uint8_t i = 0;
+	for (; i < strlen(gid_name); i++)
+	{
+		if (i == (LENGHT_GID - 1)) //31
+		{
+			break;
+		}
+		eeprom_write_byte((gid_eeprom + i), gid_name[i]);
+	}
+	eeprom_write_byte((gid_eeprom + i), '\0');
+	eeprom_write_byte(&flag_gid_eeprom, 'w');
+	gid = String(gid_name);
+	SerialMon.print(F("new GID="));
+	SerialMon.println(gid);
+}
+
+void write_GID2(const char* gid_name)
+{
+	uint8_t i = 0;
+	for (; i < strlen(gid_name); i++)
+	{
+		if (i == (LENGHT_GID - 1)) //31
+			{
+				break;
+			}
+		eeprom_write_byte((gid2_eeprom + i), gid_name[i]);
+	}
+	eeprom_write_byte((gid2_eeprom + i), '\0');
+	eeprom_write_byte(&flag_gid2_eeprom, 'w');
+	gid2 = String(gid_name);
+	SerialMon.print(F("new GID2="));
+	SerialMon.println(gid2);
 }
 
 //bool readSMS(uint8_t index)
@@ -697,33 +814,32 @@ bool initModem() {
 					SerialMon.println(F("ERROR: Modem IMEI not valid"));
 					return false;
 				}
-			}
-		
-			byte flg = eeprom_read_byte(&flag_gid_eeprom);
-			if (flg == 'r')
-			{
-				for (uint8_t i = 0; i < LENGHT_GID; i++)
-				{
-					gid_array[i] = 0;
-				}
-				for (uint8_t i = 0; i < LENGHT_GID; i++)
-				{
-					gid_array[i] = eeprom_read_byte(gid_eeprom + i);
-				}
-				gid = String(gid_array);
-				SerialMon.print(F("GID(over SMS): "));
-			}
-			else if (flg == 'd')
-			{
-				SerialMon.print(F("default GID: "));
-				gid = imei;
-			}
-			else
-			{
-				eeprom_write_byte(&flag_gid_eeprom, 'd');
-				SerialMon.print(F("no GID. set default GID: "));
-				gid = imei;
-			}
+			}	
+//			byte flg = eeprom_read_byte(&flag_gid_eeprom);
+//			if (flg == 'w')
+//			{
+//				for (uint8_t i = 0; i < LENGHT_GID; i++)
+//				{
+//					gid_array[i] = eeprom_read_byte(gid_eeprom + i);
+//				}
+//				gid_array[LENGHT_GID - 1] = '\0';
+//				gid = String(gid_array);
+//				SerialMon.print(F("GID(over SMS): "));
+//			}
+//			else if (flg == 'd')
+//			{
+//				SerialMon.print(F("default GID: "));
+//				gid = imei;
+//			}
+//			else
+//			{
+//				eeprom_write_byte(&flag_gid_eeprom, 'd');
+//				SerialMon.print(F("no GID. set default GID: "));
+//				gid = imei;
+//			}
+			read_GID();
+			read_GID2();
+			read_Mode();
 			SerialMon.println(gid);
 		} 
 	else
