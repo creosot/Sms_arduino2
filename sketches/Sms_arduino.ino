@@ -65,7 +65,8 @@ const char * pass;
 const char server[] = "84.204.24.100";   //spb
 const int  port = 53817;
 uint8_t countCheckNetwork = 0;
-int rotate = ROTATE_OFF_AC_ON;
+uint8_t gid_rotate_status = ROTATE_OFF_AC_ON;
+uint8_t gid2_rotate_status = ROTATE_OFF_AC_ON;
 String operator_apn;
 String imei;
 String gid;
@@ -85,7 +86,7 @@ uint8_t EEMEM gid_eeprom[LENGHT_GID];
 uint8_t EEMEM flag_gid2_eeprom;
 uint8_t EEMEM gid2_eeprom[LENGHT_GID];
 char gid_array[LENGHT_GID] = { 0 };
-const char* status_str[] = { "vraschenie", "net phase", "net vrascheniz" };
+const char* rotate_status[] = { "vraschenie", "net phase", "net vrascheniz" };
 unsigned long measuring_timer = 0;
 
 bool initModem(void);
@@ -142,7 +143,7 @@ public:
 		return res;
 	}
 	
-	bool sendSMS(const String& number, const String& text) {
+	bool sendSMS(const String &number, const String &text) {
 		sendAT(GF("+CMGF=1"));
 		waitResponse();
 		//Set GSM 7 bit default alphabet (3GPP TS 23.038)
@@ -229,19 +230,6 @@ void loop()
 	delay(30000);
 	
 }
-
-//void checkSMS()
-//{
-//	uint16_t c = count_receiveSMS();
-//	if (!c) return;
-//	for (; c; --c)
-//	{
-//		readSMS(c);
-//		//deleteSMS(c);
-//	}
-//	delete_all_SMS();
-//}
-
 
 bool delete_SMS(uint8_t index) 
 {
@@ -448,16 +436,52 @@ void prepare_Stack_SMS(sms_node_t *node)
 		break;
 	case CMD_MODE:
 		write_Mode(node->mode);
+		send_Status(node->tel);
 		break;
 	case CMD_GID2:
 		write_GID2(node->data_str);
+		send_Status(node->tel);
 		break;
 	case CMD_GID:
 		write_GID(node->data_str);
+		send_Status(node->tel);
 		break;
 	default:
 		break;
 	}
+}
+
+void send_Status(const char* tel)
+{
+	if (mode == 1)
+	{
+		modem.sendSMS(tel, "gid=" + gid + "; status=" + rotate_status[gid_rotate_status] + "; mode=" + mode + "; imei=" + imei); 
+	}
+	else
+	{
+		modem.sendSMS(tel, "gid=" + gid + "; status=" + rotate_status[gid_rotate_status] + \
+			"gid2=" + gid2 + "; status=" + rotate_status[gid2_rotate_status] + \
+			"; mode=" + mode + "; imei=" + imei);
+	}
+}
+
+void read_Mode()
+{
+	uint8_t mode_number = eeprom_read_byte(&mode_eeprom);
+	if (mode_number == 1 || mode_number == 2)
+	{
+		mode = mode_number; 
+	}
+	else
+	{
+		write_Mode(1);
+	}
+}
+
+void write_Mode(uint8_t mode_number)
+{
+	mode = mode_number;
+	eeprom_write_byte(&mode_eeprom, mode_number);
 }
 
 void read_GID()
@@ -482,30 +506,6 @@ void read_GID()
 		SerialMon.print(F("no GID. set default GID: "));
 		gid = imei;
 	}
-}
-
-void send_Status(const char* tel)
-{
-	modem.sendSMS(tel, "GID=" + gid + "; imei=" + imei + "; status=" + status_str[rotate]);
-}
-
-void read_Mode()
-{
-	uint8_t mode_number = eeprom_read_byte(&mode_eeprom);
-	if (mode_number == 1 || mode_number == 2)
-	{
-		mode = mode_number; 
-	}
-	else
-	{
-		write_Mode(1);
-	}
-}
-
-void write_Mode(uint8_t mode_number)
-{
-	mode = mode_number;
-	eeprom_write_byte(&mode_eeprom, mode_number);
 }
 
 void read_GID2()
@@ -567,147 +567,6 @@ void write_GID2(const char* gid_name)
 	SerialMon.print(F("new GID2="));
 	SerialMon.println(gid2);
 }
-
-//bool readSMS(uint8_t index)
-//{
-//	modem.sendAT(GF("+CMGF=1"));    //Text type messages instead of PDU
-//	if(modem.waitResponse(10000L) != 1) {
-//		return false;
-//	}
-//	modem.sendAT(GF("+CNMI=2,0"));    //Disable messages about new SMS from the GSM module
-//	if(modem.waitResponse(10000L) != 1) {
-//		return false;
-//	}
-//	modem.sendAT(GF("+CMGR="), index);
-//	if (modem.waitResponse(10000L, GF(GSM_NL "+CMGR:"))) 
-//	{
-//		String header = modem.stream.readStringUntil('\n');
-//		String body = modem.stream.readStringUntil('\n');
-//		body.trim();
-//		SerialMon.println();
-//		SerialMon.println(F("Receive SMS:"));
-//		SerialMon.print(F("Header: "));
-//		SerialMon.println(header);
-//		SerialMon.print(F("Body: "));
-//		SerialMon.println(body);
-//		to_indexoff = body.indexOf("@");
-//		if (to_indexoff != -1)
-//		{
-//			if (imei.equals(body.substring(0, to_indexoff)))
-//			{
-//				SerialMon.println(F("imei Ok"));
-//				
-//				from_indexoff = body.indexOf("status");  //imei@status
-//				if(from_indexoff != -1)
-//				{
-//					SerialMon.println("receive status command");
-//					String tel = tel_number_receiveSMS(header);
-//					if (tel.length() > 7)
-//					{
-//						modem.sendSMS(tel, "GID=" + gid + "; imei=" + imei + "; status=" + status_str[rotate]);
-//						return true;
-//					}
-//					else
-//					{
-//						return false;
-//					}
-//				}
-//				
-//				from_indexoff = body.indexOf("gid=");  //imei@gid=newgid
-//				if(from_indexoff != -1)
-//				{
-//					uint8_t len = body.length() - (from_indexoff + 4);  //+ 4(gid=)
-//					if(len > 3 && len < LENGHT_GID)
-//					{
-//						for (uint8_t i = 0; i < LENGHT_GID; i++)
-//						{
-//							gid_array[i] = 0;
-//						}
-//						gid = body.substring((from_indexoff + 4), body.length());
-//						gid.toCharArray(gid_array, LENGHT_GID);
-//						for (uint8_t i = 0; i < LENGHT_GID; i++)
-//						{
-//							eeprom_write_byte((gid_eeprom + i), gid_array[i]);
-//						}
-//						eeprom_write_byte(&flag_gid_eeprom, 'r');
-//						SerialMon.print(F("new GID="));
-//						SerialMon.println(gid);
-//						String tel = tel_number_receiveSMS(header);
-//						if (tel.length() > 7)
-//						{
-//							modem.sendSMS(tel, "new GID=" + gid);
-//							return true;
-//						}
-//						else
-//						{
-//							return false;
-//						}
-//					}
-//					else
-//					{
-//						SerialMon.println(F("ERRROR: not valid size gid in SMS"));
-//						return false;
-//					}
-//				}
-//				else
-//				{
-//					SerialMon.println(F("ERRROR: not valid gid in SMS"));
-//					return false;
-//				}
-//			}
-//			else
-//			{
-//				SerialMon.println(F("ERRROR: not valid imei in SMS"));
-//				return false;
-//			}
-//		}
-//	}
-//	return true;
-//}
-//
-//String tel_number_receiveSMS(String header)
-//{
-//	String tel;
-//	from_indexoff = header.indexOf("\",\"+");
-//	if (from_indexoff != -1)
-//	{
-//		tel = header.substring(from_indexoff + 3, header.length());  //start to +
-//		from_indexoff = tel.indexOf("\",\"");
-//		if (from_indexoff != -1)
-//		{
-//			return tel.substring(0, from_indexoff);
-//		}
-//		else
-//		{
-//			SerialMon.print(F("ERROR: not valid lenght number telefon"));
-//			return tel = "";
-//		}
-//	}
-//	else
-//	{
-//		return tel = "";
-//	}
-//}
-//
-//uint16_t count_receiveSMS()
-//{
-//	uint16_t c = 0;
-//	String res;
-//	res.reserve(50);
-//	modem.waitResponse();
-//	modem.sendAT(GF("+CPMS?"));
-//	if (modem.waitResponse(10000L, GF("+CPMS:"))) 
-//	{
-//		res = modem.stream.readStringUntil('\n');
-//		from_indexoff = res.indexOf("SM_P");
-//		if (from_indexoff != -1)
-//		{
-//			c = res.substring(from_indexoff + 6, from_indexoff + 8).toInt();
-//		}
-//	}
-//	modem.waitResponse();
-//	return c;
-//}
 
 void smsInit()
 {
@@ -815,28 +674,6 @@ bool initModem() {
 					return false;
 				}
 			}	
-//			byte flg = eeprom_read_byte(&flag_gid_eeprom);
-//			if (flg == 'w')
-//			{
-//				for (uint8_t i = 0; i < LENGHT_GID; i++)
-//				{
-//					gid_array[i] = eeprom_read_byte(gid_eeprom + i);
-//				}
-//				gid_array[LENGHT_GID - 1] = '\0';
-//				gid = String(gid_array);
-//				SerialMon.print(F("GID(over SMS): "));
-//			}
-//			else if (flg == 'd')
-//			{
-//				SerialMon.print(F("default GID: "));
-//				gid = imei;
-//			}
-//			else
-//			{
-//				eeprom_write_byte(&flag_gid_eeprom, 'd');
-//				SerialMon.print(F("no GID. set default GID: "));
-//				gid = imei;
-//			}
 			read_GID();
 			read_GID2();
 			read_Mode();
