@@ -85,6 +85,7 @@ uint8_t EEMEM flag_gid_eeprom;
 uint8_t EEMEM gid_eeprom[LENGHT_GID];
 uint8_t EEMEM flag_gid2_eeprom;
 uint8_t EEMEM gid2_eeprom[LENGHT_GID];
+int8_t sms_delete_index[LENGTH_SMS_BUFFER] = { -1 };
 char gid_array[LENGHT_GID] = { 0 };
 const char* rotate_status[] = { "vraschenie", "net phase", "net vrascheniz" };
 unsigned long measuring_timer = 0;
@@ -95,10 +96,11 @@ void smsInit(void);
 bool readSMS(uint8_t);
 uint16_t count_receiveSMS(void);
 bool delete_SMS(uint8_t); 
+void delete_SMS_array(int8_t array[]);
 bool delete_all_SMS(void);
 String tel_number_receiveSMS(String);
 bool read_all_SMS();
-bool prepare_SMS(String header, String body);
+int8_t prepare_SMS(String header, String body);
 void testAtCommand();
 void node_push(stack_t *s, uint8_t cmd, int d_int, const char *d_str, const char *t);
 void prepare_Stack_SMS(sms_node_t *node);
@@ -215,6 +217,10 @@ void setup()
 //	for (uint8_t i = 0; i < COUNT_ANALOG_PINS; i++) {
 //		analog_measuring(i);
 //	}
+	for(uint8_t i = 0; i < LENGTH_SMS_BUFFER; i++)
+	{
+		sms_delete_index[i] = -1;
+	}
 	smsInit();
 	SerialMon.println("------------------------------------------------");
 	SerialMon.println("30sec voltage, current, rotation, ACline measure");
@@ -227,7 +233,8 @@ void loop()
 {
 	//testAtCommand();
 	read_all_SMS();
-	delay(30000);
+	delete_SMS_array(sms_delete_index);
+	delay(60000);
 	
 }
 
@@ -235,6 +242,30 @@ bool delete_SMS(uint8_t index)
 {
 	modem.sendAT(GF("+CMGD="), index, GF(","), 0);   // Delete SMS Message from <mem1> location
 	return modem.waitResponse(5000L) == 1;
+}
+
+void delete_SMS_array(int8_t array[]) 
+{
+	SerialMon.println(F("Delete SMS array:"));
+	for (uint8_t i = 0; i < LENGTH_SMS_BUFFER; i++)
+	{
+		if (array[i] != -1)
+		{
+			SerialMon.print(F("SMS index "));
+			SerialMon.print(array[i]);
+			if (delete_SMS(array[i]) == true)
+			{
+				SerialMon.println(F(": true"));
+			}
+			else
+			{
+				SerialMon.println(F(": false"));
+			}
+		}
+		array[i] = -1;
+	}
+	SerialMon.println(F("Done"));
+	SerialMon.println();
 }
 
 bool delete_all_SMS() 
@@ -253,6 +284,8 @@ bool read_all_SMS()
 	if(modem.waitResponse(10000L) != 1) {
 		return false;
 	}
+	SerialMon.println();
+	SerialMon.println(F("Read all SMS"));
 	modem.sendAT(GF("+CMGL=\"ALL\""));
 	for (uint8_t i = 0; i < LENGTH_SMS_BUFFER; i++)
 	{
@@ -263,134 +296,146 @@ bool read_all_SMS()
 			delete_all_SMS();
 			return false;
 		}
-		if (res == 1)
+		if (res == 1) //"ERROR"
 		{
 			SerialMon.println(F("ERROR: Read SMS"));
 			delete_all_SMS();
 			return false;
 		}
-		if (res == 2)
+		if (res == 2) //"+CMGL:"
 		{
 			String header = modem.stream.readStringUntil('\n');
 			String body = modem.stream.readStringUntil('\n');
-			body.trim();
-			SerialMon.println();
-			SerialMon.print("count: ");
-			SerialMon.println(i + 1);
-			SerialMon.println(F("Receive SMS:"));
+			SerialMon.println(F("---------------------------------------------------------"));
+			SerialMon.print("Receive ");
+			SerialMon.print(i + 1);
+			SerialMon.println(F(" SMS:"));
 			SerialMon.print(F("Header: "));
 			SerialMon.println(header);
 			SerialMon.print(F("Body: "));
 			SerialMon.println(body);
-			prepare_SMS(header, body);
+			SerialMon.println(F("---------------------------------------------------------"));
+			int8_t res = prepare_SMS(header, body);
+			if (res != -1)
+			{
+				sms_delete_index[i] = res; 
+				SerialMon.print(F("sms_delete_index["));
+				SerialMon.print(i);	
+				SerialMon.print(F("]="));
+				SerialMon.println(res);	
+			}
 		}
-		if (res == 3)
+		if (res == 3) //"OK"
 		{
-			SerialMon.println();
-			SerialMon.println(F("All receive SMS reading"));
+			//SerialMon.println();
+			SerialMon.println(F("All SMS reading"));
 			return true;
 		}
 	}
 	return false;
 }
 
-bool prepare_SMS(String header, String body)
+int8_t prepare_SMS(String header, String body)
 {
 	//header
-	header.trim();
-	from_indexoff = header.indexOf(F(",\"REC"));
+	header.trim(); //1,"REC READ","+79037450251","","20/05/15,21:20:45+12"
+	from_indexoff = header.indexOf(F(",\"REC")); //<<,"REC
 	if (from_indexoff == -1 || from_indexoff == 0)
 	{
-		return false;
+		return -1;
 	}
-	int index = header.substring(0, from_indexoff).toInt();
-	SerialMon.println();
-	SerialMon.print("sms index: ");
-	SerialMon.println(index);
-	from_indexoff = header.indexOf(F("READ\",\""));
+	uint8_t index = header.substring(0, from_indexoff).toInt(); //>>1>>,"REC READ","+79037450251","","20/05/15,21:20:45+12"
+	SerialMon.println(F("Prepare SMS:"));
+	SerialMon.print("SMS index: ");
+	SerialMon.print(index);
+	from_indexoff = header.indexOf(F("READ\",\"")); //>>READ","+79037450251","","20/05/15,21:20:45+12"
 	if (from_indexoff == -1)
 	{
-		return false;
+		SerialMon.print(F("ERROR: READ\",\" not found"));
+		return index;
 	}
-	from_indexoff += 7; //length READ","
-	to_indexoff = header.indexOf(F("\",\""), from_indexoff);
+	from_indexoff += 7; //>>+79037450251","","20/05/15,21:20:45+12"
+	to_indexoff = header.indexOf(F("\",\""), from_indexoff); //<<","","20/05/15,21:20:45+12"
 	if (to_indexoff == -1)
 	{
-		return false;
+		SerialMon.print(F("ERROR: \",\" not found"));
+		return index;
 	}
 	//tel
-	String tel = header.substring(from_indexoff, to_indexoff);
-	SerialMon.print("tel: ");
+	String tel = header.substring(from_indexoff, to_indexoff); //>>+79037450251<<","","20/05/15,21:20:45+12"
+	SerialMon.print("; tel:");
 	SerialMon.println(tel);
+	
 	//body
 	body.trim();
 	//find imei
-	to_indexoff = body.indexOf("@");
+	to_indexoff = body.indexOf("@"); //862057045434450<<@
 	if (imei.equals(body.substring(0, to_indexoff)) == false)
 	{
-		SerialMon.println(F("ERRROR: not valid imei, SMS delete"));
-		goto exit;
+		SerialMon.print(F("ERRROR: not valid imei"));
+		return index;
 	}
 	SerialMon.println(F("imei Ok"));
 	//find command
-	from_indexoff = to_indexoff + 1; //@
+	from_indexoff = to_indexoff + 1; //862057045434450@>>
 	//status
-	to_indexoff = body.indexOf("status", from_indexoff);
+	to_indexoff = body.indexOf("status", from_indexoff); //862057045434450@<<status
 	if (to_indexoff != -1)
 	{
 		SerialMon.println(F("receive command status"));
 		node_push(ptr_sms_nodes, CMD_STATUS, 0, NULL, tel.c_str());
-		return true;
+		return index;
 	}
 	//mode
-	to_indexoff = body.indexOf("mode=", from_indexoff);
+	to_indexoff = body.indexOf("mode=", from_indexoff); //862057045434450@<<mode=
 	if (to_indexoff != -1)
 	{
-		int len_data = body.length() - (to_indexoff + 5);  //legth mode=
-		if(len_data == 0 || len_data > 1)
+		from_indexoff = to_indexoff + 5;  //862057045434450@mode=>>
+		uint8_t len_data = body.length() - from_indexoff;
+		if (len_data != 1) //mode=x
 		{
-			SerialMon.println(F("ERROR: mode command not valid length"));
-			goto exit;
+			SerialMon.print(F("ERROR: command mode not valid"));
+			return index;
 		}
-		char ch = body.charAt(from_indexoff + 5);
+		char ch = body.charAt(from_indexoff); //mode=>>
 		if (ch == '1' || ch == '2')
 		{
 			SerialMon.print(F("receive command mode="));
 			SerialMon.println(ch);
 			uint8_t mode_number = ch - '0';
 			node_push(ptr_sms_nodes, CMD_MODE, mode_number, NULL, tel.c_str());
-			return true;
+			return index;
 		}
 		else
 		{
-			SerialMon.println(F("ERROR: mode command not valid data"));
-			goto exit;
+			SerialMon.print(F("ERROR: command mode not valid data"));
+			return index;
 		}
 	}
 	//gid2
-	to_indexoff = body.indexOf("gid2=", from_indexoff);
+	to_indexoff = body.indexOf("gid2=", from_indexoff); //862057045434450@<<gid2=asdfghjkl
 	if (to_indexoff != -1)
 	{
-		SerialMon.println(F("receive command gid2="));
-		from_indexoff = to_indexoff + 5; //legth gid2=
+		SerialMon.print(F("receive command gid2="));
+		from_indexoff = to_indexoff + 5; //862057045434450@gid2=>>
 		String gid2 = body.substring(from_indexoff, body.length());
+		SerialMon.println(gid2);
 		node_push(ptr_sms_nodes, CMD_GID2, 0, gid2.c_str(), tel.c_str());
-		return true;
+		return index;
 	}
 	//gid
-	to_indexoff = body.indexOf("gid=", from_indexoff);
+	to_indexoff = body.indexOf("gid=", from_indexoff); //862057045434450@<<gid=asdfghjkl
 	if (to_indexoff != -1)
 	{
-		SerialMon.println(F("receive command gid="));
-		from_indexoff = to_indexoff + 4;  //legth gid=
+		SerialMon.print(F("receive command gid="));
+		from_indexoff = to_indexoff + 4; //862057045434450@gid=>>
 		String gid = body.substring(from_indexoff, body.length());
+		SerialMon.println(gid);
 		node_push(ptr_sms_nodes, CMD_GID, 0, gid.c_str(), tel.c_str());
-		return true;
+		return index;
 	}
-	SerialMon.println(F("ERROR: command not found, SMS delete"));
-exit:
-	delete_SMS(index);
-	return false;
+	SerialMon.print(F("ERROR: command not found"));
+	return index;
 }
 
 void node_push(stack_t *s, uint8_t cmd, int d_int, const char *d_str, const char *t)
@@ -499,12 +544,13 @@ void read_GID()
 		}
 		gid_array[LENGHT_GID - 1] = '\0';
 		gid = String(gid_array);
-		SerialMon.print(F("GID(over SMS): "));
+		SerialMon.print(F("GID set over SMS: "));
 	}
 	else
 	{
-		SerialMon.print(F("no GID. set default GID: "));
 		gid = imei;
+		SerialMon.print(F("no GID. set default GID: "));
+		SerialMon.println(gid);
 	}
 }
 
@@ -523,12 +569,13 @@ void read_GID2()
 		}
 		gid_array[LENGHT_GID - 1] = '\0';
 		gid2 = String(gid_array);
-		SerialMon.print(F("GID2(over SMS): "));
+		SerialMon.print(F("GID set over SMS: "));
 	}
 	else
 	{
-		SerialMon.print(F("no GID2. set default GID2: "));
 		gid2 = imei;
+		SerialMon.print(F("no GID2. set default GID2: "));
+		SerialMon.println(gid2);
 	}
 }
 
@@ -677,7 +724,6 @@ bool initModem() {
 			read_GID();
 			read_GID2();
 			read_Mode();
-			SerialMon.println(gid);
 		} 
 	else
 	{
