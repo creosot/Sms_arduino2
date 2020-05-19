@@ -59,7 +59,7 @@
 ===info ||| Progress {0} ||| [147.22]
 ===info ||| Progress {0} ||| [147.24]
 ===info ||| Progress {0} ||| [147.27]
-===info ||| Progress {0} ||| [147.30]
+===info ||| Progress {0} ||| [147.24]
 ===info ||| Progress {0} ||| [147.32]
 ===info ||| Progress {0} ||| [150.45]
 ===info ||| Progress {0} ||| [153.57]

@@ -608,36 +608,6 @@
             },
             {
                 "GCC": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-g++",
-                "InputFile": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\abi.cpp",
-                "ObjectFile": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\abi.cpp.o",
-                "Arguments": [
-                    "-c",
-                    "-g",
-                    "-Os",
-                    "-w",
-                    "-std=gnu++11",
-                    "-fpermissive",
-                    "-fno-exceptions",
-                    "-ffunction-sections",
-                    "-fdata-sections",
-                    "-fno-threadsafe-statics",
-                    "-Wno-error=narrowing",
-                    "-MMD",
-                    "-flto",
-                    "-mmcu=atmega2560",
-                    "-DF_CPU=16000000L",
-                    "-DARDUINO=10600",
-                    "-DARDUINO_AVR_MEGA2560",
-                    "-DARDUINO_ARCH_AVR",
-                    "-IC:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino",
-                    "-IC:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega",
-                    "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\abi.cpp",
-                    "-o",
-                    "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\abi.cpp.o"
-                ]
-            },
-            {
-                "GCC": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-g++",
                 "InputFile": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\main.cpp",
                 "ObjectFile": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\main.cpp.o",
                 "Arguments": [
@@ -725,6 +695,36 @@
                     "-o",
                     "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\WMath.cpp.o"
                 ]
+            },
+            {
+                "GCC": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-g++",
+                "InputFile": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\abi.cpp",
+                "ObjectFile": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\abi.cpp.o",
+                "Arguments": [
+                    "-c",
+                    "-g",
+                    "-Os",
+                    "-w",
+                    "-std=gnu++11",
+                    "-fpermissive",
+                    "-fno-exceptions",
+                    "-ffunction-sections",
+                    "-fdata-sections",
+                    "-fno-threadsafe-statics",
+                    "-Wno-error=narrowing",
+                    "-MMD",
+                    "-flto",
+                    "-mmcu=atmega2560",
+                    "-DF_CPU=16000000L",
+                    "-DARDUINO=10600",
+                    "-DARDUINO_AVR_MEGA2560",
+                    "-DARDUINO_ARCH_AVR",
+                    "-IC:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino",
+                    "-IC:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega",
+                    "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino\\abi.cpp",
+                    "-o",
+                    "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\core\\abi.cpp.o"
+                ]
             }
         ]
     },
@@ -757,7 +757,7 @@
                     "-DARDUINO_ARCH_AVR",
                     "-IC:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino",
                     "-IC:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega",
-                    "-IC:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                    "-IC:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
                     "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\sketch\\Sms_arduino.ino.cpp",
                     "-o",
                     "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug\\sketch\\Sms_arduino.ino.cpp.o"
@@ -767,95 +767,31 @@
     },
     "Libraries": [
         {
-            "Name": "TinyGSM-master",
-            "SourceDirectory": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+            "Name": "TinyGSM-master_old_old",
+            "SourceDirectory": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
             "ArchiveFile": "",
             "Invocations": null
         }
     ],
     "KnownHeaders": [
         {
-            "Name": "CommandDispatcher.h",
+            "Name": "TinyGsmClient.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
-            ]
-        },
-        {
-            "Name": "DeviceAddress.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
-            ]
-        },
-        {
-            "Name": "SoftwareSerial.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftwareSerial-master",
-                "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SoftwareSerial\\src"
-            ]
-        },
-        {
-            "Name": "HttpClient.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
-            ]
-        },
-        {
-            "Name": "OneWire.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\OneWire-master"
-            ]
-        },
-        {
-            "Name": "Dns.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
-            ]
-        },
-        {
-            "Name": "EthernetServer.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientXBee.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "HID.h",
+            "Name": "GyverFilters.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\HID\\src"
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\GyverFilters"
             ]
         },
         {
-            "Name": "Ethernet2.h",
+            "Name": "SPI.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientSIM800.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "MegunoLink.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
-            ]
-        },
-        {
-            "Name": "Filter.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
+                "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI\\src"
             ]
         },
         {
@@ -871,30 +807,180 @@
             ]
         },
         {
-            "Name": "stash.h",
+            "Name": "EEPROMStore.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
+            ]
+        },
+        {
+            "Name": "HID.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\HID\\src"
+            ]
+        },
+        {
+            "Name": "OneWire.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\OneWire-master"
+            ]
+        },
+        {
+            "Name": "ArduinoHttpClient.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
+            ]
+        },
+        {
+            "Name": "ArduinoJson.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoJson-6.x\\src"
+            ]
+        },
+        {
+            "Name": "enc28j60.h",
             "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master\\src"
             ]
         },
         {
-            "Name": "EthernetClient.h",
+            "Name": "TinyGsmClientSIM5360.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientESP8266.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientM95.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientSIM7600.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "EthernetServer.h",
             "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
             ]
         },
         {
-            "Name": "TinyGsmClientA6.h",
+            "Name": "StreamDebugger.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\StreamDebugger-master"
+            ]
+        },
+        {
+            "Name": "Dns.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
+            ]
+        },
+        {
+            "Name": "UIPEthernet.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
+            ]
+        },
+        {
+            "Name": "net.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master\\src"
+            ]
+        },
+        {
+            "Name": "ArduinoTimer.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
+            ]
+        },
+        {
+            "Name": "DeviceAddress.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
+            ]
+        },
+        {
+            "Name": "U8g2lib.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8g2\\src"
+            ]
+        },
+        {
+            "Name": "U8glib.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8glib\\src"
+            ]
+        },
+        {
+            "Name": "MegunoLink.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
+            ]
+        },
+        {
+            "Name": "U8x8lib.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8g2\\src"
+            ]
+        },
+        {
+            "Name": "ArduinoJson.hpp",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoJson-6.x\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmCommon.h",
+            "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "TinyGsmClientSIM7000.h",
+            "Name": "Dhcp.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
+            ]
+        },
+        {
+            "Name": "UIPServer.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientBG96.h",
+            "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientM590.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
@@ -905,15 +991,99 @@
             ]
         },
         {
-            "Name": "URLEncoder.h",
+            "Name": "EEPROM.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM\\src"
+            ]
+        },
+        {
+            "Name": "UIPUdp.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
+            ]
+        },
+        {
+            "Name": "bufferfiller.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master\\src"
+            ]
+        },
+        {
+            "Name": "Parser.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoSIM800L-master_"
+            ]
+        },
+        {
+            "Name": "EthernetUdp2.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
+            ]
+        },
+        {
+            "Name": "TCPCommandHandler.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
+            ]
+        },
+        {
+            "Name": "BH1750.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\BH1750-master"
+            ]
+        },
+        {
+            "Name": "UIPClient.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
+            ]
+        },
+        {
+            "Name": "WebSocketClient.h",
             "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
             ]
         },
         {
-            "Name": "net.h",
+            "Name": "EtherCard.h",
             "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master\\src"
+            ]
+        },
+        {
+            "Name": "AS_BH1750_SoftI2C.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\AS_BH1750_SoftI2C-master"
+            ]
+        },
+        {
+            "Name": "uart.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\avr-uart-master"
+            ]
+        },
+        {
+            "Name": "Http.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoSIM800L-master_"
+            ]
+        },
+        {
+            "Name": "ThingSpeak.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\thingspeak-arduino-master\\src"
+            ]
+        },
+        {
+            "Name": "MessageHeaders.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
+            ]
+        },
+        {
+            "Name": "Twitter.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
             ]
         },
         {
@@ -923,21 +1093,105 @@
             ]
         },
         {
-            "Name": "TinyGsmClientSIM5360.h",
+            "Name": "Wire.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\Wire\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientSIM7000.h",
+            "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "CircularBuffer.h",
+            "Name": "TinyGsmClientXBee.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "EthernetClient.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientSIM800.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "SoftI2CMaster.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftI2CMaster"
+            ]
+        },
+        {
+            "Name": "CommandProcessor.h",
             "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
             ]
         },
         {
-            "Name": "enc28j60.h",
+            "Name": "microsmooth.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Microsmooth-master"
+            ]
+        },
+        {
+            "Name": "ethernet_comp.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
+            ]
+        },
+        {
+            "Name": "HttpClient.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
+            ]
+        },
+        {
+            "Name": "URLEncoder.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
+            ]
+        },
+        {
+            "Name": "b64.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
+            ]
+        },
+        {
+            "Name": "Digital_Light_ISL29035.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Grove_-_Digital_Light_Sensor"
+            ]
+        },
+        {
+            "Name": "Geo.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoSIM800L-master_"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientSIM808.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "stash.h",
             "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master\\src"
             ]
@@ -949,125 +1203,23 @@
             ]
         },
         {
-            "Name": "ArduinoTimer.h",
+            "Name": "TinyGsmClientA6.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
-            ]
-        },
-        {
-            "Name": "uart.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\avr-uart-master"
-            ]
-        },
-        {
-            "Name": "U8x8lib.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8g2\\src"
-            ]
-        },
-        {
-            "Name": "Digital_Light_ISL29035.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Grove_-_Digital_Light_Sensor"
-            ]
-        },
-        {
-            "Name": "bufferfiller.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master\\src"
-            ]
-        },
-        {
-            "Name": "UIPUdp.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientMC60.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "EEPROMStore.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
-            ]
-        },
-        {
-            "Name": "StreamDebugger.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\StreamDebugger-master"
-            ]
-        },
-        {
-            "Name": "Http.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoSIM800L-master_"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientBG96.h",
-            "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "PubSubClient.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\pubsubclient-master\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientUBLOX.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
             "Name": "TinyGsmFifo.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "EtherCard.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master\\src"
-            ]
-        },
-        {
-            "Name": "Twitter.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientSaraR4.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "microsmooth.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Microsmooth-master"
-            ]
-        },
-        {
-            "Name": "CommandProcessor.h",
+            "Name": "CircularBuffer.h",
             "LibraryDirectories": [
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
             ]
@@ -1079,191 +1231,10 @@
             ]
         },
         {
-            "Name": "MessageHeaders.h",
+            "Name": "SoftwareSerial.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
-            ]
-        },
-        {
-            "Name": "ethernet_comp.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
-            ]
-        },
-        {
-            "Name": "AS_BH1750_SoftI2C.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\AS_BH1750_SoftI2C-master"
-            ]
-        },
-        {
-            "Name": "Wire.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\Wire\\src"
-            ]
-        },
-        {
-            "Name": "GyverFilters.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\GyverFilters"
-            ]
-        },
-        {
-            "Name": "Parser.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoSIM800L-master_"
-            ]
-        },
-        {
-            "Name": "UIPServer.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
-            ]
-        },
-        {
-            "Name": "TinyGsmClient.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientSIM808.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmCommon.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientESP8266.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "SoftI2CMaster.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftI2CMaster"
-            ]
-        },
-        {
-            "Name": "autotune.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Microsmooth-master"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientSequansMonarch.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "UIPEthernet.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
-            ]
-        },
-        {
-            "Name": "EthernetUdp2.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
-            ]
-        },
-        {
-            "Name": "Geo.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoSIM800L-master_"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientM590.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "TCPCommandHandler.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
-            ]
-        },
-        {
-            "Name": "ThingSpeak.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\thingspeak-arduino-master\\src"
-            ]
-        },
-        {
-            "Name": "ArduinoHttpClient.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
-            ]
-        },
-        {
-            "Name": "WebSocketClient.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
-            ]
-        },
-        {
-            "Name": "BH1750.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\BH1750-master"
-            ]
-        },
-        {
-            "Name": "ArduinoJson.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoJson-6.x\\src"
-            ]
-        },
-        {
-            "Name": "ArduinoJson.hpp",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoJson-6.x\\src"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientM95.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
-            ]
-        },
-        {
-            "Name": "UIPClient.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
-            ]
-        },
-        {
-            "Name": "U8g2lib.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8g2\\src"
-            ]
-        },
-        {
-            "Name": "EEPROM.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM\\src"
+                "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SoftwareSerial\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftwareSerial-master"
             ]
         },
         {
@@ -1273,36 +1244,65 @@
             ]
         },
         {
-            "Name": "SPI.h",
+            "Name": "TinyGsmClientSequansMonarch.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI\\src"
-            ]
-        },
-        {
-            "Name": "U8glib.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8glib\\src"
-            ]
-        },
-        {
-            "Name": "Dhcp.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src",
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master"
-            ]
-        },
-        {
-            "Name": "TinyGsmClientSIM7600.h",
-            "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
                 "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
             ]
         },
         {
-            "Name": "b64.h",
+            "Name": "PubSubClient.h",
             "LibraryDirectories": [
-                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src"
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\pubsubclient-master\\src"
+            ]
+        },
+        {
+            "Name": "Ethernet2.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src"
+            ]
+        },
+        {
+            "Name": "Filter.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
+            ]
+        },
+        {
+            "Name": "autotune.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Microsmooth-master"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientMC60.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientSaraR4.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "TinyGsmClientUBLOX.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master\\src",
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src"
+            ]
+        },
+        {
+            "Name": "CommandDispatcher.h",
+            "LibraryDirectories": [
+                "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master"
             ]
         }
     ],
@@ -1312,75 +1312,136 @@
             "File": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches\\Sms_arduino.ino",
             "Prototype": "void setup();",
             "Modifiers": "",
-            "Line": 189
+            "Line": 193
         },
         {
             "FunctionName": "loop",
             "File": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches\\Sms_arduino.ino",
             "Prototype": "void loop();",
             "Modifiers": "",
-            "Line": 233
+            "Line": 237
         },
         {
             "FunctionName": "delete_SMS",
             "File": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches\\Sms_arduino.ino",
             "Prototype": "bool delete_SMS(uint8_t index);",
             "Modifiers": "",
-            "Line": 242
+            "Line": 247
         },
         {
             "FunctionName": "delete_all_SMS",
             "File": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches\\Sms_arduino.ino",
             "Prototype": "bool delete_all_SMS();",
             "Modifiers": "",
-            "Line": 272
-        },
-        {
-            "FunctionName": "node_pop",
-            "File": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches\\Sms_arduino.ino",
-            "Prototype": "void node_pop(stack *s);",
-            "Modifiers": "",
-            "Line": 469
+            "Line": 277
         },
         {
             "FunctionName": "write_Mode",
             "File": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches\\Sms_arduino.ino",
             "Prototype": "void write_Mode(uint8_t mode_number);",
             "Modifiers": "",
-            "Line": 538
+            "Line": 570
         },
         {
             "FunctionName": "smsInit",
             "File": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches\\Sms_arduino.ino",
             "Prototype": "void smsInit();",
             "Modifiers": "",
-            "Line": 630
+            "Line": 662
         },
         {
             "FunctionName": "checkNetwork",
             "File": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches\\Sms_arduino.ino",
             "Prototype": "bool checkNetwork();",
             "Modifiers": "",
-            "Line": 645
+            "Line": 677
         },
         {
             "FunctionName": "initModem",
             "File": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches\\Sms_arduino.ino",
             "Prototype": "bool initModem();",
             "Modifiers": "",
-            "Line": 712
+            "Line": 744
         }
     ],
     "KnownLibraries": [
         {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+            "Folder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM\\src",
             "UtilityFolder": "",
             "Layout": "recursive",
-            "Name": "TinyGSM-master_old_old",
+            "Name": "EEPROM",
+            "RealName": "EEPROM",
+            "IsLegacy": false,
+            "Version": "2.0",
+            "Author": "Arduino, Christopher Andrews",
+            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
+            "Sentence": "Enables reading and writing to the permanent board storage.",
+            "Paragraph": "This library allows to read and write data in a memory type, the EEPROM, that keeps its content also when the board is powered off. The amount of EEPROM available depends on the microcontroller type.",
+            "URL": "http://www.arduino.cc/en/Reference/EEPROM",
+            "Category": "Data Storage",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\avr-uart-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\avr-uart-master",
+            "UtilityFolder": "",
+            "Layout": "flat",
+            "Name": "avr-uart-master",
+            "RealName": "",
+            "IsLegacy": true,
+            "Version": "",
+            "Author": "",
+            "Maintainer": "",
+            "Sentence": "",
+            "Paragraph": "",
+            "URL": "",
+            "Category": "",
+            "License": ""
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\thingspeak-arduino-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\thingspeak-arduino-master\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "thingspeak-arduino-master",
+            "RealName": "ThingSpeak",
+            "IsLegacy": false,
+            "Version": "1.5.0",
+            "Author": "MathWorks \u003csupport@thingspeak.com\u003e",
+            "Maintainer": "MathWorks \u003csupport@thingspeak.com\u003e",
+            "Sentence": "ThingSpeak Communication Library for Arduino, ESP8266 \u0026 EPS32",
+            "Paragraph": "ThingSpeak ( https://www.thingspeak.com ) is an analytic IoT platform service that allows you to aggregate, visualize and analyze live data streams in the cloud.",
+            "URL": "https://www.thingspeak.com/",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoSIM800L-master_",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoSIM800L-master_",
+            "UtilityFolder": "",
+            "Layout": "flat",
+            "Name": "ArduinoSIM800L-master_",
+            "RealName": "",
+            "IsLegacy": true,
+            "Version": "",
+            "Author": "",
+            "Maintainer": "",
+            "Sentence": "",
+            "Paragraph": "",
+            "URL": "",
+            "Category": "",
+            "License": ""
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "TinyGSM",
             "RealName": "TinyGSM",
             "IsLegacy": false,
-            "Version": "0.9.7",
+            "Version": "0.10.1",
             "Author": "Volodymyr Shymanskyy",
             "Maintainer": "Volodymyr Shymanskyy",
             "Sentence": "A small Arduino library for GPRS modules, that just works.",
@@ -1390,21 +1451,106 @@
             "License": "Unspecified"
         },
         {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8g2",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8g2\\src",
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\NeoSWSerial",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\NeoSWSerial\\src",
             "UtilityFolder": "",
             "Layout": "recursive",
-            "Name": "U8g2",
-            "RealName": "U8g2",
+            "Name": "NeoSWSerial",
+            "RealName": "NeoSWSerial",
             "IsLegacy": false,
-            "Version": "2.23.18",
-            "Author": "oliver \u003colikraus@gmail.com\u003e",
-            "Maintainer": "oliver \u003colikraus@gmail.com\u003e",
-            "Sentence": "Monochrome LCD, OLED and eInk Library. Display controller: SSD1305, SSD1306, SSD1309, SSD1322, SSD1325, SSD1327, SSD1329, SSD1606, SSD1607, SH1106, SH1107, SH1108, SH1122, T6963, RA8835, LC7981, PCD8544, PCF8812, HX1230, UC1601, UC1604, UC1608, UC1610, UC1611, UC1701, ST7565, ST7567, ST7588, ST75256, NT7534, IST3020, ST7920, LD7032, KS0108, SED1520, SBN1661, IL3820, MAX7219. Interfaces: I2C, SPI, Parallel.",
-            "Paragraph": "Monochrome LCD, OLED and eInk Library. Successor of U8glib. Supported display controller: SSD1305, SSD1306, SSD1309, SSD1322, SSD1325, SSD1327, SSD1329, SSD1606, SSD1607, SH1106, SH1107, SH1108, SH1122, T6963, RA8835, LC7981, PCD8544, PCF8812, HX1230, UC1601, UC1604, UC1608, UC1610, UC1611, UC1701, ST7565, ST7567, ST7588, ST75256, NT7534, IST3020, ST7920, LD7032, KS0108, SED1520, SBN1661, IL3820, MAX7219. Supported interfaces: I2C, SPI, Parallel. Features: UTF8, \u003e700 fonts, U8x8 char output.",
-            "URL": "https://github.com/olikraus/u8g2",
-            "Category": "Display",
-            "License": "BSD-2-Clause"
+            "Version": "3.0.5",
+            "Author": "SlashDevin",
+            "Maintainer": "SlashDevin",
+            "Sentence": "An efficient replacement for SoftwareSerial at baud rates 9600, 19200 and 38400.",
+            "Paragraph": "Simultaneous RX \u0026 TX, does not require additional TIMERs, interrupts not disabled during RX",
+            "URL": "https://github.com/SlashDevin/NeoSWSerial",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master",
+            "UtilityFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master\\utility",
+            "Layout": "flat",
+            "Name": "MLP-master",
+            "RealName": "MegunoLink",
+            "IsLegacy": false,
+            "Version": "1.30",
+            "Author": "Number Eight Innovation",
+            "Maintainer": "Number Eight Innovation \u003csupport@megunolink.com\u003e",
+            "Sentence": "Library for storing data in the eeprom, processing serial messages and plotting data with MegunoLink.",
+            "Paragraph": "Also includes handy timer and filtering tools.",
+            "URL": "https://www.megunolink.com/documentation/arduino-library/",
+            "Category": "Other",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\StreamDebugger-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\StreamDebugger-master",
+            "UtilityFolder": "",
+            "Layout": "flat",
+            "Name": "StreamDebugger-master",
+            "RealName": "StreamDebugger",
+            "IsLegacy": false,
+            "Version": "1.0.1",
+            "Author": "Volodymyr Shymanskyy",
+            "Maintainer": "Volodymyr Shymanskyy",
+            "Sentence": "Debugger for Arduino Stream-based communication",
+            "Paragraph": "This class is an Arduino Stream, that dumps all data to another Stream for debug purposes.",
+            "URL": "https://github.com/vshymanskyy/StreamDebugger",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftwareSerial-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftwareSerial-master",
+            "UtilityFolder": "",
+            "Layout": "flat",
+            "Name": "SoftwareSerial-master",
+            "RealName": "SoftwareSerial",
+            "IsLegacy": false,
+            "Version": "1.0",
+            "Author": "Arduino",
+            "Maintainer": "Paul Stoffregen",
+            "Sentence": "Enables serial communication on any digital pin.",
+            "Paragraph": "The SoftwareSerial library has been developed to allow serial communication, using software to replicate the functionality of the hardware UART. It is possible to have multiple software serial ports with speeds up to 115200 bps. On 32 bit Teensy boards, SoftwareSerial uses the real hardware serial ports (and is restricted to only those pins), but allows compatibility with programs that depend on SoftwareSerial.",
+            "URL": "http://www.arduino.cc/en/Reference/SoftwareSerial",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "EtherCard-master",
+            "RealName": "EtherCard",
+            "IsLegacy": false,
+            "Version": "1.1.0",
+            "Author": "Jean-Claude Wippler",
+            "Maintainer": "Nicholas Humfrey",
+            "Sentence": "EtherCard is an IPv4 driver for the ENC28J60 chip.",
+            "Paragraph": "",
+            "URL": "https://github.com/njh/EtherCard",
+            "Category": "Communication",
+            "License": "GPL-2.0"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master",
+            "UtilityFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master\\utility",
+            "Layout": "flat",
+            "Name": "arduino_uip-master",
+            "RealName": "UIPEthernet",
+            "IsLegacy": false,
+            "Version": "",
+            "Author": "ntruchsess",
+            "Maintainer": "Norbert Truchsess \u003cnorbert.truchsess@t-online.de\u003e",
+            "Sentence": "Ethernet library for ENC28J60",
+            "Paragraph": "implements the same API as stock Ethernet-lib. Just replace the include of Ethernet.h with UIPEthernet.h",
+            "URL": "https://github.com/ntruchsess/arduino_uip",
+            "Category": "Uncategorized",
+            "License": "Unspecified"
         },
         {
             "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8glib",
@@ -1424,6 +1570,74 @@
             "License": "Unspecified"
         },
         {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\GyverFilters",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\GyverFilters",
+            "UtilityFolder": "",
+            "Layout": "flat",
+            "Name": "GyverFilters",
+            "RealName": "GyverFilters",
+            "IsLegacy": false,
+            "Version": "1.6",
+            "Author": "AlexGyver \u003cberagumbo@ya.ru\u003e",
+            "Maintainer": "AlexGyver \u003cberagumbo@ya.ru\u003e",
+            "Sentence": "Library with few filters for data.",
+            "Paragraph": "Includes median, running average, AB, simplified Kalman and linear approximation filtering algorithms.",
+            "URL": "https://github.com/AlexGyver/GyverLibs",
+            "Category": "Data Processing",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "ArduinoHttpClient-master",
+            "RealName": "ArduinoHttpClient",
+            "IsLegacy": false,
+            "Version": "0.4.0",
+            "Author": "Arduino",
+            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
+            "Sentence": "[EXPERIMENTAL] Easily interact with web servers from Arduino, using HTTP and WebSocket's.",
+            "Paragraph": "This library can be used for HTTP (GET, POST, PUT, DELETE) requests to a web server. It also supports exchanging messages with WebSocket servers. Based on Adrian McEwen's HttpClient library.",
+            "URL": "https://github.com/arduino-libraries/ArduinoHttpClient",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoJson-6.x",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoJson-6.x\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "ArduinoJson-6.x",
+            "RealName": "ArduinoJson",
+            "IsLegacy": false,
+            "Version": "6.11.5",
+            "Author": "Benoit Blanchon \u003cblog.benoitblanchon.fr\u003e",
+            "Maintainer": "Benoit Blanchon \u003cblog.benoitblanchon.fr\u003e",
+            "Sentence": "An efficient and elegant JSON library for Arduino.",
+            "Paragraph": "ArduinoJson supports ✔ serialization, ✔ deserialization, ✔ MessagePack, ✔ fixed allocation, ✔ zero-copy, ✔ streams, and more. It is the most popular Arduino library on GitHub ❤❤❤❤❤. Check out arduinojson.org for a comprehensive documentation.",
+            "URL": "https://arduinojson.org/?utm_source=meta\u0026utm_medium=library.properties",
+            "Category": "Data Processing",
+            "License": "MIT"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8g2",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\U8g2\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "U8g2",
+            "RealName": "U8g2",
+            "IsLegacy": false,
+            "Version": "2.23.18",
+            "Author": "oliver \u003colikraus@gmail.com\u003e",
+            "Maintainer": "oliver \u003colikraus@gmail.com\u003e",
+            "Sentence": "Monochrome LCD, OLED and eInk Library. Display controller: SSD1305, SSD1306, SSD1309, SSD1322, SSD1325, SSD1327, SSD1329, SSD1606, SSD1607, SH1106, SH1107, SH1108, SH1122, T6963, RA8835, LC7981, PCD8544, PCF8812, HX1230, UC1601, UC1604, UC1608, UC1610, UC1611, UC1701, ST7565, ST7567, ST7588, ST75256, NT7534, IST3020, ST7920, LD7032, KS0108, SED1520, SBN1661, IL3820, MAX7219. Interfaces: I2C, SPI, Parallel.",
+            "Paragraph": "Monochrome LCD, OLED and eInk Library. Successor of U8glib. Supported display controller: SSD1305, SSD1306, SSD1309, SSD1322, SSD1325, SSD1327, SSD1329, SSD1606, SSD1607, SH1106, SH1107, SH1108, SH1122, T6963, RA8835, LC7981, PCD8544, PCF8812, HX1230, UC1601, UC1604, UC1608, UC1610, UC1611, UC1701, ST7565, ST7567, ST7588, ST75256, NT7534, IST3020, ST7920, LD7032, KS0108, SED1520, SBN1661, IL3820, MAX7219. Supported interfaces: I2C, SPI, Parallel. Features: UTF8, \u003e700 fonts, U8x8 char output.",
+            "URL": "https://github.com/olikraus/u8g2",
+            "Category": "Display",
+            "License": "BSD-2-Clause"
+        },
+        {
             "Folder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SoftwareSerial",
             "SrcFolder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SoftwareSerial\\src",
             "UtilityFolder": "",
@@ -1441,19 +1655,104 @@
             "License": "Unspecified"
         },
         {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM\\src",
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\pubsubclient-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\pubsubclient-master\\src",
             "UtilityFolder": "",
             "Layout": "recursive",
-            "Name": "TinyGSM",
+            "Name": "pubsubclient-master",
+            "RealName": "PubSubClient",
+            "IsLegacy": false,
+            "Version": "2.7",
+            "Author": "Nick O'Leary \u003cnick.oleary@gmail.com\u003e",
+            "Maintainer": "Nick O'Leary \u003cnick.oleary@gmail.com\u003e",
+            "Sentence": "A client library for MQTT messaging.",
+            "Paragraph": "MQTT is a lightweight messaging protocol ideal for small devices. This library allows you to send and receive MQTT messages. It supports the latest MQTT 3.1.1 protocol and can be configured to use the older MQTT 3.1 if needed. It supports all Arduino Ethernet Client compatible hardware, including the Intel Galileo/Edison, ESP8266 and TI CC3000.",
+            "URL": "http://pubsubclient.knolleary.net",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\TinyGSM-master_old_old\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "TinyGSM-master_old_old",
             "RealName": "TinyGSM",
             "IsLegacy": false,
-            "Version": "0.10.1",
+            "Version": "0.9.7",
             "Author": "Volodymyr Shymanskyy",
             "Maintainer": "Volodymyr Shymanskyy",
             "Sentence": "A small Arduino library for GPRS modules, that just works.",
             "Paragraph": "Includes examples for Blynk, MQTT, File Download, and Web Client. Supports many GSM, LTE, and WiFi modules with AT command interfaces.",
             "URL": "https://github.com/vshymanskyy/TinyGSM",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\OneWire-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\OneWire-master",
+            "UtilityFolder": "",
+            "Layout": "flat",
+            "Name": "OneWire-master",
+            "RealName": "OneWire",
+            "IsLegacy": false,
+            "Version": "2.3.4",
+            "Author": "Jim Studt, Tom Pollard, Robin James, Glenn Trewitt, Jason Dangel, Guillermo Lovato, Paul Stoffregen, Scott Roberts, Bertrik Sikken, Mark Tillotson, Ken Butcher, Roger Clark, Love Nystrom",
+            "Maintainer": "Paul Stoffregen",
+            "Sentence": "Access 1-wire temperature sensors, memory and other chips.",
+            "Paragraph": "",
+            "URL": "http://www.pjrc.com/teensy/td_libs_OneWire.html",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "Ethernet2",
+            "RealName": "Ethernet2",
+            "IsLegacy": false,
+            "Version": "1.0.4",
+            "Author": "Various",
+            "Maintainer": "Adafruit \u003cinfo@adafruit.com\u003e",
+            "Sentence": "Enables network connection (local and Internet) using W5500 based Ethernet shields.",
+            "Paragraph": "With this library you can use W5500 based Ethernet shields, such as the 'Arduino Ethernet Shield v2' to connect to Internet, but not older W5100 based shields. The library provides both Client and server functionalities. The library permits you to connect to a local network also with DHCP and to resolve DNS.",
+            "URL": "https://github.com/adafruit/Ethernet2",
+            "Category": "Communication",
+            "License": "Unspecified"
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftI2CMaster",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftI2CMaster",
+            "UtilityFolder": "",
+            "Layout": "flat",
+            "Name": "SoftI2CMaster",
+            "RealName": "",
+            "IsLegacy": true,
+            "Version": "",
+            "Author": "",
+            "Maintainer": "",
+            "Sentence": "",
+            "Paragraph": "",
+            "URL": "",
+            "Category": "",
+            "License": ""
+        },
+        {
+            "Folder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\HID",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\HID\\src",
+            "UtilityFolder": "",
+            "Layout": "recursive",
+            "Name": "HID",
+            "RealName": "HID",
+            "IsLegacy": false,
+            "Version": "1.0",
+            "Author": "Arduino",
+            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
+            "Sentence": "Module for PluggableUSB infrastructure. Exposes an API for devices like Keyboards, Mice and Gamepads.",
+            "Paragraph": "",
+            "URL": "http://www.arduino.cc/en/Reference/HID",
             "Category": "Communication",
             "License": "Unspecified"
         },
@@ -1492,156 +1791,20 @@
             "License": "Unspecified"
         },
         {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Ethernet2\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "Ethernet2",
-            "RealName": "Ethernet2",
-            "IsLegacy": false,
-            "Version": "1.0.4",
-            "Author": "Various",
-            "Maintainer": "Adafruit \u003cinfo@adafruit.com\u003e",
-            "Sentence": "Enables network connection (local and Internet) using W5500 based Ethernet shields.",
-            "Paragraph": "With this library you can use W5500 based Ethernet shields, such as the 'Arduino Ethernet Shield v2' to connect to Internet, but not older W5100 based shields. The library provides both Client and server functionalities. The library permits you to connect to a local network also with DHCP and to resolve DNS.",
-            "URL": "https://github.com/adafruit/Ethernet2",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\HID",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\HID\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "HID",
-            "RealName": "HID",
-            "IsLegacy": false,
-            "Version": "1.0",
-            "Author": "Arduino",
-            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
-            "Sentence": "Module for PluggableUSB infrastructure. Exposes an API for devices like Keyboards, Mice and Gamepads.",
-            "Paragraph": "",
-            "URL": "http://www.arduino.cc/en/Reference/HID",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\thingspeak-arduino-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\thingspeak-arduino-master\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "thingspeak-arduino-master",
-            "RealName": "ThingSpeak",
-            "IsLegacy": false,
-            "Version": "1.5.0",
-            "Author": "MathWorks \u003csupport@thingspeak.com\u003e",
-            "Maintainer": "MathWorks \u003csupport@thingspeak.com\u003e",
-            "Sentence": "ThingSpeak Communication Library for Arduino, ESP8266 \u0026 EPS32",
-            "Paragraph": "ThingSpeak ( https://www.thingspeak.com ) is an analytic IoT platform service that allows you to aggregate, visualize and analyze live data streams in the cloud.",
-            "URL": "https://www.thingspeak.com/",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\StreamDebugger-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\StreamDebugger-master",
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Grove_-_Digital_Light_Sensor",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Grove_-_Digital_Light_Sensor",
             "UtilityFolder": "",
             "Layout": "flat",
-            "Name": "StreamDebugger-master",
-            "RealName": "StreamDebugger",
+            "Name": "Grove_-_Digital_Light_Sensor",
+            "RealName": "Grove - Digital Light Sensor",
             "IsLegacy": false,
-            "Version": "1.0.1",
-            "Author": "Volodymyr Shymanskyy",
-            "Maintainer": "Volodymyr Shymanskyy",
-            "Sentence": "Debugger for Arduino Stream-based communication",
-            "Paragraph": "This class is an Arduino Stream, that dumps all data to another Stream for debug purposes.",
-            "URL": "https://github.com/vshymanskyy/StreamDebugger",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\GyverFilters",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\GyverFilters",
-            "UtilityFolder": "",
-            "Layout": "flat",
-            "Name": "GyverFilters",
-            "RealName": "GyverFilters",
-            "IsLegacy": false,
-            "Version": "1.6",
-            "Author": "AlexGyver \u003cberagumbo@ya.ru\u003e",
-            "Maintainer": "AlexGyver \u003cberagumbo@ya.ru\u003e",
-            "Sentence": "Library with few filters for data.",
-            "Paragraph": "Includes median, running average, AB, simplified Kalman and linear approximation filtering algorithms.",
-            "URL": "https://github.com/AlexGyver/GyverLibs",
-            "Category": "Data Processing",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\BH1750-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\BH1750-master",
-            "UtilityFolder": "",
-            "Layout": "flat",
-            "Name": "BH1750-master",
-            "RealName": "BH1750",
-            "IsLegacy": false,
-            "Version": "1.1.4",
-            "Author": "Christopher Laws",
-            "Maintainer": "Christopher Laws",
-            "Sentence": "Digital light sensor breakout boards containing the BH1750FVI IC",
-            "Paragraph": "Pretty simple and robust BH1750 library",
-            "URL": "https://github.com/claws/BH1750",
+            "Version": "1.0.0",
+            "Author": "Seeed Studio",
+            "Maintainer": "Seeed Studio \u003ctechsupport@seeed.cc\u003e",
+            "Sentence": "Arduino library to control Grove - Digital Light Sensor(TSL2561/ISL29035).",
+            "Paragraph": "Arduino library to control Grove - Digital Light Sensor(TSL2561/ISL29035).",
+            "URL": "https://github.com/Seeed-Studio/Grove_Digital_Light_Sensor",
             "Category": "Sensors",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "SPI",
-            "RealName": "SPI",
-            "IsLegacy": false,
-            "Version": "1.0",
-            "Author": "Arduino",
-            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
-            "Sentence": "Enables the communication with devices that use the Serial Peripheral Interface (SPI) Bus.",
-            "Paragraph": "SPI is a synchronous serial data protocol used by microcontrollers for communicating with one or more peripheral devices quickly over short distances. It uses three lines common to all devices (MISO, MOSI and SCK) and one specific for each device.",
-            "URL": "http://www.arduino.cc/en/Reference/SPI",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master",
-            "UtilityFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\MLP-master\\utility",
-            "Layout": "flat",
-            "Name": "MLP-master",
-            "RealName": "MegunoLink",
-            "IsLegacy": false,
-            "Version": "1.30",
-            "Author": "Number Eight Innovation",
-            "Maintainer": "Number Eight Innovation \u003csupport@megunolink.com\u003e",
-            "Sentence": "Library for storing data in the eeprom, processing serial messages and plotting data with MegunoLink.",
-            "Paragraph": "Also includes handy timer and filtering tools.",
-            "URL": "https://www.megunolink.com/documentation/arduino-library/",
-            "Category": "Other",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoHttpClient-master\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "ArduinoHttpClient-master",
-            "RealName": "ArduinoHttpClient",
-            "IsLegacy": false,
-            "Version": "0.4.0",
-            "Author": "Arduino",
-            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
-            "Sentence": "[EXPERIMENTAL] Easily interact with web servers from Arduino, using HTTP and WebSocket's.",
-            "Paragraph": "This library can be used for HTTP (GET, POST, PUT, DELETE) requests to a web server. It also supports exchanging messages with WebSocket servers. Based on Adrian McEwen's HttpClient library.",
-            "URL": "https://github.com/arduino-libraries/ArduinoHttpClient",
-            "Category": "Communication",
             "License": "Unspecified"
         },
         {
@@ -1662,36 +1825,19 @@
             "License": "Unspecified"
         },
         {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoSIM800L-master_",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoSIM800L-master_",
-            "UtilityFolder": "",
-            "Layout": "flat",
-            "Name": "ArduinoSIM800L-master_",
-            "RealName": "",
-            "IsLegacy": true,
-            "Version": "",
-            "Author": "",
-            "Maintainer": "",
-            "Sentence": "",
-            "Paragraph": "",
-            "URL": "",
-            "Category": "",
-            "License": ""
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\NeoSWSerial",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\NeoSWSerial\\src",
+            "Folder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\SPI\\src",
             "UtilityFolder": "",
             "Layout": "recursive",
-            "Name": "NeoSWSerial",
-            "RealName": "NeoSWSerial",
+            "Name": "SPI",
+            "RealName": "SPI",
             "IsLegacy": false,
-            "Version": "3.0.5",
-            "Author": "SlashDevin",
-            "Maintainer": "SlashDevin",
-            "Sentence": "An efficient replacement for SoftwareSerial at baud rates 9600, 19200 and 38400.",
-            "Paragraph": "Simultaneous RX \u0026 TX, does not require additional TIMERs, interrupts not disabled during RX",
-            "URL": "https://github.com/SlashDevin/NeoSWSerial",
+            "Version": "1.0",
+            "Author": "Arduino",
+            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
+            "Sentence": "Enables the communication with devices that use the Serial Peripheral Interface (SPI) Bus.",
+            "Paragraph": "SPI is a synchronous serial data protocol used by microcontrollers for communicating with one or more peripheral devices quickly over short distances. It uses three lines common to all devices (MISO, MOSI and SCK) and one specific for each device.",
+            "URL": "http://www.arduino.cc/en/Reference/SPI",
             "Category": "Communication",
             "License": "Unspecified"
         },
@@ -1713,157 +1859,21 @@
             "License": "Unspecified"
         },
         {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Grove_-_Digital_Light_Sensor",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Grove_-_Digital_Light_Sensor",
+            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\BH1750-master",
+            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\BH1750-master",
             "UtilityFolder": "",
             "Layout": "flat",
-            "Name": "Grove_-_Digital_Light_Sensor",
-            "RealName": "Grove - Digital Light Sensor",
+            "Name": "BH1750-master",
+            "RealName": "BH1750",
             "IsLegacy": false,
-            "Version": "1.0.0",
-            "Author": "Seeed Studio",
-            "Maintainer": "Seeed Studio \u003ctechsupport@seeed.cc\u003e",
-            "Sentence": "Arduino library to control Grove - Digital Light Sensor(TSL2561/ISL29035).",
-            "Paragraph": "Arduino library to control Grove - Digital Light Sensor(TSL2561/ISL29035).",
-            "URL": "https://github.com/Seeed-Studio/Grove_Digital_Light_Sensor",
+            "Version": "1.1.4",
+            "Author": "Christopher Laws",
+            "Maintainer": "Christopher Laws",
+            "Sentence": "Digital light sensor breakout boards containing the BH1750FVI IC",
+            "Paragraph": "Pretty simple and robust BH1750 library",
+            "URL": "https://github.com/claws/BH1750",
             "Category": "Sensors",
             "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master",
-            "UtilityFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\arduino_uip-master\\utility",
-            "Layout": "flat",
-            "Name": "arduino_uip-master",
-            "RealName": "UIPEthernet",
-            "IsLegacy": false,
-            "Version": "",
-            "Author": "ntruchsess",
-            "Maintainer": "Norbert Truchsess \u003cnorbert.truchsess@t-online.de\u003e",
-            "Sentence": "Ethernet library for ENC28J60",
-            "Paragraph": "implements the same API as stock Ethernet-lib. Just replace the include of Ethernet.h with UIPEthernet.h",
-            "URL": "https://github.com/ntruchsess/arduino_uip",
-            "Category": "Uncategorized",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftI2CMaster",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftI2CMaster",
-            "UtilityFolder": "",
-            "Layout": "flat",
-            "Name": "SoftI2CMaster",
-            "RealName": "",
-            "IsLegacy": true,
-            "Version": "",
-            "Author": "",
-            "Maintainer": "",
-            "Sentence": "",
-            "Paragraph": "",
-            "URL": "",
-            "Category": "",
-            "License": ""
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\libraries\\EEPROM\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "EEPROM",
-            "RealName": "EEPROM",
-            "IsLegacy": false,
-            "Version": "2.0",
-            "Author": "Arduino, Christopher Andrews",
-            "Maintainer": "Arduino \u003cinfo@arduino.cc\u003e",
-            "Sentence": "Enables reading and writing to the permanent board storage.",
-            "Paragraph": "This library allows to read and write data in a memory type, the EEPROM, that keeps its content also when the board is powered off. The amount of EEPROM available depends on the microcontroller type.",
-            "URL": "http://www.arduino.cc/en/Reference/EEPROM",
-            "Category": "Data Storage",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftwareSerial-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\SoftwareSerial-master",
-            "UtilityFolder": "",
-            "Layout": "flat",
-            "Name": "SoftwareSerial-master",
-            "RealName": "SoftwareSerial",
-            "IsLegacy": false,
-            "Version": "1.0",
-            "Author": "Arduino",
-            "Maintainer": "Paul Stoffregen",
-            "Sentence": "Enables serial communication on any digital pin.",
-            "Paragraph": "The SoftwareSerial library has been developed to allow serial communication, using software to replicate the functionality of the hardware UART. It is possible to have multiple software serial ports with speeds up to 115200 bps. On 32 bit Teensy boards, SoftwareSerial uses the real hardware serial ports (and is restricted to only those pins), but allows compatibility with programs that depend on SoftwareSerial.",
-            "URL": "http://www.arduino.cc/en/Reference/SoftwareSerial",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\OneWire-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\OneWire-master",
-            "UtilityFolder": "",
-            "Layout": "flat",
-            "Name": "OneWire-master",
-            "RealName": "OneWire",
-            "IsLegacy": false,
-            "Version": "2.3.4",
-            "Author": "Jim Studt, Tom Pollard, Robin James, Glenn Trewitt, Jason Dangel, Guillermo Lovato, Paul Stoffregen, Scott Roberts, Bertrik Sikken, Mark Tillotson, Ken Butcher, Roger Clark, Love Nystrom",
-            "Maintainer": "Paul Stoffregen",
-            "Sentence": "Access 1-wire temperature sensors, memory and other chips.",
-            "Paragraph": "",
-            "URL": "http://www.pjrc.com/teensy/td_libs_OneWire.html",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\EtherCard-master\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "EtherCard-master",
-            "RealName": "EtherCard",
-            "IsLegacy": false,
-            "Version": "1.1.0",
-            "Author": "Jean-Claude Wippler",
-            "Maintainer": "Nicholas Humfrey",
-            "Sentence": "EtherCard is an IPv4 driver for the ENC28J60 chip.",
-            "Paragraph": "",
-            "URL": "https://github.com/njh/EtherCard",
-            "Category": "Communication",
-            "License": "GPL-2.0"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\pubsubclient-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\pubsubclient-master\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "pubsubclient-master",
-            "RealName": "PubSubClient",
-            "IsLegacy": false,
-            "Version": "2.7",
-            "Author": "Nick O'Leary \u003cnick.oleary@gmail.com\u003e",
-            "Maintainer": "Nick O'Leary \u003cnick.oleary@gmail.com\u003e",
-            "Sentence": "A client library for MQTT messaging.",
-            "Paragraph": "MQTT is a lightweight messaging protocol ideal for small devices. This library allows you to send and receive MQTT messages. It supports the latest MQTT 3.1.1 protocol and can be configured to use the older MQTT 3.1 if needed. It supports all Arduino Ethernet Client compatible hardware, including the Intel Galileo/Edison, ESP8266 and TI CC3000.",
-            "URL": "http://pubsubclient.knolleary.net",
-            "Category": "Communication",
-            "License": "Unspecified"
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\avr-uart-master",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\avr-uart-master",
-            "UtilityFolder": "",
-            "Layout": "flat",
-            "Name": "avr-uart-master",
-            "RealName": "",
-            "IsLegacy": true,
-            "Version": "",
-            "Author": "",
-            "Maintainer": "",
-            "Sentence": "",
-            "Paragraph": "",
-            "URL": "",
-            "Category": "",
-            "License": ""
         },
         {
             "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\Microsmooth-master",
@@ -1881,306 +1891,233 @@
             "URL": "",
             "Category": "",
             "License": ""
-        },
-        {
-            "Folder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoJson-6.x",
-            "SrcFolder": "C:\\Users\\Admin\\Documents\\Arduino\\Libraries\\ArduinoJson-6.x\\src",
-            "UtilityFolder": "",
-            "Layout": "recursive",
-            "Name": "ArduinoJson-6.x",
-            "RealName": "ArduinoJson",
-            "IsLegacy": false,
-            "Version": "6.11.5",
-            "Author": "Benoit Blanchon \u003cblog.benoitblanchon.fr\u003e",
-            "Maintainer": "Benoit Blanchon \u003cblog.benoitblanchon.fr\u003e",
-            "Sentence": "An efficient and elegant JSON library for Arduino.",
-            "Paragraph": "ArduinoJson supports ✔ serialization, ✔ deserialization, ✔ MessagePack, ✔ fixed allocation, ✔ zero-copy, ✔ streams, and more. It is the most popular Arduino library on GitHub ❤❤❤❤❤. Check out arduinojson.org for a comprehensive documentation.",
-            "URL": "https://arduinojson.org/?utm_source=meta\u0026utm_medium=library.properties",
-            "Category": "Data Processing",
-            "License": "MIT"
         }
     ],
     "LinkerCommandLine": "\"C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5/bin/avr-gcc\" -w -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -mmcu=atmega2560  -o \"C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug/Sms_arduino.ino.elf\" {object_files} \"C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug/{archive_file}\" \"-LC:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug\" -lm",
     "BuildProperties": [
         {
-            "Key": "menu.cpu.atmega1280.bootloader.file",
-            "Value": "atmega/ATmegaBOOT_168_atmega1280.hex"
-        },
-        {
-            "Key": "tools.avrdude.program.params.noverify",
-            "Value": "-V"
-        },
-        {
-            "Key": "tools.avrdude.bootloader.params.quiet",
-            "Value": "-q -q"
-        },
-        {
-            "Key": "tools.avrdude_remote.upload.pattern",
-            "Value": "/usr/bin/run-avrdude /tmp/sketch.hex {upload.verbose} -p{build.mcu}"
-        },
-        {
-            "Key": "pid.1",
-            "Value": "0x0042"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.build.board",
-            "Value": "AVR_MEGA2560"
-        },
-        {
-            "Key": "runtime.tools.ctags.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\VisualGDB\\Arduino\\tools-builder\\ctags\\5.8-arduino11"
-        },
-        {
-            "Key": "compiler.warning_flags.none",
-            "Value": "-w"
-        },
-        {
-            "Key": "compiler.c.elf.flags",
-            "Value": "{compiler.warning_flags} -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections"
-        },
-        {
-            "Key": "recipe.preproc.macros",
-            "Value": "\"{compiler.path}{compiler.cpp.cmd}\" {compiler.cpp.flags} {preproc.macros.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{preprocessed_file_path}\""
-        },
-        {
-            "Key": "compiler.objcopy.eep.flags",
-            "Value": "-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0"
-        },
-        {
-            "Key": "archive_file_path",
-            "Value": "{build.path}/{archive_file}"
-        },
-        {
-            "Key": "build.f_cpu",
-            "Value": "16000000L"
-        },
-        {
-            "Key": "pid.2",
-            "Value": "0x0010"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.build.mcu",
-            "Value": "atmega2560"
-        },
-        {
-            "Key": "bootloader.high_fuses",
-            "Value": "0xD8"
-        },
-        {
-            "Key": "tools.avrdude.upload.pattern",
-            "Value": "\"{cmd.path}\" \"-C{config.path}\" {upload.verbose} {upload.verify} -p{build.mcu} -c{upload.protocol} \"-P{serial.port}\" -b{upload.speed} -D \"-Uflash:w:{build.path}/{build.project_name}.hex:i\""
-        },
-        {
-            "Key": "tools.avrdude.program.pattern",
-            "Value": "\"{cmd.path}\" \"-C{config.path}\" {program.verbose} {program.verify} -p{build.mcu} -c{protocol} {program.extra_params} \"-Uflash:w:{build.path}/{build.project_name}.hex:i\""
-        },
-        {
-            "Key": "tools.avrdude.erase.params.verbose",
-            "Value": "-v"
-        },
-        {
-            "Key": "recipe.c.combine.pattern",
-            "Value": "\"{compiler.path}{compiler.c.elf.cmd}\" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o \"{build.path}/{build.project_name}.elf\" {object_files} \"{build.path}/{archive_file}\" \"-L{build.path}\" -lm"
-        },
-        {
-            "Key": "tools.avrdude.upload.params.quiet",
-            "Value": "-q -q"
-        },
-        {
-            "Key": "build.variant.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega"
-        },
-        {
-            "Key": "compiler.warning_flags.default",
-            "Value": ""
-        },
-        {
-            "Key": "compiler.objcopy.eep.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "recipe.c.o.pattern",
-            "Value": "\"{compiler.path}{compiler.c.cmd}\" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
-        },
-        {
-            "Key": "menu.cpu.atmega2560.bootloader.high_fuses",
-            "Value": "0xD8"
-        },
-        {
-            "Key": "build.mcu",
-            "Value": "atmega2560"
-        },
-        {
-            "Key": "runtime.tools.arduino.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools"
-        },
-        {
-            "Key": "build.source.path",
-            "Value": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches"
-        },
-        {
-            "Key": "extra.time.local",
-            "Value": "1589896318"
-        },
-        {
-            "Key": "tools.avrdude.path",
-            "Value": "{runtime.tools.avrdude.path}"
-        },
-        {
-            "Key": "tools.avrdude.program.params.verbose",
-            "Value": "-v"
-        },
-        {
-            "Key": "name",
-            "Value": "Arduino Mega or Mega 2560"
-        },
-        {
-            "Key": "tools.avrdude.network_cmd",
-            "Value": "{runtime.tools.arduinoOTA.path}/bin/arduinoOTA"
-        },
-        {
-            "Key": "tools.avrdude.program.verify",
-            "Value": ""
-        },
-        {
-            "Key": "compiler.elf2hex.cmd",
-            "Value": "avr-objcopy"
-        },
-        {
-            "Key": "compiler.cpp.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "recipe.size.regex",
-            "Value": "^(?:\\.text|\\.data|\\.bootloader)\\s+([0-9]+).*"
-        },
-        {
-            "Key": "runtime.tools.esptool-2.5.0-3-20ed2b9.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\esptool\\2.5.0-3-20ed2b9"
-        },
-        {
-            "Key": "extra.time.utc",
-            "Value": "1589885518"
-        },
-        {
-            "Key": "runtime.tools.arduinoOTA.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\arduinoOTA\\1.3.0"
-        },
-        {
-            "Key": "tools.avrdude.bootloader.params.verbose",
-            "Value": "-v"
-        },
-        {
-            "Key": "pid.4",
-            "Value": "0x0210"
-        },
-        {
-            "Key": "menu.cpu.atmega1280.build.mcu",
-            "Value": "atmega1280"
-        },
-        {
-            "Key": "vid.4",
-            "Value": "0x2341"
-        },
-        {
-            "Key": "runtime.tools.xtensa-lx106-elf-gcc.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\xtensa-lx106-elf-gcc\\2.5.0-3-20ed2b9"
-        },
-        {
-            "Key": "runtime.tools.avr-gcc.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5"
-        },
-        {
-            "Key": "bootloader.extended_fuses",
-            "Value": "0xFD"
-        },
-        {
-            "Key": "runtime.platform.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2"
-        },
-        {
-            "Key": "bootloader.tool",
-            "Value": "avrdude"
-        },
-        {
-            "Key": "bootloader.low_fuses",
-            "Value": "0xFF"
-        },
-        {
-            "Key": "menu.cpu.atmega1280.upload.protocol",
-            "Value": "arduino"
-        },
-        {
-            "Key": "tools.avrdude.upload.verify",
-            "Value": ""
-        },
-        {
-            "Key": "runtime.tools.esp8266-hardware.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware"
-        },
-        {
-            "Key": "runtime.tools.mkspiffs.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\mkspiffs\\2.5.0-3-20ed2b9"
-        },
-        {
-            "Key": "vid.2",
-            "Value": "0x2A03"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.upload.speed",
-            "Value": "115200"
-        },
-        {
-            "Key": "upload.speed",
-            "Value": "115200"
-        },
-        {
-            "Key": "recipe.size.regex.eeprom",
-            "Value": "^(?:\\.eeprom)\\s+([0-9]+).*"
-        },
-        {
-            "Key": "bootloader.unlock_bits",
-            "Value": "0x3F"
-        },
-        {
-            "Key": "compiler.size.cmd",
-            "Value": "avr-size"
+            "Key": "compiler.ar.cmd",
+            "Value": "avr-gcc-ar"
         },
         {
             "Key": "compiler.c.elf.extra_flags",
             "Value": ""
         },
         {
-            "Key": "recipe.size.regex.data",
-            "Value": "^(?:\\.data|\\.bss|\\.noinit)\\s+([0-9]+).*"
+            "Key": "archive_file_path",
+            "Value": "{build.path}/{archive_file}"
         },
         {
-            "Key": "upload.protocol",
-            "Value": "wiring"
+            "Key": "recipe.size.pattern",
+            "Value": "\"{compiler.path}{compiler.size.cmd}\" -A \"{build.path}/{build.project_name}.elf\""
         },
         {
-            "Key": "compiler.cpp.cmd",
-            "Value": "avr-g++"
+            "Key": "pid.2",
+            "Value": "0x0010"
         },
         {
-            "Key": "recipe.preproc.includes",
-            "Value": "\"{compiler.path}{compiler.cpp.cmd}\" {compiler.cpp.flags} {preproc.includes.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} \"{source_file}\""
+            "Key": "runtime.ide.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\VisualGDB\\Arduino"
         },
         {
-            "Key": "pid.5",
-            "Value": "0x0242"
+            "Key": "version",
+            "Value": "1.8.2"
         },
         {
-            "Key": "build.usb_manufacturer",
-            "Value": "\"Unknown\""
+            "Key": "compiler.path",
+            "Value": "{runtime.tools.avr-gcc.path}/bin/"
+        },
+        {
+            "Key": "recipe.output.save_file",
+            "Value": "{build.project_name}.{build.variant}.hex"
+        },
+        {
+            "Key": "build.fqbn",
+            "Value": "arduino:avr:mega:cpu=atmega2560"
+        },
+        {
+            "Key": "extra.time.utc",
+            "Value": "1589892627"
+        },
+        {
+            "Key": "extra.time.local",
+            "Value": "1589903427"
+        },
+        {
+            "Key": "compiler.size.cmd",
+            "Value": "avr-size"
+        },
+        {
+            "Key": "tools.avrdude.upload.params.verbose",
+            "Value": "-v"
+        },
+        {
+            "Key": "vid.1",
+            "Value": "0x2341"
+        },
+        {
+            "Key": "bootloader.file",
+            "Value": "stk500v2/stk500boot_v2_mega2560.hex"
+        },
+        {
+            "Key": "preproc.macros.flags",
+            "Value": "-w -x c++ -E -CC"
+        },
+        {
+            "Key": "compiler.cpp.flags",
+            "Value": "-c -g -Os {compiler.warning_flags} -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto"
+        },
+        {
+            "Key": "pid.4",
+            "Value": "0x0210"
+        },
+        {
+            "Key": "menu.cpu.atmega1280.upload.protocol",
+            "Value": "arduino"
+        },
+        {
+            "Key": "menu.cpu.atmega1280.upload.maximum_size",
+            "Value": "126976"
+        },
+        {
+            "Key": "compiler.warning_flags.all",
+            "Value": "-Wall -Wextra"
+        },
+        {
+            "Key": "tools.avrdude.program.pattern",
+            "Value": "\"{cmd.path}\" \"-C{config.path}\" {program.verbose} {program.verify} -p{build.mcu} -c{protocol} {program.extra_params} \"-Uflash:w:{build.path}/{build.project_name}.hex:i\""
+        },
+        {
+            "Key": "pid.3",
+            "Value": "0x0042"
+        },
+        {
+            "Key": "upload.tool",
+            "Value": "avrdude"
+        },
+        {
+            "Key": "menu.cpu.atmega1280.upload.speed",
+            "Value": "57600"
+        },
+        {
+            "Key": "menu.cpu.atmega1280.build.board",
+            "Value": "AVR_MEGA"
+        },
+        {
+            "Key": "tools.avrdude.path",
+            "Value": "{runtime.tools.avrdude.path}"
+        },
+        {
+            "Key": "compiler.ar.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "build.variant",
+            "Value": "mega"
+        },
+        {
+            "Key": "build.core",
+            "Value": "arduino"
+        },
+        {
+            "Key": "compiler.warning_flags.default",
+            "Value": ""
         },
         {
             "Key": "menu.cpu.atmega2560",
             "Value": "ATmega2560 (Mega 2560)"
         },
         {
-            "Key": "menu.cpu.atmega2560.upload.protocol",
-            "Value": "wiring"
+            "Key": "build.mcu",
+            "Value": "atmega2560"
+        },
+        {
+            "Key": "build.variant.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\variants\\mega"
+        },
+        {
+            "Key": "upload.speed",
+            "Value": "115200"
+        },
+        {
+            "Key": "runtime.tools.avr-gcc-7.3.0-atmel3.6.1-arduino5.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5"
+        },
+        {
+            "Key": "extra.time.dst",
+            "Value": "0"
+        },
+        {
+            "Key": "compiler.c.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "recipe.output.tmp_file",
+            "Value": "{build.project_name}.hex"
+        },
+        {
+            "Key": "tools.avrdude.config.path",
+            "Value": "{path}/etc/avrdude.conf"
+        },
+        {
+            "Key": "build.usb_manufacturer",
+            "Value": "\"Unknown\""
+        },
+        {
+            "Key": "runtime.tools.arduino-hardware.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware"
+        },
+        {
+            "Key": "runtime.tools.esptool-2.5.0-3-20ed2b9.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\esptool\\2.5.0-3-20ed2b9"
+        },
+        {
+            "Key": "recipe.cpp.o.pattern",
+            "Value": "\"{compiler.path}{compiler.cpp.cmd}\" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
+        },
+        {
+            "Key": "tools.avrdude.erase.params.quiet",
+            "Value": "-q -q"
+        },
+        {
+            "Key": "vid.2",
+            "Value": "0x2A03"
+        },
+        {
+            "Key": "tools.arduino-preprocessor.pattern",
+            "Value": "\"{cmd.path}\" \"{source_file}\" \"{codecomplete}\" -- -std=gnu++11"
+        },
+        {
+            "Key": "compiler.c.elf.cmd",
+            "Value": "avr-gcc"
+        },
+        {
+            "Key": "compiler.ar.flags",
+            "Value": "rcs"
+        },
+        {
+            "Key": "tools.avrdude.program.params.quiet",
+            "Value": "-q -q"
+        },
+        {
+            "Key": "runtime.platform.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2"
+        },
+        {
+            "Key": "runtime.tools.mkspiffs-2.5.0-3-20ed2b9.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\mkspiffs\\2.5.0-3-20ed2b9"
+        },
+        {
+            "Key": "tools.arduino-preprocessor.path",
+            "Value": "{runtime.tools.arduino-preprocessor.path}"
+        },
+        {
+            "Key": "tools.avrdude.program.params.verbose",
+            "Value": "-v"
+        },
+        {
+            "Key": "tools.avrdude.erase.pattern",
+            "Value": "\"{cmd.path}\" \"-C{config.path}\" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m"
         },
         {
             "Key": "build.system.path",
@@ -2191,376 +2128,432 @@
             "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avrdude\\6.3.0-arduino17"
         },
         {
-            "Key": "compiler.warning_flags.more",
-            "Value": "-Wall"
-        },
-        {
-            "Key": "compiler.ar.flags",
-            "Value": "rcs"
-        },
-        {
-            "Key": "compiler.elf2hex.flags",
-            "Value": "-O ihex -R .eeprom"
-        },
-        {
-            "Key": "tools.avrdude.upload.network_pattern",
-            "Value": "\"{network_cmd}\" -address {serial.port} -port {upload.network.port} -sketch \"{build.path}/{build.project_name}.hex\" -upload {upload.network.endpoint_upload} -sync {upload.network.endpoint_sync} -reset {upload.network.endpoint_reset} -sync_exp {upload.network.sync_return}"
-        },
-        {
-            "Key": "build.core",
-            "Value": "arduino"
-        },
-        {
-            "Key": "runtime.tools.esp8266.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools"
-        },
-        {
-            "Key": "tools.ctags.path",
-            "Value": "{runtime.tools.ctags.path}"
-        },
-        {
-            "Key": "recipe.objcopy.eep.pattern",
-            "Value": "\"{compiler.path}{compiler.objcopy.cmd}\" {compiler.objcopy.eep.flags} {compiler.objcopy.eep.extra_flags} \"{build.path}/{build.project_name}.elf\" \"{build.path}/{build.project_name}.eep\""
-        },
-        {
-            "Key": "recipe.output.tmp_file",
-            "Value": "{build.project_name}.hex"
-        },
-        {
-            "Key": "upload.tool",
-            "Value": "avrdude"
-        },
-        {
-            "Key": "recipe.objcopy.hex.pattern",
-            "Value": "\"{compiler.path}{compiler.elf2hex.cmd}\" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} \"{build.path}/{build.project_name}.elf\" \"{build.path}/{build.project_name}.hex\""
-        },
-        {
-            "Key": "tools.avrdude.erase.params.quiet",
-            "Value": "-q -q"
-        },
-        {
-            "Key": "vid.3",
-            "Value": "0x2A03"
-        },
-        {
-            "Key": "menu.cpu.atmega1280.build.board",
-            "Value": "AVR_MEGA"
-        },
-        {
-            "Key": "runtime.tools.avrdude.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avrdude\\6.3.0-arduino17"
-        },
-        {
-            "Key": "preproc.includes.flags",
-            "Value": "-w -x c++ -M -MG -MP"
-        },
-        {
-            "Key": "vid.1",
-            "Value": "0x2341"
-        },
-        {
-            "Key": "upload.maximum_data_size",
-            "Value": "8192"
-        },
-        {
-            "Key": "bootloader.file",
-            "Value": "stk500v2/stk500boot_v2_mega2560.hex"
-        },
-        {
-            "Key": "build.core.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino"
-        },
-        {
-            "Key": "pid.0",
-            "Value": "0x0010"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.upload.maximum_size",
-            "Value": "253952"
-        },
-        {
-            "Key": "menu.cpu.atmega1280.upload.maximum_size",
-            "Value": "126976"
-        },
-        {
-            "Key": "vid.5",
-            "Value": "0x2341"
-        },
-        {
-            "Key": "build.path",
-            "Value": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug"
-        },
-        {
-            "Key": "software",
-            "Value": "ARDUINO"
-        },
-        {
-            "Key": "build.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "compiler.ar.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "recipe.S.o.pattern",
-            "Value": "\"{compiler.path}{compiler.c.cmd}\" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
-        },
-        {
-            "Key": "_id",
-            "Value": "mega"
-        },
-        {
-            "Key": "compiler.objcopy.cmd",
-            "Value": "avr-objcopy"
-        },
-        {
-            "Key": "recipe.ar.pattern",
-            "Value": "\"{compiler.path}{compiler.ar.cmd}\" {compiler.ar.flags} {compiler.ar.extra_flags} \"{archive_file_path}\" \"{object_file}\""
-        },
-        {
-            "Key": "menu.cpu.atmega1280.bootloader.high_fuses",
-            "Value": "0xDA"
-        },
-        {
-            "Key": "runtime.ide.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\VisualGDB\\Arduino"
-        },
-        {
-            "Key": "build.fqbn",
-            "Value": "arduino:avr:mega:cpu=atmega2560"
-        },
-        {
-            "Key": "runtime.tools.mkspiffs-2.5.0-3-20ed2b9.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\mkspiffs\\2.5.0-3-20ed2b9"
-        },
-        {
-            "Key": "tools.arduino-preprocessor.cmd.path",
-            "Value": "{path}/arduino-preprocessor"
-        },
-        {
-            "Key": "compiler.elf2hex.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "runtime.ide.version",
-            "Value": "10600"
-        },
-        {
-            "Key": "vid.0",
-            "Value": "0x2341"
-        },
-        {
-            "Key": "pid.3",
-            "Value": "0x0042"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.bootloader.extended_fuses",
-            "Value": "0xFD"
-        },
-        {
-            "Key": "compiler.warning_flags.all",
-            "Value": "-Wall -Wextra"
-        },
-        {
-            "Key": "compiler.ar.cmd",
-            "Value": "avr-gcc-ar"
-        },
-        {
-            "Key": "recipe.cpp.o.pattern",
-            "Value": "\"{compiler.path}{compiler.cpp.cmd}\" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
-        },
-        {
-            "Key": "runtime.tools.arduino-tools.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools"
-        },
-        {
-            "Key": "runtime.tools.arduinoOTA-1.3.0.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\arduinoOTA\\1.3.0"
-        },
-        {
-            "Key": "extra.time.zone",
-            "Value": "10800"
-        },
-        {
-            "Key": "build.usb_flags",
-            "Value": "-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'"
-        },
-        {
-            "Key": "menu.cpu.atmega2560.bootloader.file",
-            "Value": "stk500v2/stk500boot_v2_mega2560.hex"
-        },
-        {
-            "Key": "build.arch",
-            "Value": "AVR"
-        },
-        {
-            "Key": "tools.avrdude.upload.params.noverify",
-            "Value": "-V"
-        },
-        {
-            "Key": "menu.cpu.atmega1280",
-            "Value": "ATmega1280"
-        },
-        {
-            "Key": "build.board",
-            "Value": "AVR_MEGA2560"
-        },
-        {
-            "Key": "runtime.tools.xtensa-lx106-elf-gcc-2.5.0-3-20ed2b9.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\xtensa-lx106-elf-gcc\\2.5.0-3-20ed2b9"
-        },
-        {
-            "Key": "runtime.tools.esp8266-tools.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools"
-        },
-        {
             "Key": "tools.ctags.cmd.path",
             "Value": "{path}/ctags"
-        },
-        {
-            "Key": "compiler.c.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "recipe.output.save_file",
-            "Value": "{build.project_name}.{build.variant}.hex"
-        },
-        {
-            "Key": "runtime.tools.esptool.path",
-            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\esptool\\2.5.0-3-20ed2b9"
-        },
-        {
-            "Key": "compiler.S.extra_flags",
-            "Value": ""
-        },
-        {
-            "Key": "tools.avrdude.cmd.path",
-            "Value": "{path}/bin/avrdude"
-        },
-        {
-            "Key": "ide_version",
-            "Value": "10600"
-        },
-        {
-            "Key": "tools.avrdude.config.path",
-            "Value": "{path}/etc/avrdude.conf"
-        },
-        {
-            "Key": "upload.maximum_size",
-            "Value": "253952"
-        },
-        {
-            "Key": "tools.avrdude.bootloader.pattern",
-            "Value": "\"{cmd.path}\" \"-C{config.path}\" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} \"-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i\" -Ulock:w:{bootloader.lock_bits}:m"
-        },
-        {
-            "Key": "build.variant",
-            "Value": "mega"
-        },
-        {
-            "Key": "runtime.tools.arduino-hardware.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware"
-        },
-        {
-            "Key": "extra.time.dst",
-            "Value": "0"
-        },
-        {
-            "Key": "tools.ctags.pattern",
-            "Value": "\"{cmd.path}\" -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives \"{source_file}\""
-        },
-        {
-            "Key": "tools.avrdude.upload.params.verbose",
-            "Value": "-v"
-        },
-        {
-            "Key": "tools.avrdude.program.params.quiet",
-            "Value": "-q -q"
-        },
-        {
-            "Key": "compiler.cpp.flags",
-            "Value": "-c -g -Os {compiler.warning_flags} -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto"
-        },
-        {
-            "Key": "recipe.size.pattern",
-            "Value": "\"{compiler.path}{compiler.size.cmd}\" -A \"{build.path}/{build.project_name}.elf\""
-        },
-        {
-            "Key": "tools.avrdude.erase.pattern",
-            "Value": "\"{cmd.path}\" \"-C{config.path}\" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m"
-        },
-        {
-            "Key": "runtime.hardware.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr"
-        },
-        {
-            "Key": "runtime.os",
-            "Value": "windows"
-        },
-        {
-            "Key": "tools.arduino-preprocessor.path",
-            "Value": "{runtime.tools.arduino-preprocessor.path}"
-        },
-        {
-            "Key": "compiler.warning_flags",
-            "Value": "-w"
-        },
-        {
-            "Key": "compiler.S.flags",
-            "Value": "-c -g -x assembler-with-cpp -flto -MMD"
-        },
-        {
-            "Key": "runtime.tools.avr-gcc-7.3.0-atmel3.6.1-arduino5.path",
-            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5"
-        },
-        {
-            "Key": "preproc.macros.flags",
-            "Value": "-w -x c++ -E -CC"
-        },
-        {
-            "Key": "compiler.ldflags",
-            "Value": ""
-        },
-        {
-            "Key": "build.project_name",
-            "Value": "Sms_arduino.ino"
-        },
-        {
-            "Key": "compiler.c.elf.cmd",
-            "Value": "avr-gcc"
-        },
-        {
-            "Key": "compiler.path",
-            "Value": "{runtime.tools.avr-gcc.path}/bin/"
         },
         {
             "Key": "compiler.c.cmd",
             "Value": "avr-gcc"
         },
         {
+            "Key": "compiler.S.flags",
+            "Value": "-c -g -x assembler-with-cpp -flto -MMD"
+        },
+        {
+            "Key": "recipe.objcopy.eep.pattern",
+            "Value": "\"{compiler.path}{compiler.objcopy.cmd}\" {compiler.objcopy.eep.flags} {compiler.objcopy.eep.extra_flags} \"{build.path}/{build.project_name}.elf\" \"{build.path}/{build.project_name}.eep\""
+        },
+        {
+            "Key": "tools.avrdude.program.params.noverify",
+            "Value": "-V"
+        },
+        {
+            "Key": "pid.0",
+            "Value": "0x0010"
+        },
+        {
+            "Key": "build.path",
+            "Value": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\Output\\Arduino_Mega_or_Mega_2560\\Debug"
+        },
+        {
+            "Key": "recipe.S.o.pattern",
+            "Value": "\"{compiler.path}{compiler.c.cmd}\" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
+        },
+        {
+            "Key": "recipe.c.combine.pattern",
+            "Value": "\"{compiler.path}{compiler.c.elf.cmd}\" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o \"{build.path}/{build.project_name}.elf\" {object_files} \"{build.path}/{archive_file}\" \"-L{build.path}\" -lm"
+        },
+        {
+            "Key": "recipe.preproc.includes",
+            "Value": "\"{compiler.path}{compiler.cpp.cmd}\" {compiler.cpp.flags} {preproc.includes.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} \"{source_file}\""
+        },
+        {
+            "Key": "tools.avrdude.cmd.path",
+            "Value": "{path}/bin/avrdude"
+        },
+        {
+            "Key": "build.f_cpu",
+            "Value": "16000000L"
+        },
+        {
+            "Key": "menu.cpu.atmega2560.build.board",
+            "Value": "AVR_MEGA2560"
+        },
+        {
+            "Key": "bootloader.high_fuses",
+            "Value": "0xD8"
+        },
+        {
+            "Key": "build.usb_flags",
+            "Value": "-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'"
+        },
+        {
+            "Key": "menu.cpu.atmega1280",
+            "Value": "ATmega1280"
+        },
+        {
+            "Key": "runtime.tools.esp8266-tools.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools"
+        },
+        {
+            "Key": "runtime.tools.avrdude.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avrdude\\6.3.0-arduino17"
+        },
+        {
+            "Key": "bootloader.lock_bits",
+            "Value": "0x0F"
+        },
+        {
+            "Key": "menu.cpu.atmega2560.upload.protocol",
+            "Value": "wiring"
+        },
+        {
+            "Key": "menu.cpu.atmega2560.bootloader.high_fuses",
+            "Value": "0xD8"
+        },
+        {
+            "Key": "build.board",
+            "Value": "AVR_MEGA2560"
+        },
+        {
+            "Key": "compiler.c.elf.flags",
+            "Value": "{compiler.warning_flags} -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections"
+        },
+        {
+            "Key": "compiler.cpp.cmd",
+            "Value": "avr-g++"
+        },
+        {
+            "Key": "compiler.elf2hex.flags",
+            "Value": "-O ihex -R .eeprom"
+        },
+        {
+            "Key": "tools.avrdude.program.verify",
+            "Value": ""
+        },
+        {
+            "Key": "pid.5",
+            "Value": "0x0242"
+        },
+        {
+            "Key": "runtime.tools.arduinoOTA.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\arduinoOTA\\1.3.0"
+        },
+        {
+            "Key": "tools.avrdude.bootloader.pattern",
+            "Value": "\"{cmd.path}\" \"-C{config.path}\" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} \"-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i\" -Ulock:w:{bootloader.lock_bits}:m"
+        },
+        {
+            "Key": "upload.protocol",
+            "Value": "wiring"
+        },
+        {
+            "Key": "runtime.tools.xtensa-lx106-elf-gcc.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\xtensa-lx106-elf-gcc\\2.5.0-3-20ed2b9"
+        },
+        {
+            "Key": "menu.cpu.atmega1280.build.mcu",
+            "Value": "atmega1280"
+        },
+        {
+            "Key": "build.project_name",
+            "Value": "Sms_arduino.ino"
+        },
+        {
+            "Key": "ide_version",
+            "Value": "10600"
+        },
+        {
+            "Key": "software",
+            "Value": "ARDUINO"
+        },
+        {
+            "Key": "compiler.objcopy.cmd",
+            "Value": "avr-objcopy"
+        },
+        {
+            "Key": "compiler.elf2hex.cmd",
+            "Value": "avr-objcopy"
+        },
+        {
+            "Key": "build.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "runtime.tools.arduino-tools.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools"
+        },
+        {
+            "Key": "runtime.tools.esp8266.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\Arduino15\\packages\\esp8266\\tools"
+        },
+        {
+            "Key": "tools.avrdude.erase.params.verbose",
+            "Value": "-v"
+        },
+        {
+            "Key": "upload.maximum_data_size",
+            "Value": "8192"
+        },
+        {
+            "Key": "menu.cpu.atmega2560.bootloader.extended_fuses",
+            "Value": "0xFD"
+        },
+        {
+            "Key": "runtime.hardware.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr"
+        },
+        {
+            "Key": "tools.ctags.pattern",
+            "Value": "\"{cmd.path}\" -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives \"{source_file}\""
+        },
+        {
+            "Key": "tools.avrdude.network_cmd",
+            "Value": "{runtime.tools.arduinoOTA.path}/bin/arduinoOTA"
+        },
+        {
+            "Key": "tools.avrdude.upload.params.noverify",
+            "Value": "-V"
+        },
+        {
+            "Key": "name",
+            "Value": "Arduino Mega or Mega 2560"
+        },
+        {
+            "Key": "vid.5",
+            "Value": "0x2341"
+        },
+        {
+            "Key": "runtime.tools.arduino.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools"
+        },
+        {
             "Key": "compiler.c.flags",
             "Value": "-c -g -Os {compiler.warning_flags} -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects"
         },
         {
-            "Key": "menu.cpu.atmega1280.upload.speed",
-            "Value": "57600"
+            "Key": "compiler.objcopy.eep.flags",
+            "Value": "-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0"
+        },
+        {
+            "Key": "compiler.elf2hex.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "recipe.ar.pattern",
+            "Value": "\"{compiler.path}{compiler.ar.cmd}\" {compiler.ar.flags} {compiler.ar.extra_flags} \"{archive_file_path}\" \"{object_file}\""
+        },
+        {
+            "Key": "bootloader.tool",
+            "Value": "avrdude"
+        },
+        {
+            "Key": "menu.cpu.atmega2560.build.mcu",
+            "Value": "atmega2560"
+        },
+        {
+            "Key": "tools.ctags.path",
+            "Value": "{runtime.tools.ctags.path}"
+        },
+        {
+            "Key": "compiler.warning_flags.more",
+            "Value": "-Wall"
+        },
+        {
+            "Key": "recipe.size.regex.eeprom",
+            "Value": "^(?:\\.eeprom)\\s+([0-9]+).*"
+        },
+        {
+            "Key": "tools.avrdude.upload.network_pattern",
+            "Value": "\"{network_cmd}\" -address {serial.port} -port {upload.network.port} -sketch \"{build.path}/{build.project_name}.hex\" -upload {upload.network.endpoint_upload} -sync {upload.network.endpoint_sync} -reset {upload.network.endpoint_reset} -sync_exp {upload.network.sync_return}"
+        },
+        {
+            "Key": "menu.cpu.atmega1280.bootloader.high_fuses",
+            "Value": "0xDA"
+        },
+        {
+            "Key": "menu.cpu.atmega1280.bootloader.file",
+            "Value": "atmega/ATmegaBOOT_168_atmega1280.hex"
+        },
+        {
+            "Key": "runtime.tools.esp8266-hardware.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\Arduino15\\packages\\esp8266\\hardware"
+        },
+        {
+            "Key": "compiler.S.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "preproc.includes.flags",
+            "Value": "-w -x c++ -M -MG -MP"
+        },
+        {
+            "Key": "tools.avrdude.bootloader.params.verbose",
+            "Value": "-v"
+        },
+        {
+            "Key": "tools.avrdude_remote.upload.pattern",
+            "Value": "/usr/bin/run-avrdude /tmp/sketch.hex {upload.verbose} -p{build.mcu}"
+        },
+        {
+            "Key": "bootloader.extended_fuses",
+            "Value": "0xFD"
+        },
+        {
+            "Key": "build.core.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\hardware\\avr\\1.8.2\\cores\\arduino"
+        },
+        {
+            "Key": "build.source.path",
+            "Value": "C:\\Users\\Admin\\Source\\Repos\\creosot\\Sms_arduino2\\sketches"
+        },
+        {
+            "Key": "compiler.cpp.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "recipe.c.o.pattern",
+            "Value": "\"{compiler.path}{compiler.c.cmd}\" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{object_file}\""
+        },
+        {
+            "Key": "tools.avrdude.upload.params.quiet",
+            "Value": "-q -q"
+        },
+        {
+            "Key": "tools.avrdude.upload.verify",
+            "Value": ""
+        },
+        {
+            "Key": "pid.1",
+            "Value": "0x0042"
+        },
+        {
+            "Key": "runtime.ide.version",
+            "Value": "10600"
+        },
+        {
+            "Key": "runtime.tools.arduinoOTA-1.3.0.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\arduinoOTA\\1.3.0"
+        },
+        {
+            "Key": "runtime.tools.avr-gcc.path",
+            "Value": "C:\\Users\\Admin\\Documents\\ArduinoData\\packages\\arduino\\tools\\avr-gcc\\7.3.0-atmel3.6.1-arduino5"
+        },
+        {
+            "Key": "recipe.size.regex",
+            "Value": "^(?:\\.text|\\.data|\\.bootloader)\\s+([0-9]+).*"
+        },
+        {
+            "Key": "recipe.size.regex.data",
+            "Value": "^(?:\\.data|\\.bss|\\.noinit)\\s+([0-9]+).*"
+        },
+        {
+            "Key": "tools.avrdude.upload.pattern",
+            "Value": "\"{cmd.path}\" \"-C{config.path}\" {upload.verbose} {upload.verify} -p{build.mcu} -c{upload.protocol} \"-P{serial.port}\" -b{upload.speed} -D \"-Uflash:w:{build.path}/{build.project_name}.hex:i\""
+        },
+        {
+            "Key": "tools.avrdude.bootloader.params.quiet",
+            "Value": "-q -q"
+        },
+        {
+            "Key": "bootloader.unlock_bits",
+            "Value": "0x3F"
+        },
+        {
+            "Key": "menu.cpu.atmega2560.upload.maximum_size",
+            "Value": "253952"
+        },
+        {
+            "Key": "runtime.os",
+            "Value": "windows"
+        },
+        {
+            "Key": "runtime.tools.esptool.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\esptool\\2.5.0-3-20ed2b9"
+        },
+        {
+            "Key": "runtime.tools.xtensa-lx106-elf-gcc-2.5.0-3-20ed2b9.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\xtensa-lx106-elf-gcc\\2.5.0-3-20ed2b9"
+        },
+        {
+            "Key": "compiler.warning_flags",
+            "Value": "-w"
+        },
+        {
+            "Key": "vid.4",
+            "Value": "0x2341"
+        },
+        {
+            "Key": "bootloader.low_fuses",
+            "Value": "0xFF"
+        },
+        {
+            "Key": "runtime.tools.ctags.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\VisualGDB\\Arduino\\tools-builder\\ctags\\5.8-arduino11"
+        },
+        {
+            "Key": "compiler.objcopy.eep.extra_flags",
+            "Value": ""
+        },
+        {
+            "Key": "menu.cpu.atmega2560.bootloader.file",
+            "Value": "stk500v2/stk500boot_v2_mega2560.hex"
         },
         {
             "Key": "menu.cpu.atmega1280.bootloader.extended_fuses",
             "Value": "0xF5"
         },
         {
-            "Key": "tools.arduino-preprocessor.pattern",
-            "Value": "\"{cmd.path}\" \"{source_file}\" \"{codecomplete}\" -- -std=gnu++11"
+            "Key": "_id",
+            "Value": "mega"
         },
         {
-            "Key": "version",
-            "Value": "1.8.2"
+            "Key": "build.arch",
+            "Value": "AVR"
         },
         {
-            "Key": "bootloader.lock_bits",
-            "Value": "0x0F"
+            "Key": "tools.arduino-preprocessor.cmd.path",
+            "Value": "{path}/arduino-preprocessor"
+        },
+        {
+            "Key": "recipe.objcopy.hex.pattern",
+            "Value": "\"{compiler.path}{compiler.elf2hex.cmd}\" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} \"{build.path}/{build.project_name}.elf\" \"{build.path}/{build.project_name}.hex\""
+        },
+        {
+            "Key": "recipe.preproc.macros",
+            "Value": "\"{compiler.path}{compiler.cpp.cmd}\" {compiler.cpp.flags} {preproc.macros.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} \"{source_file}\" -o \"{preprocessed_file_path}\""
+        },
+        {
+            "Key": "menu.cpu.atmega2560.upload.speed",
+            "Value": "115200"
+        },
+        {
+            "Key": "compiler.warning_flags.none",
+            "Value": "-w"
+        },
+        {
+            "Key": "compiler.ldflags",
+            "Value": ""
+        },
+        {
+            "Key": "vid.3",
+            "Value": "0x2A03"
+        },
+        {
+            "Key": "runtime.tools.mkspiffs.path",
+            "Value": "C:\\Users\\Admin\\AppData\\Local\\arduino15\\packages\\esp8266\\tools\\mkspiffs\\2.5.0-3-20ed2b9"
+        },
+        {
+            "Key": "vid.0",
+            "Value": "0x2341"
+        },
+        {
+            "Key": "upload.maximum_size",
+            "Value": "253952"
+        },
+        {
+            "Key": "extra.time.zone",
+            "Value": "10800"
         }
     ]
 }

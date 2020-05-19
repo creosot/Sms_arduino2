@@ -21,8 +21,8 @@
 typedef struct sms_node {
 	struct sms_node *next;
 	uint8_t command;
-	uint8_t mode;
-	const char* data_str;
+	int payload_int;
+	const char* payload_str;
 	const char* tel;
 } sms_node_t;
 
@@ -44,6 +44,8 @@ enum CmdStatus
 	CMD_GID2 = 3,
 	CMD_GID = 4,
 };
+
+const char *array_cmd_status[] = { "status", "mode", "gid2", "gid" };
 
 struct Provider
 {
@@ -85,6 +87,7 @@ uint8_t EEMEM flag_gid_eeprom;
 uint8_t EEMEM gid_eeprom[LENGHT_GID];
 uint8_t EEMEM flag_gid2_eeprom;
 uint8_t EEMEM gid2_eeprom[LENGHT_GID];
+char body_payload[20];
 int8_t sms_delete_index[LENGTH_SMS_BUFFER] = { -1 };
 char gid_array[LENGHT_GID] = { 0 };
 const char* rotate_status[] = { "vraschenie", "net phase", "net vrascheniz" };
@@ -102,8 +105,9 @@ String tel_number_receiveSMS(String);
 bool read_all_SMS();
 int8_t prepare_SMS(String header);
 void testAtCommand();
-void node_push(stack_t *s, uint8_t cmd, int d_int, const char *d_str, const char *t);
-char body_payload[20];
+void node_pop(stack *s);
+void node_push(stack_t *s, uint8_t cmd, int p_int, const char *p_str, const char *t);
+void node_print(stack *s);
 void prepare_Stack_SMS(sms_node_t *node);
 void write_GID(const char* gid_name);
 void read_GID();
@@ -223,8 +227,8 @@ void setup()
 		sms_delete_index[i] = -1;
 	}
 	smsInit();
-	SerialMon.println("------------------------------------------------");
-	SerialMon.println("30sec voltage, current, rotation, ACline measure");
+	SerialMon.println(F("------------------------------------------------"));
+	SerialMon.println(F("30sec voltage, current, rotation, ACline measure"));
 	measuring_timer = millis();
 }
 
@@ -235,6 +239,7 @@ void loop()
 //	testAtCommand();
 	read_all_SMS();
 	delete_SMS_array(sms_delete_index);
+	node_print(ptr_sms_nodes);
 	delay(40000);
 	
 }
@@ -450,7 +455,34 @@ int8_t prepare_SMS(String header)
 	return index;
 }
 
-void node_push(stack_t *s, uint8_t cmd, int d_int, const char *d_str, const char *t)
+void node_print(stack *s)
+{
+	sms_node_t *node = s->head;
+	int size = s->size;
+	for (; size; size--)
+	{
+		if (node == NULL)
+		{
+			SerialMon.println(F("Ptr NULL"));
+			break;
+		}
+		SerialMon.print(F("Node: "));
+		SerialMon.println(size);
+		SerialMon.print(F("command: "));
+		SerialMon.println(array_cmd_status[node->command]);
+		SerialMon.print(F("payload_str: "));
+		SerialMon.println(node->payload_str);
+		SerialMon.print(F("payload_int: "));
+		SerialMon.println(node->payload_int);
+		SerialMon.print(F("tel: "));
+		SerialMon.println(node->tel);
+		SerialMon.println();
+		node = node->next;
+	}
+	SerialMon.println(F("Nodes fine"));
+}
+
+void node_push(stack_t *s, uint8_t cmd, int p_int, const char *p_str, const char *t)
 {
 	sms_node_t *node = (sms_node_t *) malloc(sizeof(sms_node_t));
 	if (node == NULL)
@@ -458,8 +490,8 @@ void node_push(stack_t *s, uint8_t cmd, int d_int, const char *d_str, const char
 		return;
 	}
 	node->command = cmd;
-	node->mode = d_int;
-	node->data_str = d_str;
+	node->payload_int = p_int;
+	node->payload_str = p_str;
 	node->tel = t;
 	node->next = s->head;
 	s->head = node;
@@ -492,15 +524,15 @@ void prepare_Stack_SMS(sms_node_t *node)
 		send_Status(node->tel);
 		break;
 	case CMD_MODE:
-		write_Mode(node->mode);
+		write_Mode(node->payload_int);
 		send_Status(node->tel);
 		break;
 	case CMD_GID2:
-		write_GID2(node->data_str);
+		write_GID2(node->payload_str);
 		send_Status(node->tel);
 		break;
 	case CMD_GID:
-		write_GID(node->data_str);
+		write_GID(node->payload_str);
 		send_Status(node->tel);
 		break;
 	default:
